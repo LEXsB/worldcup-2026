@@ -1,9 +1,14 @@
 {
-  "updatedAt": "2026-06-16T20:31:15+00:00",
+  "updatedAt": "2026-06-16T20:49:12+00:00",
   "source": null,
   "sourcesTried": [
     {
       "source": "api-football",
+      "ok": true,
+      "teams_with_data": 0
+    },
+    {
+      "source": "wikipedia",
       "ok": true,
       "teams_with_data": 0
     }
