@@ -1,7 +1,1267 @@
 {
-  "updatedAt": null,
+  "updatedAt": "2026-06-16T16:09:24+00:00",
   "window": 10,
-  "teamCount": 0,
-  "sourcesTried": [],
-  "teams": {}
+  "teamCount": 48,
+  "sourcesTried": [
+    {
+      "source": "bayesian-results",
+      "ok": false,
+      "error": "BAYESIAN_RESULTS_URL not set"
+    },
+    {
+      "source": "fd-bookings",
+      "ok": true,
+      "teams_with_data": 0
+    }
+  ],
+  "teams": {
+    "Algeria": {
+      "team": "Algeria",
+      "form": {
+        "team": "Algeria",
+        "matches": 0,
+        "window": 10,
+        "gf_total": 0,
+        "ga_total": 0,
+        "gf_avg": null,
+        "ga_avg": null,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "record": "0-0-0",
+        "last_match_date": "",
+        "last_matches": []
+      },
+      "wc_bookings": {
+        "yellow": 0,
+        "red": 0,
+        "second_yellow": 0,
+        "yellow_avg": null,
+        "matches_with_data": 0,
+        "matches": []
+      }
+    },
+    "Argentina": {
+      "team": "Argentina",
+      "form": {
+        "team": "Argentina",
+        "matches": 0,
+        "window": 10,
+        "gf_total": 0,
+        "ga_total": 0,
+        "gf_avg": null,
+        "ga_avg": null,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "record": "0-0-0",
+        "last_match_date": "",
+        "last_matches": []
+      },
+      "wc_bookings": {
+        "yellow": 0,
+        "red": 0,
+        "second_yellow": 0,
+        "yellow_avg": null,
+        "matches_with_data": 0,
+        "matches": []
+      }
+    },
+    "Australia": {
+      "team": "Australia",
+      "form": {
+        "team": "Australia",
+        "matches": 0,
+        "window": 10,
+        "gf_total": 0,
+        "ga_total": 0,
+        "gf_avg": null,
+        "ga_avg": null,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "record": "0-0-0",
+        "last_match_date": "",
+        "last_matches": []
+      },
+      "wc_bookings": {
+        "yellow": 0,
+        "red": 0,
+        "second_yellow": 0,
+        "yellow_avg": null,
+        "matches_with_data": 0,
+        "matches": []
+      }
+    },
+    "Austria": {
+      "team": "Austria",
+      "form": {
+        "team": "Austria",
+        "matches": 0,
+        "window": 10,
+        "gf_total": 0,
+        "ga_total": 0,
+        "gf_avg": null,
+        "ga_avg": null,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "record": "0-0-0",
+        "last_match_date": "",
+        "last_matches": []
+      },
+      "wc_bookings": {
+        "yellow": 0,
+        "red": 0,
+        "second_yellow": 0,
+        "yellow_avg": null,
+        "matches_with_data": 0,
+        "matches": []
+      }
+    },
+    "Belgium": {
+      "team": "Belgium",
+      "form": {
+        "team": "Belgium",
+        "matches": 0,
+        "window": 10,
+        "gf_total": 0,
+        "ga_total": 0,
+        "gf_avg": null,
+        "ga_avg": null,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "record": "0-0-0",
+        "last_match_date": "",
+        "last_matches": []
+      },
+      "wc_bookings": {
+        "yellow": 0,
+        "red": 0,
+        "second_yellow": 0,
+        "yellow_avg": null,
+        "matches_with_data": 0,
+        "matches": []
+      }
+    },
+    "Bosnia-Herzegovina": {
+      "team": "Bosnia-Herzegovina",
+      "form": {
+        "team": "Bosnia-Herzegovina",
+        "matches": 0,
+        "window": 10,
+        "gf_total": 0,
+        "ga_total": 0,
+        "gf_avg": null,
+        "ga_avg": null,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "record": "0-0-0",
+        "last_match_date": "",
+        "last_matches": []
+      },
+      "wc_bookings": {
+        "yellow": 0,
+        "red": 0,
+        "second_yellow": 0,
+        "yellow_avg": null,
+        "matches_with_data": 0,
+        "matches": []
+      }
+    },
+    "Brazil": {
+      "team": "Brazil",
+      "form": {
+        "team": "Brazil",
+        "matches": 0,
+        "window": 10,
+        "gf_total": 0,
+        "ga_total": 0,
+        "gf_avg": null,
+        "ga_avg": null,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "record": "0-0-0",
+        "last_match_date": "",
+        "last_matches": []
+      },
+      "wc_bookings": {
+        "yellow": 0,
+        "red": 0,
+        "second_yellow": 0,
+        "yellow_avg": null,
+        "matches_with_data": 0,
+        "matches": []
+      }
+    },
+    "Canada": {
+      "team": "Canada",
+      "form": {
+        "team": "Canada",
+        "matches": 0,
+        "window": 10,
+        "gf_total": 0,
+        "ga_total": 0,
+        "gf_avg": null,
+        "ga_avg": null,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "record": "0-0-0",
+        "last_match_date": "",
+        "last_matches": []
+      },
+      "wc_bookings": {
+        "yellow": 0,
+        "red": 0,
+        "second_yellow": 0,
+        "yellow_avg": null,
+        "matches_with_data": 0,
+        "matches": []
+      }
+    },
+    "Cape Verde Islands": {
+      "team": "Cape Verde Islands",
+      "form": {
+        "team": "Cape Verde Islands",
+        "matches": 0,
+        "window": 10,
+        "gf_total": 0,
+        "ga_total": 0,
+        "gf_avg": null,
+        "ga_avg": null,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "record": "0-0-0",
+        "last_match_date": "",
+        "last_matches": []
+      },
+      "wc_bookings": {
+        "yellow": 0,
+        "red": 0,
+        "second_yellow": 0,
+        "yellow_avg": null,
+        "matches_with_data": 0,
+        "matches": []
+      }
+    },
+    "Colombia": {
+      "team": "Colombia",
+      "form": {
+        "team": "Colombia",
+        "matches": 0,
+        "window": 10,
+        "gf_total": 0,
+        "ga_total": 0,
+        "gf_avg": null,
+        "ga_avg": null,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "record": "0-0-0",
+        "last_match_date": "",
+        "last_matches": []
+      },
+      "wc_bookings": {
+        "yellow": 0,
+        "red": 0,
+        "second_yellow": 0,
+        "yellow_avg": null,
+        "matches_with_data": 0,
+        "matches": []
+      }
+    },
+    "Congo DR": {
+      "team": "Congo DR",
+      "form": {
+        "team": "Congo DR",
+        "matches": 0,
+        "window": 10,
+        "gf_total": 0,
+        "ga_total": 0,
+        "gf_avg": null,
+        "ga_avg": null,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "record": "0-0-0",
+        "last_match_date": "",
+        "last_matches": []
+      },
+      "wc_bookings": {
+        "yellow": 0,
+        "red": 0,
+        "second_yellow": 0,
+        "yellow_avg": null,
+        "matches_with_data": 0,
+        "matches": []
+      }
+    },
+    "Croatia": {
+      "team": "Croatia",
+      "form": {
+        "team": "Croatia",
+        "matches": 0,
+        "window": 10,
+        "gf_total": 0,
+        "ga_total": 0,
+        "gf_avg": null,
+        "ga_avg": null,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "record": "0-0-0",
+        "last_match_date": "",
+        "last_matches": []
+      },
+      "wc_bookings": {
+        "yellow": 0,
+        "red": 0,
+        "second_yellow": 0,
+        "yellow_avg": null,
+        "matches_with_data": 0,
+        "matches": []
+      }
+    },
+    "Curaçao": {
+      "team": "Curaçao",
+      "form": {
+        "team": "Curaçao",
+        "matches": 0,
+        "window": 10,
+        "gf_total": 0,
+        "ga_total": 0,
+        "gf_avg": null,
+        "ga_avg": null,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "record": "0-0-0",
+        "last_match_date": "",
+        "last_matches": []
+      },
+      "wc_bookings": {
+        "yellow": 0,
+        "red": 0,
+        "second_yellow": 0,
+        "yellow_avg": null,
+        "matches_with_data": 0,
+        "matches": []
+      }
+    },
+    "Czechia": {
+      "team": "Czechia",
+      "form": {
+        "team": "Czechia",
+        "matches": 0,
+        "window": 10,
+        "gf_total": 0,
+        "ga_total": 0,
+        "gf_avg": null,
+        "ga_avg": null,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "record": "0-0-0",
+        "last_match_date": "",
+        "last_matches": []
+      },
+      "wc_bookings": {
+        "yellow": 0,
+        "red": 0,
+        "second_yellow": 0,
+        "yellow_avg": null,
+        "matches_with_data": 0,
+        "matches": []
+      }
+    },
+    "Ecuador": {
+      "team": "Ecuador",
+      "form": {
+        "team": "Ecuador",
+        "matches": 0,
+        "window": 10,
+        "gf_total": 0,
+        "ga_total": 0,
+        "gf_avg": null,
+        "ga_avg": null,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "record": "0-0-0",
+        "last_match_date": "",
+        "last_matches": []
+      },
+      "wc_bookings": {
+        "yellow": 0,
+        "red": 0,
+        "second_yellow": 0,
+        "yellow_avg": null,
+        "matches_with_data": 0,
+        "matches": []
+      }
+    },
+    "Egypt": {
+      "team": "Egypt",
+      "form": {
+        "team": "Egypt",
+        "matches": 0,
+        "window": 10,
+        "gf_total": 0,
+        "ga_total": 0,
+        "gf_avg": null,
+        "ga_avg": null,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "record": "0-0-0",
+        "last_match_date": "",
+        "last_matches": []
+      },
+      "wc_bookings": {
+        "yellow": 0,
+        "red": 0,
+        "second_yellow": 0,
+        "yellow_avg": null,
+        "matches_with_data": 0,
+        "matches": []
+      }
+    },
+    "England": {
+      "team": "England",
+      "form": {
+        "team": "England",
+        "matches": 0,
+        "window": 10,
+        "gf_total": 0,
+        "ga_total": 0,
+        "gf_avg": null,
+        "ga_avg": null,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "record": "0-0-0",
+        "last_match_date": "",
+        "last_matches": []
+      },
+      "wc_bookings": {
+        "yellow": 0,
+        "red": 0,
+        "second_yellow": 0,
+        "yellow_avg": null,
+        "matches_with_data": 0,
+        "matches": []
+      }
+    },
+    "France": {
+      "team": "France",
+      "form": {
+        "team": "France",
+        "matches": 0,
+        "window": 10,
+        "gf_total": 0,
+        "ga_total": 0,
+        "gf_avg": null,
+        "ga_avg": null,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "record": "0-0-0",
+        "last_match_date": "",
+        "last_matches": []
+      },
+      "wc_bookings": {
+        "yellow": 0,
+        "red": 0,
+        "second_yellow": 0,
+        "yellow_avg": null,
+        "matches_with_data": 0,
+        "matches": []
+      }
+    },
+    "Germany": {
+      "team": "Germany",
+      "form": {
+        "team": "Germany",
+        "matches": 0,
+        "window": 10,
+        "gf_total": 0,
+        "ga_total": 0,
+        "gf_avg": null,
+        "ga_avg": null,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "record": "0-0-0",
+        "last_match_date": "",
+        "last_matches": []
+      },
+      "wc_bookings": {
+        "yellow": 0,
+        "red": 0,
+        "second_yellow": 0,
+        "yellow_avg": null,
+        "matches_with_data": 0,
+        "matches": []
+      }
+    },
+    "Ghana": {
+      "team": "Ghana",
+      "form": {
+        "team": "Ghana",
+        "matches": 0,
+        "window": 10,
+        "gf_total": 0,
+        "ga_total": 0,
+        "gf_avg": null,
+        "ga_avg": null,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "record": "0-0-0",
+        "last_match_date": "",
+        "last_matches": []
+      },
+      "wc_bookings": {
+        "yellow": 0,
+        "red": 0,
+        "second_yellow": 0,
+        "yellow_avg": null,
+        "matches_with_data": 0,
+        "matches": []
+      }
+    },
+    "Haiti": {
+      "team": "Haiti",
+      "form": {
+        "team": "Haiti",
+        "matches": 0,
+        "window": 10,
+        "gf_total": 0,
+        "ga_total": 0,
+        "gf_avg": null,
+        "ga_avg": null,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "record": "0-0-0",
+        "last_match_date": "",
+        "last_matches": []
+      },
+      "wc_bookings": {
+        "yellow": 0,
+        "red": 0,
+        "second_yellow": 0,
+        "yellow_avg": null,
+        "matches_with_data": 0,
+        "matches": []
+      }
+    },
+    "Iran": {
+      "team": "Iran",
+      "form": {
+        "team": "Iran",
+        "matches": 0,
+        "window": 10,
+        "gf_total": 0,
+        "ga_total": 0,
+        "gf_avg": null,
+        "ga_avg": null,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "record": "0-0-0",
+        "last_match_date": "",
+        "last_matches": []
+      },
+      "wc_bookings": {
+        "yellow": 0,
+        "red": 0,
+        "second_yellow": 0,
+        "yellow_avg": null,
+        "matches_with_data": 0,
+        "matches": []
+      }
+    },
+    "Iraq": {
+      "team": "Iraq",
+      "form": {
+        "team": "Iraq",
+        "matches": 0,
+        "window": 10,
+        "gf_total": 0,
+        "ga_total": 0,
+        "gf_avg": null,
+        "ga_avg": null,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "record": "0-0-0",
+        "last_match_date": "",
+        "last_matches": []
+      },
+      "wc_bookings": {
+        "yellow": 0,
+        "red": 0,
+        "second_yellow": 0,
+        "yellow_avg": null,
+        "matches_with_data": 0,
+        "matches": []
+      }
+    },
+    "Ivory Coast": {
+      "team": "Ivory Coast",
+      "form": {
+        "team": "Ivory Coast",
+        "matches": 0,
+        "window": 10,
+        "gf_total": 0,
+        "ga_total": 0,
+        "gf_avg": null,
+        "ga_avg": null,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "record": "0-0-0",
+        "last_match_date": "",
+        "last_matches": []
+      },
+      "wc_bookings": {
+        "yellow": 0,
+        "red": 0,
+        "second_yellow": 0,
+        "yellow_avg": null,
+        "matches_with_data": 0,
+        "matches": []
+      }
+    },
+    "Japan": {
+      "team": "Japan",
+      "form": {
+        "team": "Japan",
+        "matches": 0,
+        "window": 10,
+        "gf_total": 0,
+        "ga_total": 0,
+        "gf_avg": null,
+        "ga_avg": null,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "record": "0-0-0",
+        "last_match_date": "",
+        "last_matches": []
+      },
+      "wc_bookings": {
+        "yellow": 0,
+        "red": 0,
+        "second_yellow": 0,
+        "yellow_avg": null,
+        "matches_with_data": 0,
+        "matches": []
+      }
+    },
+    "Jordan": {
+      "team": "Jordan",
+      "form": {
+        "team": "Jordan",
+        "matches": 0,
+        "window": 10,
+        "gf_total": 0,
+        "ga_total": 0,
+        "gf_avg": null,
+        "ga_avg": null,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "record": "0-0-0",
+        "last_match_date": "",
+        "last_matches": []
+      },
+      "wc_bookings": {
+        "yellow": 0,
+        "red": 0,
+        "second_yellow": 0,
+        "yellow_avg": null,
+        "matches_with_data": 0,
+        "matches": []
+      }
+    },
+    "Mexico": {
+      "team": "Mexico",
+      "form": {
+        "team": "Mexico",
+        "matches": 0,
+        "window": 10,
+        "gf_total": 0,
+        "ga_total": 0,
+        "gf_avg": null,
+        "ga_avg": null,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "record": "0-0-0",
+        "last_match_date": "",
+        "last_matches": []
+      },
+      "wc_bookings": {
+        "yellow": 0,
+        "red": 0,
+        "second_yellow": 0,
+        "yellow_avg": null,
+        "matches_with_data": 0,
+        "matches": []
+      }
+    },
+    "Morocco": {
+      "team": "Morocco",
+      "form": {
+        "team": "Morocco",
+        "matches": 0,
+        "window": 10,
+        "gf_total": 0,
+        "ga_total": 0,
+        "gf_avg": null,
+        "ga_avg": null,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "record": "0-0-0",
+        "last_match_date": "",
+        "last_matches": []
+      },
+      "wc_bookings": {
+        "yellow": 0,
+        "red": 0,
+        "second_yellow": 0,
+        "yellow_avg": null,
+        "matches_with_data": 0,
+        "matches": []
+      }
+    },
+    "Netherlands": {
+      "team": "Netherlands",
+      "form": {
+        "team": "Netherlands",
+        "matches": 0,
+        "window": 10,
+        "gf_total": 0,
+        "ga_total": 0,
+        "gf_avg": null,
+        "ga_avg": null,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "record": "0-0-0",
+        "last_match_date": "",
+        "last_matches": []
+      },
+      "wc_bookings": {
+        "yellow": 0,
+        "red": 0,
+        "second_yellow": 0,
+        "yellow_avg": null,
+        "matches_with_data": 0,
+        "matches": []
+      }
+    },
+    "New Zealand": {
+      "team": "New Zealand",
+      "form": {
+        "team": "New Zealand",
+        "matches": 0,
+        "window": 10,
+        "gf_total": 0,
+        "ga_total": 0,
+        "gf_avg": null,
+        "ga_avg": null,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "record": "0-0-0",
+        "last_match_date": "",
+        "last_matches": []
+      },
+      "wc_bookings": {
+        "yellow": 0,
+        "red": 0,
+        "second_yellow": 0,
+        "yellow_avg": null,
+        "matches_with_data": 0,
+        "matches": []
+      }
+    },
+    "Norway": {
+      "team": "Norway",
+      "form": {
+        "team": "Norway",
+        "matches": 0,
+        "window": 10,
+        "gf_total": 0,
+        "ga_total": 0,
+        "gf_avg": null,
+        "ga_avg": null,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "record": "0-0-0",
+        "last_match_date": "",
+        "last_matches": []
+      },
+      "wc_bookings": {
+        "yellow": 0,
+        "red": 0,
+        "second_yellow": 0,
+        "yellow_avg": null,
+        "matches_with_data": 0,
+        "matches": []
+      }
+    },
+    "Panama": {
+      "team": "Panama",
+      "form": {
+        "team": "Panama",
+        "matches": 0,
+        "window": 10,
+        "gf_total": 0,
+        "ga_total": 0,
+        "gf_avg": null,
+        "ga_avg": null,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "record": "0-0-0",
+        "last_match_date": "",
+        "last_matches": []
+      },
+      "wc_bookings": {
+        "yellow": 0,
+        "red": 0,
+        "second_yellow": 0,
+        "yellow_avg": null,
+        "matches_with_data": 0,
+        "matches": []
+      }
+    },
+    "Paraguay": {
+      "team": "Paraguay",
+      "form": {
+        "team": "Paraguay",
+        "matches": 0,
+        "window": 10,
+        "gf_total": 0,
+        "ga_total": 0,
+        "gf_avg": null,
+        "ga_avg": null,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "record": "0-0-0",
+        "last_match_date": "",
+        "last_matches": []
+      },
+      "wc_bookings": {
+        "yellow": 0,
+        "red": 0,
+        "second_yellow": 0,
+        "yellow_avg": null,
+        "matches_with_data": 0,
+        "matches": []
+      }
+    },
+    "Portugal": {
+      "team": "Portugal",
+      "form": {
+        "team": "Portugal",
+        "matches": 0,
+        "window": 10,
+        "gf_total": 0,
+        "ga_total": 0,
+        "gf_avg": null,
+        "ga_avg": null,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "record": "0-0-0",
+        "last_match_date": "",
+        "last_matches": []
+      },
+      "wc_bookings": {
+        "yellow": 0,
+        "red": 0,
+        "second_yellow": 0,
+        "yellow_avg": null,
+        "matches_with_data": 0,
+        "matches": []
+      }
+    },
+    "Qatar": {
+      "team": "Qatar",
+      "form": {
+        "team": "Qatar",
+        "matches": 0,
+        "window": 10,
+        "gf_total": 0,
+        "ga_total": 0,
+        "gf_avg": null,
+        "ga_avg": null,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "record": "0-0-0",
+        "last_match_date": "",
+        "last_matches": []
+      },
+      "wc_bookings": {
+        "yellow": 0,
+        "red": 0,
+        "second_yellow": 0,
+        "yellow_avg": null,
+        "matches_with_data": 0,
+        "matches": []
+      }
+    },
+    "Saudi Arabia": {
+      "team": "Saudi Arabia",
+      "form": {
+        "team": "Saudi Arabia",
+        "matches": 0,
+        "window": 10,
+        "gf_total": 0,
+        "ga_total": 0,
+        "gf_avg": null,
+        "ga_avg": null,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "record": "0-0-0",
+        "last_match_date": "",
+        "last_matches": []
+      },
+      "wc_bookings": {
+        "yellow": 0,
+        "red": 0,
+        "second_yellow": 0,
+        "yellow_avg": null,
+        "matches_with_data": 0,
+        "matches": []
+      }
+    },
+    "Scotland": {
+      "team": "Scotland",
+      "form": {
+        "team": "Scotland",
+        "matches": 0,
+        "window": 10,
+        "gf_total": 0,
+        "ga_total": 0,
+        "gf_avg": null,
+        "ga_avg": null,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "record": "0-0-0",
+        "last_match_date": "",
+        "last_matches": []
+      },
+      "wc_bookings": {
+        "yellow": 0,
+        "red": 0,
+        "second_yellow": 0,
+        "yellow_avg": null,
+        "matches_with_data": 0,
+        "matches": []
+      }
+    },
+    "Senegal": {
+      "team": "Senegal",
+      "form": {
+        "team": "Senegal",
+        "matches": 0,
+        "window": 10,
+        "gf_total": 0,
+        "ga_total": 0,
+        "gf_avg": null,
+        "ga_avg": null,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "record": "0-0-0",
+        "last_match_date": "",
+        "last_matches": []
+      },
+      "wc_bookings": {
+        "yellow": 0,
+        "red": 0,
+        "second_yellow": 0,
+        "yellow_avg": null,
+        "matches_with_data": 0,
+        "matches": []
+      }
+    },
+    "South Africa": {
+      "team": "South Africa",
+      "form": {
+        "team": "South Africa",
+        "matches": 0,
+        "window": 10,
+        "gf_total": 0,
+        "ga_total": 0,
+        "gf_avg": null,
+        "ga_avg": null,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "record": "0-0-0",
+        "last_match_date": "",
+        "last_matches": []
+      },
+      "wc_bookings": {
+        "yellow": 0,
+        "red": 0,
+        "second_yellow": 0,
+        "yellow_avg": null,
+        "matches_with_data": 0,
+        "matches": []
+      }
+    },
+    "South Korea": {
+      "team": "South Korea",
+      "form": {
+        "team": "South Korea",
+        "matches": 0,
+        "window": 10,
+        "gf_total": 0,
+        "ga_total": 0,
+        "gf_avg": null,
+        "ga_avg": null,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "record": "0-0-0",
+        "last_match_date": "",
+        "last_matches": []
+      },
+      "wc_bookings": {
+        "yellow": 0,
+        "red": 0,
+        "second_yellow": 0,
+        "yellow_avg": null,
+        "matches_with_data": 0,
+        "matches": []
+      }
+    },
+    "Spain": {
+      "team": "Spain",
+      "form": {
+        "team": "Spain",
+        "matches": 0,
+        "window": 10,
+        "gf_total": 0,
+        "ga_total": 0,
+        "gf_avg": null,
+        "ga_avg": null,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "record": "0-0-0",
+        "last_match_date": "",
+        "last_matches": []
+      },
+      "wc_bookings": {
+        "yellow": 0,
+        "red": 0,
+        "second_yellow": 0,
+        "yellow_avg": null,
+        "matches_with_data": 0,
+        "matches": []
+      }
+    },
+    "Sweden": {
+      "team": "Sweden",
+      "form": {
+        "team": "Sweden",
+        "matches": 0,
+        "window": 10,
+        "gf_total": 0,
+        "ga_total": 0,
+        "gf_avg": null,
+        "ga_avg": null,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "record": "0-0-0",
+        "last_match_date": "",
+        "last_matches": []
+      },
+      "wc_bookings": {
+        "yellow": 0,
+        "red": 0,
+        "second_yellow": 0,
+        "yellow_avg": null,
+        "matches_with_data": 0,
+        "matches": []
+      }
+    },
+    "Switzerland": {
+      "team": "Switzerland",
+      "form": {
+        "team": "Switzerland",
+        "matches": 0,
+        "window": 10,
+        "gf_total": 0,
+        "ga_total": 0,
+        "gf_avg": null,
+        "ga_avg": null,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "record": "0-0-0",
+        "last_match_date": "",
+        "last_matches": []
+      },
+      "wc_bookings": {
+        "yellow": 0,
+        "red": 0,
+        "second_yellow": 0,
+        "yellow_avg": null,
+        "matches_with_data": 0,
+        "matches": []
+      }
+    },
+    "Tunisia": {
+      "team": "Tunisia",
+      "form": {
+        "team": "Tunisia",
+        "matches": 0,
+        "window": 10,
+        "gf_total": 0,
+        "ga_total": 0,
+        "gf_avg": null,
+        "ga_avg": null,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "record": "0-0-0",
+        "last_match_date": "",
+        "last_matches": []
+      },
+      "wc_bookings": {
+        "yellow": 0,
+        "red": 0,
+        "second_yellow": 0,
+        "yellow_avg": null,
+        "matches_with_data": 0,
+        "matches": []
+      }
+    },
+    "Turkey": {
+      "team": "Turkey",
+      "form": {
+        "team": "Turkey",
+        "matches": 0,
+        "window": 10,
+        "gf_total": 0,
+        "ga_total": 0,
+        "gf_avg": null,
+        "ga_avg": null,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "record": "0-0-0",
+        "last_match_date": "",
+        "last_matches": []
+      },
+      "wc_bookings": {
+        "yellow": 0,
+        "red": 0,
+        "second_yellow": 0,
+        "yellow_avg": null,
+        "matches_with_data": 0,
+        "matches": []
+      }
+    },
+    "United States": {
+      "team": "United States",
+      "form": {
+        "team": "United States",
+        "matches": 0,
+        "window": 10,
+        "gf_total": 0,
+        "ga_total": 0,
+        "gf_avg": null,
+        "ga_avg": null,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "record": "0-0-0",
+        "last_match_date": "",
+        "last_matches": []
+      },
+      "wc_bookings": {
+        "yellow": 0,
+        "red": 0,
+        "second_yellow": 0,
+        "yellow_avg": null,
+        "matches_with_data": 0,
+        "matches": []
+      }
+    },
+    "Uruguay": {
+      "team": "Uruguay",
+      "form": {
+        "team": "Uruguay",
+        "matches": 0,
+        "window": 10,
+        "gf_total": 0,
+        "ga_total": 0,
+        "gf_avg": null,
+        "ga_avg": null,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "record": "0-0-0",
+        "last_match_date": "",
+        "last_matches": []
+      },
+      "wc_bookings": {
+        "yellow": 0,
+        "red": 0,
+        "second_yellow": 0,
+        "yellow_avg": null,
+        "matches_with_data": 0,
+        "matches": []
+      }
+    },
+    "Uzbekistan": {
+      "team": "Uzbekistan",
+      "form": {
+        "team": "Uzbekistan",
+        "matches": 0,
+        "window": 10,
+        "gf_total": 0,
+        "ga_total": 0,
+        "gf_avg": null,
+        "ga_avg": null,
+        "wins": 0,
+        "draws": 0,
+        "losses": 0,
+        "record": "0-0-0",
+        "last_match_date": "",
+        "last_matches": []
+      },
+      "wc_bookings": {
+        "yellow": 0,
+        "red": 0,
+        "second_yellow": 0,
+        "yellow_avg": null,
+        "matches_with_data": 0,
+        "matches": []
+      }
+    }
+  }
 }

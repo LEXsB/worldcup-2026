@@ -1,0 +1,48 @@
+{
+  "checkedAt": "2026-06-16T16:10:17+00:00",
+  "anomalyCount": 2,
+  "anomalies": [
+    {
+      "area": "team_stats",
+      "level": "warn",
+      "msg": "no team has recent-form data — check BAYESIAN_RESULTS_URL"
+    },
+    {
+      "area": "injuries",
+      "level": "info",
+      "msg": "no injury source configured (set API_FOOTBALL_KEY)"
+    }
+  ],
+  "summary": {
+    "matches": {
+      "count": 104,
+      "out_of_window": 0,
+      "missing_status": 0,
+      "finished": 16,
+      "scheduled": 88
+    },
+    "odds": {
+      "count": 56,
+      "source": "the-odds-api",
+      "sources_failed": [
+        "espn"
+      ],
+      "drift_warnings": 0
+    },
+    "team_stats": {
+      "team_count": 48,
+      "teams_without_form": 48,
+      "teams_without_card_data": 48
+    },
+    "injuries": {
+      "team_count": 48,
+      "teams_with_injuries": 0,
+      "source": null
+    }
+  },
+  "issue": {
+    "opened": true,
+    "number": 1,
+    "fp": "3641a1ddf859"
+  }
+}
