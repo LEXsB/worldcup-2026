@@ -1,21 +1,16 @@
 {
-  "checkedAt": "2026-06-16T20:49:13+00:00",
-  "anomalyCount": 4,
+  "checkedAt": "2026-06-16T21:08:48+00:00",
+  "anomalyCount": 3,
   "anomalies": [
     {
       "area": "odds",
       "level": "warn",
-      "msg": "2026-06-16 France vs Senegal: home_odds 2.1975 → 1.0961 (drift 50%)"
+      "msg": "2026-06-16 France vs Senegal: draw_odds 17.9186 → 139.7363 (drift 680%)"
     },
     {
       "area": "odds",
       "level": "warn",
-      "msg": "2026-06-16 France vs Senegal: draw_odds 2.2086 → 17.9186 (drift 711%)"
-    },
-    {
-      "area": "odds",
-      "level": "warn",
-      "msg": "2026-06-16 France vs Senegal: away_odds 6.0336 → 113.495 (drift 1781%)"
+      "msg": "2026-06-16 France vs Senegal: away_odds 113.495 → 368.5337 (drift 225%)"
     },
     {
       "area": "injuries",
@@ -37,7 +32,7 @@
       "sources_failed": [
         "espn"
       ],
-      "drift_warnings": 3
+      "drift_warnings": 2
     },
     "team_stats": {
       "team_count": 48,
@@ -52,7 +47,7 @@
   },
   "issue": {
     "opened": true,
-    "number": 3,
-    "fp": "1e0f31a1c9e8"
+    "number": 5,
+    "fp": "701972d4a8ef"
   }
 }
