@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-16T17:48:03+00:00",
+  "updatedAt": "2026-06-16T20:30:20+00:00",
   "window": 10,
   "teamCount": 48,
   "sourcesTried": [
@@ -78,7 +78,7 @@
           },
           {
             "date": "2026-01-06",
-            "opponent": "DR Congo",
+            "opponent": "Congo DR",
             "gf": 1,
             "ga": 0,
             "result": "W",
@@ -267,7 +267,7 @@
         "last_matches": [
           {
             "date": "2026-06-13",
-            "opponent": "Turkey",
+            "opponent": "Türkiye",
             "gf": 2,
             "ga": 0,
             "result": "W",
@@ -411,7 +411,7 @@
           },
           {
             "date": "2025-11-18",
-            "opponent": "Bosnia and Herzegovina",
+            "opponent": "Bosnia & Herzegovina",
             "gf": 1,
             "ga": 1,
             "result": "D",
@@ -447,7 +447,7 @@
           },
           {
             "date": "2025-09-09",
-            "opponent": "Bosnia and Herzegovina",
+            "opponent": "Bosnia & Herzegovina",
             "gf": 2,
             "ga": 1,
             "result": "W",
@@ -600,22 +600,113 @@
         "matches": []
       }
     },
-    "Bosnia-Herzegovina": {
-      "team": "Bosnia-Herzegovina",
+    "Bosnia & Herzegovina": {
+      "team": "Bosnia & Herzegovina",
       "form": {
-        "team": "Bosnia-Herzegovina",
-        "matches": 0,
+        "team": "Bosnia & Herzegovina",
+        "matches": 10,
         "window": 10,
-        "gf_total": 0,
-        "ga_total": 0,
-        "gf_avg": null,
-        "ga_avg": null,
-        "wins": 0,
-        "draws": 0,
-        "losses": 0,
-        "record": "0-0-0",
-        "last_match_date": "",
-        "last_matches": []
+        "gf_total": 15,
+        "ga_total": 11,
+        "gf_avg": 1.5,
+        "ga_avg": 1.1,
+        "wins": 2,
+        "draws": 7,
+        "losses": 1,
+        "record": "2-7-1",
+        "last_match_date": "2026-06-12",
+        "last_matches": [
+          {
+            "date": "2026-06-12",
+            "opponent": "Canada",
+            "gf": 1,
+            "ga": 1,
+            "result": "D",
+            "tournament": "FIFA World Cup",
+            "venue": "A"
+          },
+          {
+            "date": "2026-06-06",
+            "opponent": "Panama",
+            "gf": 1,
+            "ga": 1,
+            "result": "D",
+            "tournament": "Friendly",
+            "venue": "A"
+          },
+          {
+            "date": "2026-05-29",
+            "opponent": "North Macedonia",
+            "gf": 0,
+            "ga": 0,
+            "result": "D",
+            "tournament": "Friendly",
+            "venue": "H"
+          },
+          {
+            "date": "2026-03-31",
+            "opponent": "Italy",
+            "gf": 1,
+            "ga": 1,
+            "result": "D",
+            "tournament": "FIFA World Cup qualification",
+            "venue": "H"
+          },
+          {
+            "date": "2026-03-26",
+            "opponent": "Wales",
+            "gf": 1,
+            "ga": 1,
+            "result": "D",
+            "tournament": "FIFA World Cup qualification",
+            "venue": "A"
+          },
+          {
+            "date": "2025-11-18",
+            "opponent": "Austria",
+            "gf": 1,
+            "ga": 1,
+            "result": "D",
+            "tournament": "FIFA World Cup qualification",
+            "venue": "A"
+          },
+          {
+            "date": "2025-11-15",
+            "opponent": "Romania",
+            "gf": 3,
+            "ga": 1,
+            "result": "W",
+            "tournament": "FIFA World Cup qualification",
+            "venue": "H"
+          },
+          {
+            "date": "2025-10-12",
+            "opponent": "Malta",
+            "gf": 4,
+            "ga": 1,
+            "result": "W",
+            "tournament": "Friendly",
+            "venue": "A"
+          },
+          {
+            "date": "2025-10-09",
+            "opponent": "Cyprus",
+            "gf": 2,
+            "ga": 2,
+            "result": "D",
+            "tournament": "FIFA World Cup qualification",
+            "venue": "A"
+          },
+          {
+            "date": "2025-09-09",
+            "opponent": "Austria",
+            "gf": 1,
+            "ga": 2,
+            "result": "L",
+            "tournament": "FIFA World Cup qualification",
+            "venue": "H"
+          }
+        ]
       },
       "wc_bookings": {
         "yellow": 0,
@@ -761,7 +852,7 @@
         "last_matches": [
           {
             "date": "2026-06-12",
-            "opponent": "Bosnia and Herzegovina",
+            "opponent": "Bosnia & Herzegovina",
             "gf": 1,
             "ga": 1,
             "result": "D",
@@ -864,18 +955,109 @@
       "team": "Cape Verde Islands",
       "form": {
         "team": "Cape Verde Islands",
-        "matches": 0,
+        "matches": 10,
         "window": 10,
-        "gf_total": 0,
-        "ga_total": 0,
-        "gf_avg": null,
-        "ga_avg": null,
-        "wins": 0,
-        "draws": 0,
-        "losses": 0,
-        "record": "0-0-0",
-        "last_match_date": "",
-        "last_matches": []
+        "gf_total": 14,
+        "ga_total": 12,
+        "gf_avg": 1.4,
+        "ga_avg": 1.2,
+        "wins": 3,
+        "draws": 5,
+        "losses": 2,
+        "record": "3-5-2",
+        "last_match_date": "2026-06-15",
+        "last_matches": [
+          {
+            "date": "2026-06-15",
+            "opponent": "Spain",
+            "gf": 0,
+            "ga": 0,
+            "result": "D",
+            "tournament": "FIFA World Cup",
+            "venue": "A"
+          },
+          {
+            "date": "2026-06-06",
+            "opponent": "Bermuda",
+            "gf": 0,
+            "ga": 3,
+            "result": "L",
+            "tournament": "Friendly",
+            "venue": "A"
+          },
+          {
+            "date": "2026-05-31",
+            "opponent": "Serbia",
+            "gf": 3,
+            "ga": 0,
+            "result": "W",
+            "tournament": "Friendly",
+            "venue": "H"
+          },
+          {
+            "date": "2026-03-30",
+            "opponent": "Finland",
+            "gf": 1,
+            "ga": 1,
+            "result": "D",
+            "tournament": "FIFA Series",
+            "venue": "H"
+          },
+          {
+            "date": "2026-03-27",
+            "opponent": "Chile",
+            "gf": 2,
+            "ga": 4,
+            "result": "L",
+            "tournament": "FIFA Series",
+            "venue": "A"
+          },
+          {
+            "date": "2025-11-17",
+            "opponent": "Egypt",
+            "gf": 1,
+            "ga": 1,
+            "result": "D",
+            "tournament": "Al Ain International Cup",
+            "venue": "H"
+          },
+          {
+            "date": "2025-11-13",
+            "opponent": "Iran",
+            "gf": 0,
+            "ga": 0,
+            "result": "D",
+            "tournament": "Al Ain International Cup",
+            "venue": "A"
+          },
+          {
+            "date": "2025-10-13",
+            "opponent": "Eswatini",
+            "gf": 3,
+            "ga": 0,
+            "result": "W",
+            "tournament": "FIFA World Cup qualification",
+            "venue": "H"
+          },
+          {
+            "date": "2025-10-08",
+            "opponent": "Libya",
+            "gf": 3,
+            "ga": 3,
+            "result": "D",
+            "tournament": "FIFA World Cup qualification",
+            "venue": "A"
+          },
+          {
+            "date": "2025-09-09",
+            "opponent": "Cameroon",
+            "gf": 1,
+            "ga": 0,
+            "result": "W",
+            "tournament": "FIFA World Cup qualification",
+            "venue": "H"
+          }
+        ]
       },
       "wc_bookings": {
         "yellow": 0,
@@ -1007,18 +1189,109 @@
       "team": "Congo DR",
       "form": {
         "team": "Congo DR",
-        "matches": 0,
+        "matches": 10,
         "window": 10,
-        "gf_total": 0,
-        "ga_total": 0,
-        "gf_avg": null,
-        "ga_avg": null,
-        "wins": 0,
-        "draws": 0,
-        "losses": 0,
-        "record": "0-0-0",
-        "last_match_date": "",
-        "last_matches": []
+        "gf_total": 11,
+        "ga_total": 5,
+        "gf_avg": 1.1,
+        "ga_avg": 0.5,
+        "wins": 5,
+        "draws": 3,
+        "losses": 2,
+        "record": "5-3-2",
+        "last_match_date": "2026-06-09",
+        "last_matches": [
+          {
+            "date": "2026-06-09",
+            "opponent": "Chile",
+            "gf": 1,
+            "ga": 2,
+            "result": "L",
+            "tournament": "Friendly",
+            "venue": "H"
+          },
+          {
+            "date": "2026-06-03",
+            "opponent": "Denmark",
+            "gf": 0,
+            "ga": 0,
+            "result": "D",
+            "tournament": "Friendly",
+            "venue": "H"
+          },
+          {
+            "date": "2026-03-31",
+            "opponent": "Jamaica",
+            "gf": 1,
+            "ga": 0,
+            "result": "W",
+            "tournament": "FIFA World Cup qualification",
+            "venue": "H"
+          },
+          {
+            "date": "2026-03-25",
+            "opponent": "Bermuda",
+            "gf": 2,
+            "ga": 0,
+            "result": "W",
+            "tournament": "Friendly",
+            "venue": "A"
+          },
+          {
+            "date": "2026-01-06",
+            "opponent": "Algeria",
+            "gf": 0,
+            "ga": 1,
+            "result": "L",
+            "tournament": "African Cup of Nations",
+            "venue": "A"
+          },
+          {
+            "date": "2025-12-30",
+            "opponent": "Botswana",
+            "gf": 3,
+            "ga": 0,
+            "result": "W",
+            "tournament": "African Cup of Nations",
+            "venue": "A"
+          },
+          {
+            "date": "2025-12-27",
+            "opponent": "Senegal",
+            "gf": 1,
+            "ga": 1,
+            "result": "D",
+            "tournament": "African Cup of Nations",
+            "venue": "A"
+          },
+          {
+            "date": "2025-12-23",
+            "opponent": "Benin",
+            "gf": 1,
+            "ga": 0,
+            "result": "W",
+            "tournament": "African Cup of Nations",
+            "venue": "H"
+          },
+          {
+            "date": "2025-11-16",
+            "opponent": "Nigeria",
+            "gf": 1,
+            "ga": 1,
+            "result": "D",
+            "tournament": "FIFA World Cup qualification",
+            "venue": "A"
+          },
+          {
+            "date": "2025-11-13",
+            "opponent": "Cameroon",
+            "gf": 1,
+            "ga": 0,
+            "result": "W",
+            "tournament": "FIFA World Cup qualification",
+            "venue": "A"
+          }
+        ]
       },
       "wc_bookings": {
         "yellow": 0,
@@ -1110,7 +1383,7 @@
           },
           {
             "date": "2025-10-09",
-            "opponent": "Czech Republic",
+            "opponent": "Czechia",
             "gf": 0,
             "ga": 0,
             "result": "D",
@@ -1200,7 +1473,7 @@
           },
           {
             "date": "2026-03-27",
-            "opponent": "China",
+            "opponent": "China PR",
             "gf": 0,
             "ga": 2,
             "result": "L",
@@ -1267,18 +1540,226 @@
       "team": "Czechia",
       "form": {
         "team": "Czechia",
-        "matches": 0,
+        "matches": 10,
         "window": 10,
-        "gf_total": 0,
-        "ga_total": 0,
-        "gf_avg": null,
-        "ga_avg": null,
-        "wins": 0,
-        "draws": 0,
-        "losses": 0,
-        "record": "0-0-0",
-        "last_match_date": "",
-        "last_matches": []
+        "gf_total": 21,
+        "ga_total": 11,
+        "gf_avg": 2.1,
+        "ga_avg": 1.1,
+        "wins": 4,
+        "draws": 4,
+        "losses": 2,
+        "record": "4-4-2",
+        "last_match_date": "2026-06-11",
+        "last_matches": [
+          {
+            "date": "2026-06-11",
+            "opponent": "South Korea",
+            "gf": 1,
+            "ga": 2,
+            "result": "L",
+            "tournament": "FIFA World Cup",
+            "venue": "A"
+          },
+          {
+            "date": "2026-06-04",
+            "opponent": "Guatemala",
+            "gf": 5,
+            "ga": 1,
+            "result": "W",
+            "tournament": "Friendly",
+            "venue": "A"
+          },
+          {
+            "date": "2026-05-31",
+            "opponent": "Kosovo",
+            "gf": 2,
+            "ga": 1,
+            "result": "W",
+            "tournament": "Friendly",
+            "venue": "H"
+          },
+          {
+            "date": "2026-03-31",
+            "opponent": "Denmark",
+            "gf": 2,
+            "ga": 2,
+            "result": "D",
+            "tournament": "FIFA World Cup qualification",
+            "venue": "H"
+          },
+          {
+            "date": "2026-03-26",
+            "opponent": "Republic of Ireland",
+            "gf": 2,
+            "ga": 2,
+            "result": "D",
+            "tournament": "FIFA World Cup qualification",
+            "venue": "H"
+          },
+          {
+            "date": "2025-11-17",
+            "opponent": "Gibraltar",
+            "gf": 6,
+            "ga": 0,
+            "result": "W",
+            "tournament": "FIFA World Cup qualification",
+            "venue": "H"
+          },
+          {
+            "date": "2025-11-13",
+            "opponent": "San Marino",
+            "gf": 1,
+            "ga": 0,
+            "result": "W",
+            "tournament": "Friendly",
+            "venue": "H"
+          },
+          {
+            "date": "2025-10-12",
+            "opponent": "Faroe Islands",
+            "gf": 1,
+            "ga": 2,
+            "result": "L",
+            "tournament": "FIFA World Cup qualification",
+            "venue": "A"
+          },
+          {
+            "date": "2025-10-09",
+            "opponent": "Croatia",
+            "gf": 0,
+            "ga": 0,
+            "result": "D",
+            "tournament": "FIFA World Cup qualification",
+            "venue": "H"
+          },
+          {
+            "date": "2025-09-08",
+            "opponent": "Saudi Arabia",
+            "gf": 1,
+            "ga": 1,
+            "result": "D",
+            "tournament": "Friendly",
+            "venue": "H"
+          }
+        ]
+      },
+      "wc_bookings": {
+        "yellow": 0,
+        "red": 0,
+        "second_yellow": 0,
+        "yellow_avg": null,
+        "matches_with_data": 0,
+        "matches": []
+      }
+    },
+    "Côte d'Ivoire": {
+      "team": "Côte d'Ivoire",
+      "form": {
+        "team": "Côte d'Ivoire",
+        "matches": 10,
+        "window": 10,
+        "gf_total": 20,
+        "ga_total": 7,
+        "gf_avg": 2.0,
+        "ga_avg": 0.7,
+        "wins": 8,
+        "draws": 1,
+        "losses": 1,
+        "record": "8-1-1",
+        "last_match_date": "2026-06-14",
+        "last_matches": [
+          {
+            "date": "2026-06-14",
+            "opponent": "Ecuador",
+            "gf": 1,
+            "ga": 0,
+            "result": "W",
+            "tournament": "FIFA World Cup",
+            "venue": "H"
+          },
+          {
+            "date": "2026-06-04",
+            "opponent": "France",
+            "gf": 2,
+            "ga": 1,
+            "result": "W",
+            "tournament": "Friendly",
+            "venue": "A"
+          },
+          {
+            "date": "2026-03-31",
+            "opponent": "Scotland",
+            "gf": 1,
+            "ga": 0,
+            "result": "W",
+            "tournament": "Friendly",
+            "venue": "H"
+          },
+          {
+            "date": "2026-03-28",
+            "opponent": "South Korea",
+            "gf": 4,
+            "ga": 0,
+            "result": "W",
+            "tournament": "Friendly",
+            "venue": "H"
+          },
+          {
+            "date": "2026-01-10",
+            "opponent": "Egypt",
+            "gf": 2,
+            "ga": 3,
+            "result": "L",
+            "tournament": "African Cup of Nations",
+            "venue": "A"
+          },
+          {
+            "date": "2026-01-06",
+            "opponent": "Burkina Faso",
+            "gf": 3,
+            "ga": 0,
+            "result": "W",
+            "tournament": "African Cup of Nations",
+            "venue": "H"
+          },
+          {
+            "date": "2025-12-31",
+            "opponent": "Gabon",
+            "gf": 3,
+            "ga": 2,
+            "result": "W",
+            "tournament": "African Cup of Nations",
+            "venue": "A"
+          },
+          {
+            "date": "2025-12-28",
+            "opponent": "Cameroon",
+            "gf": 1,
+            "ga": 1,
+            "result": "D",
+            "tournament": "African Cup of Nations",
+            "venue": "H"
+          },
+          {
+            "date": "2025-12-24",
+            "opponent": "Mozambique",
+            "gf": 1,
+            "ga": 0,
+            "result": "W",
+            "tournament": "African Cup of Nations",
+            "venue": "H"
+          },
+          {
+            "date": "2025-11-18",
+            "opponent": "Oman",
+            "gf": 2,
+            "ga": 0,
+            "result": "W",
+            "tournament": "Friendly",
+            "venue": "A"
+          }
+        ]
       },
       "wc_bookings": {
         "yellow": 0,
@@ -1307,7 +1788,7 @@
         "last_matches": [
           {
             "date": "2026-06-14",
-            "opponent": "Ivory Coast",
+            "opponent": "Côte d'Ivoire",
             "gf": 0,
             "ga": 1,
             "result": "L",
@@ -1487,7 +1968,7 @@
           },
           {
             "date": "2026-01-10",
-            "opponent": "Ivory Coast",
+            "opponent": "Côte d'Ivoire",
             "gf": 3,
             "ga": 2,
             "result": "W",
@@ -1667,7 +2148,7 @@
           },
           {
             "date": "2026-06-04",
-            "opponent": "Ivory Coast",
+            "opponent": "Côte d'Ivoire",
             "gf": 1,
             "ga": 2,
             "result": "L",
@@ -2180,7 +2661,7 @@
           },
           {
             "date": "2025-11-13",
-            "opponent": "Cape Verde",
+            "opponent": "Cape Verde Islands",
             "gf": 0,
             "ga": 0,
             "result": "D",
@@ -2329,123 +2810,6 @@
             "ga": 1,
             "result": "D",
             "tournament": "FIFA World Cup qualification",
-            "venue": "A"
-          }
-        ]
-      },
-      "wc_bookings": {
-        "yellow": 0,
-        "red": 0,
-        "second_yellow": 0,
-        "yellow_avg": null,
-        "matches_with_data": 0,
-        "matches": []
-      }
-    },
-    "Ivory Coast": {
-      "team": "Ivory Coast",
-      "form": {
-        "team": "Ivory Coast",
-        "matches": 10,
-        "window": 10,
-        "gf_total": 20,
-        "ga_total": 7,
-        "gf_avg": 2.0,
-        "ga_avg": 0.7,
-        "wins": 8,
-        "draws": 1,
-        "losses": 1,
-        "record": "8-1-1",
-        "last_match_date": "2026-06-14",
-        "last_matches": [
-          {
-            "date": "2026-06-14",
-            "opponent": "Ecuador",
-            "gf": 1,
-            "ga": 0,
-            "result": "W",
-            "tournament": "FIFA World Cup",
-            "venue": "H"
-          },
-          {
-            "date": "2026-06-04",
-            "opponent": "France",
-            "gf": 2,
-            "ga": 1,
-            "result": "W",
-            "tournament": "Friendly",
-            "venue": "A"
-          },
-          {
-            "date": "2026-03-31",
-            "opponent": "Scotland",
-            "gf": 1,
-            "ga": 0,
-            "result": "W",
-            "tournament": "Friendly",
-            "venue": "H"
-          },
-          {
-            "date": "2026-03-28",
-            "opponent": "South Korea",
-            "gf": 4,
-            "ga": 0,
-            "result": "W",
-            "tournament": "Friendly",
-            "venue": "H"
-          },
-          {
-            "date": "2026-01-10",
-            "opponent": "Egypt",
-            "gf": 2,
-            "ga": 3,
-            "result": "L",
-            "tournament": "African Cup of Nations",
-            "venue": "A"
-          },
-          {
-            "date": "2026-01-06",
-            "opponent": "Burkina Faso",
-            "gf": 3,
-            "ga": 0,
-            "result": "W",
-            "tournament": "African Cup of Nations",
-            "venue": "H"
-          },
-          {
-            "date": "2025-12-31",
-            "opponent": "Gabon",
-            "gf": 3,
-            "ga": 2,
-            "result": "W",
-            "tournament": "African Cup of Nations",
-            "venue": "A"
-          },
-          {
-            "date": "2025-12-28",
-            "opponent": "Cameroon",
-            "gf": 1,
-            "ga": 1,
-            "result": "D",
-            "tournament": "African Cup of Nations",
-            "venue": "H"
-          },
-          {
-            "date": "2025-12-24",
-            "opponent": "Mozambique",
-            "gf": 1,
-            "ga": 0,
-            "result": "W",
-            "tournament": "African Cup of Nations",
-            "venue": "H"
-          },
-          {
-            "date": "2025-11-18",
-            "opponent": "Oman",
-            "gf": 2,
-            "ga": 0,
-            "result": "W",
-            "tournament": "Friendly",
             "venue": "A"
           }
         ]
@@ -3296,7 +3660,7 @@
         "last_matches": [
           {
             "date": "2026-06-06",
-            "opponent": "Bosnia and Herzegovina",
+            "opponent": "Bosnia & Herzegovina",
             "gf": 1,
             "ga": 1,
             "result": "D",
@@ -3908,7 +4272,7 @@
           },
           {
             "date": "2026-03-31",
-            "opponent": "Ivory Coast",
+            "opponent": "Côte d'Ivoire",
             "gf": 0,
             "ga": 1,
             "result": "L",
@@ -4079,7 +4443,7 @@
           },
           {
             "date": "2025-12-27",
-            "opponent": "DR Congo",
+            "opponent": "Congo DR",
             "gf": 1,
             "ga": 1,
             "result": "D",
@@ -4232,7 +4596,7 @@
         "last_matches": [
           {
             "date": "2026-06-11",
-            "opponent": "Czech Republic",
+            "opponent": "Czechia",
             "gf": 2,
             "ga": 1,
             "result": "W",
@@ -4268,7 +4632,7 @@
           },
           {
             "date": "2026-03-28",
-            "opponent": "Ivory Coast",
+            "opponent": "Côte d'Ivoire",
             "gf": 0,
             "ga": 4,
             "result": "L",
@@ -4349,7 +4713,7 @@
         "last_matches": [
           {
             "date": "2026-06-15",
-            "opponent": "Cape Verde",
+            "opponent": "Cape Verde Islands",
             "gf": 0,
             "ga": 0,
             "result": "D",
@@ -4394,7 +4758,7 @@
           },
           {
             "date": "2025-11-18",
-            "opponent": "Turkey",
+            "opponent": "Türkiye",
             "gf": 2,
             "ga": 2,
             "result": "D",
@@ -4430,7 +4794,7 @@
           },
           {
             "date": "2025-09-07",
-            "opponent": "Turkey",
+            "opponent": "Türkiye",
             "gf": 6,
             "ga": 0,
             "result": "W",
@@ -4799,10 +5163,10 @@
         "matches": []
       }
     },
-    "Turkey": {
-      "team": "Turkey",
+    "Türkiye": {
+      "team": "Türkiye",
       "form": {
-        "team": "Turkey",
+        "team": "Türkiye",
         "matches": 10,
         "window": 10,
         "gf_total": 22,
@@ -5204,7 +5568,7 @@
           },
           {
             "date": "2026-01-26",
-            "opponent": "China",
+            "opponent": "China PR",
             "gf": 2,
             "ga": 2,
             "result": "D",

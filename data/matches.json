@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-16T17:46:10+00:00",
+  "updatedAt": "2026-06-16T20:28:23+00:00",
   "source": "football-data.org / competitions/WC/matches",
   "competition": "FIFA World Cup",
   "count": 104,
@@ -439,7 +439,7 @@
     {
       "id": 537391,
       "utcDate": "2026-06-16T19:00:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "stage": "GROUP_STAGE",
       "group": "GROUP_I",
       "matchday": 1,
@@ -456,9 +456,9 @@
         "crest": "https://crests.football-data.org/senegal.svg"
       },
       "score": {
-        "home": null,
-        "away": null,
-        "winner": null,
+        "home": 0,
+        "away": 0,
+        "winner": "DRAW",
         "duration": "REGULAR"
       },
       "venue": null

@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-16T17:48:56+00:00",
+  "updatedAt": "2026-06-16T20:31:15+00:00",
   "source": null,
   "sourcesTried": [
     {
@@ -15,7 +15,7 @@
     "Australia": [],
     "Austria": [],
     "Belgium": [],
-    "Bosnia-Herzegovina": [],
+    "Bosnia & Herzegovina": [],
     "Brazil": [],
     "Canada": [],
     "Cape Verde Islands": [],
@@ -24,6 +24,7 @@
     "Croatia": [],
     "Curaçao": [],
     "Czechia": [],
+    "Côte d'Ivoire": [],
     "Ecuador": [],
     "Egypt": [],
     "England": [],
@@ -33,7 +34,6 @@
     "Haiti": [],
     "Iran": [],
     "Iraq": [],
-    "Ivory Coast": [],
     "Japan": [],
     "Jordan": [],
     "Mexico": [],
@@ -54,7 +54,7 @@
     "Sweden": [],
     "Switzerland": [],
     "Tunisia": [],
-    "Turkey": [],
+    "Türkiye": [],
     "United States": [],
     "Uruguay": [],
     "Uzbekistan": []
