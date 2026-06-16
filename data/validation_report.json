@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-06-16T21:26:51+00:00",
+  "checkedAt": "2026-06-16T21:34:54+00:00",
   "anomalyCount": 0,
   "anomalies": [],
   "summary": {
@@ -25,7 +25,7 @@
     },
     "injuries": {
       "team_count": 48,
-      "teams_with_injuries": 3,
+      "teams_with_injuries": 18,
       "source": "wikipedia-squads"
     }
   },

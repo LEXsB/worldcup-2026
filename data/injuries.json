@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-16T21:26:51+00:00",
+  "updatedAt": "2026-06-16T21:34:54+00:00",
   "source": "wikipedia-squads",
   "sourcesTried": [
     {
@@ -10,7 +10,7 @@
     {
       "source": "wikipedia-squads",
       "ok": true,
-      "items_added": 3
+      "items_added": 21
     },
     {
       "source": "openfootball",
@@ -28,16 +28,34 @@
     "Algeria": [],
     "Argentina": [
       {
-        "note": "\"Argentina confirm final 26-man squad for the 2026 World Cup: Senesi joins Messi’s team after Balerdi injury\"",
-        "source": "wikipedia-squads"
+        "note": "Leonardo Balerdi withdrew due to a calf injury on June 6 and was replaced by Marcos Senesi on June 11",
+        "source": "wikipedia-squads",
+        "player": "Leonardo Balerdi"
       }
     ],
     "Australia": [],
-    "Austria": [],
+    "Austria": [
+      {
+        "note": "Christoph Baumgartner withdrew injured on June 2 and was replaced by Dejan Ljubičić on June 10",
+        "source": "wikipedia-squads",
+        "player": "Christoph Baumgartner"
+      }
+    ],
     "Belgium": [],
     "Bosnia & Herzegovina": [],
-    "Brazil": [],
-    "Canada": [],
+    "Brazil": [
+      {
+        "note": "Wesley withdrew injured and was replaced by Éderson Silva on June 7",
+        "source": "wikipedia-squads"
+      }
+    ],
+    "Canada": [
+      {
+        "note": "Marcelo Flores withdrew injured on May 31 and was replaced by Jayden Nelson on June 9",
+        "source": "wikipedia-squads",
+        "player": "Marcelo Flores"
+      }
+    ],
     "Cape Verde Islands": [],
     "Colombia": [],
     "Congo DR": [],
@@ -47,36 +65,113 @@
     "Côte d'Ivoire": [],
     "Ecuador": [],
     "Egypt": [],
-    "England": [],
-    "France": [],
-    "Germany": [],
-    "Ghana": [],
-    "Haiti": [],
-    "Iran": [],
-    "Iraq": [],
-    "Japan": [],
-    "Jordan": [],
-    "Mexico": [],
-    "Morocco": [],
-    "Netherlands": [],
-    "New Zealand": [],
-    "Norway": [],
-    "Panama": [],
-    "Paraguay": [],
-    "Portugal": [
+    "England": [
       {
-        "note": "\"Martinez confirmed that fourth-choice goalkeeper Ricardo Velho of Genclerbirligi Ankara will travel with the squad but can only be added to the official 26-man list in the event of an injury to one of the three registered goalkeepers.\"",
+        "note": "Tino Livramento withdrew injured and was replaced by Trevoh Chalobah on June 16",
+        "source": "wikipedia-squads",
+        "player": "Tino Livramento"
+      }
+    ],
+    "France": [],
+    "Germany": [
+      {
+        "note": "Lennart Karl withdrew injured and was replaced by Assan Ouédraogo on June 5",
+        "source": "wikipedia-squads",
+        "player": "Lennart Karl"
+      }
+    ],
+    "Ghana": [
+      {
+        "note": "Alexander Djiku withdrew injured and was replaced by Derrick Luckassen on June 1",
+        "source": "wikipedia-squads",
+        "player": "Alexander Djiku"
+      }
+    ],
+    "Haiti": [
+      {
+        "note": "Leverton Pierre withdrew injured and was replaced by Garven Metusala on June 11",
+        "source": "wikipedia-squads",
+        "player": "Leverton Pierre"
+      }
+    ],
+    "Iran": [],
+    "Iraq": [
+      {
+        "note": "Ahmed Yahya withdrew injured with a hamstring injury and was replaced by Ahmed Maknzi on June 6",
+        "source": "wikipedia-squads",
+        "player": "Ahmed Yahya"
+      }
+    ],
+    "Japan": [
+      {
+        "note": "Wataru Endo withdrew injured and was replaced by Shūto Machino on June 11",
+        "source": "wikipedia-squads",
+        "player": "Wataru Endo"
+      }
+    ],
+    "Jordan": [
+      {
+        "note": "Ibrahim Sabra withdrew injured on June 5 and was replaced by Mohammad Taha on June 8",
+        "source": "wikipedia-squads",
+        "player": "Ibrahim Sabra"
+      }
+    ],
+    "Mexico": [],
+    "Morocco": [
+      {
+        "note": "Nayef Aguerd withdrew injured and were replaced by Amine Sbaï and Marwane Saâdane on June 10, respectively",
+        "source": "wikipedia-squads",
+        "player": "Nayef Aguerd"
+      },
+      {
+        "note": "Abde Ezzalzouli and Nayef Aguerd withdrew injured and were replaced by Amine Sbaï and Marwane Saâdane on June 10, respectively",
         "source": "wikipedia-squads"
       }
     ],
+    "Netherlands": [
+      {
+        "note": "Jurriën Timber withdrew injured and was replaced by Lutsharel Geertruida on June 8",
+        "source": "wikipedia-squads",
+        "player": "Jurriën Timber"
+      }
+    ],
+    "New Zealand": [
+      {
+        "note": "Matthew Garbett withdrew injured with a hamstring injury and was replaced by Logan Rogerson on June 15",
+        "source": "wikipedia-squads",
+        "player": "Matthew Garbett"
+      }
+    ],
+    "Norway": [],
+    "Panama": [],
+    "Paraguay": [],
+    "Portugal": [],
     "Qatar": [],
     "Saudi Arabia": [],
-    "Scotland": [],
+    "Scotland": [
+      {
+        "note": "Billy Gilmour withdrew injured on May 30, and was replaced by Tyler Fletcher on May 31",
+        "source": "wikipedia-squads",
+        "player": "Billy Gilmour"
+      }
+    ],
     "Senegal": [],
     "South Africa": [],
-    "South Korea": [],
+    "South Korea": [
+      {
+        "note": "Cho Yu-min withdrew injured and was replaced by Cho Wi-je on May 31",
+        "source": "wikipedia-squads",
+        "player": "Cho Yu-min"
+      }
+    ],
     "Spain": [],
-    "Sweden": [],
+    "Sweden": [
+      {
+        "note": "Emil Holm withdrew injured and was replaced by Herman Johansson on May 30",
+        "source": "wikipedia-squads",
+        "player": "Emil Holm"
+      }
+    ],
     "Switzerland": [],
     "Tunisia": [],
     "Türkiye": [],
@@ -84,7 +179,17 @@
     "Uruguay": [],
     "Uzbekistan": [
       {
-        "note": "\"Ibrohimxalil Yoʻldoshev jarohat sababli JChni oʻtkazib yuboradi\" [Ibrokhimkhalil Yuldoshev to miss World Cup due to injury] (in Uzbek)",
+        "note": "Ibrokhimkhalil Yuldoshev withdrew injured, then to 30 players on May 24",
+        "source": "wikipedia-squads",
+        "player": "Ibrokhimkhalil Yuldoshev"
+      },
+      {
+        "note": "Jaloliddin Masharipov withdrew due to a back injury and was replaced by Ruslanbek Jiyanov on June 15",
+        "source": "wikipedia-squads",
+        "player": "Jaloliddin Masharipov"
+      },
+      {
+        "note": "The squad was reduced to 39 players on May 22 as Ibrokhimkhalil Yuldoshev withdrew injured, then to 30 players on May 24",
         "source": "wikipedia-squads"
       }
     ]
