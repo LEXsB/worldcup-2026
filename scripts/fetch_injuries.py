@@ -110,49 +110,80 @@ def _api_football_get(path: str, key: str, params: dict | None = None) -> dict:
 
 
 def fetch_api_football(key: str, teams: list[str]) -> dict[str, list[dict]]:
-    """Find each team's id then list current injuries (last 60 days)."""
+    """Fetch all WC injuries with only 2 API calls (saves free-tier quota).
+
+    Strategy:
+        1. /teams?league=1&season=2026 → returns the 48 WC teams with their ids.
+        2. /injuries?league=1&season=2026 → returns all injuries reported for
+           those WC fixtures.
+
+    The Wikipedia/results.csv data we already have uses football-data.org names
+    (e.g. "Czechia", "Congo DR"). API-Football uses slightly different names
+    ("Czech Republic", "DR Congo"), so we apply canon() in both directions.
+    """
     out: dict[str, list[dict]] = {t: [] for t in teams}
+    wanted_canon = {canon(t) for t in teams}
 
-    # Search team ids
-    team_ids: dict[str, int] = {}
-    for team in teams:
-        try:
-            data = _api_football_get("/teams", key, {"name": team, "type": "national"})
-        except requests.HTTPError as e:
-            print(f"  WARN team-lookup {team}: {e}", file=sys.stderr)
-            time.sleep(RATE_DELAY)
-            continue
-        for r in data.get("response", []) or []:
-            t = (r.get("team") or {})
-            if (t.get("national") is True) and t.get("id"):
-                team_ids[team] = int(t["id"])
-                break
-        time.sleep(RATE_DELAY)
+    # 1) Map team-id -> canonical name
+    LEAGUE_WC = 1
+    SEASON = 2026
+    try:
+        data = _api_football_get("/teams", key,
+                                 {"league": LEAGUE_WC, "season": SEASON})
+    except requests.HTTPError as e:
+        print(f"  WARN teams lookup: {e}", file=sys.stderr)
+        return out
 
-    # Pull injuries per team for current FIFA window
-    season = datetime.now(timezone.utc).year
-    for team, tid in team_ids.items():
-        try:
-            data = _api_football_get("/injuries", key,
-                                     {"team": tid, "season": season})
-        except requests.HTTPError as e:
-            print(f"  WARN injuries {team}: {e}", file=sys.stderr)
-            time.sleep(RATE_DELAY)
+    id_to_team: dict[int, str] = {}
+    for r in data.get("response", []) or []:
+        t = (r.get("team") or {})
+        tid = t.get("id")
+        api_name = t.get("name") or ""
+        if not tid or not api_name:
             continue
-        items: list[dict] = []
-        for r in data.get("response", []) or []:
-            player = (r.get("player") or {})
-            league = (r.get("league") or {})
-            fixture = (r.get("fixture") or {})
-            items.append({
-                "player": player.get("name"),
-                "type": player.get("type"),
-                "reason": player.get("reason"),
-                "league": league.get("name"),
-                "fixtureDate": (fixture.get("date") or "")[:10],
-            })
-        out[team] = items
-        time.sleep(RATE_DELAY)
+        # Try the API name; if not in our list, try canonicalizing.
+        c = canon(api_name)
+        if c in wanted_canon:
+            id_to_team[int(tid)] = c
+        else:
+            # Some API-Football names need extra normalization (e.g. "USA").
+            for variant_can, variants in _ALIASES.items():
+                if api_name == variants:  # safety
+                    if variant_can in wanted_canon:
+                        id_to_team[int(tid)] = variant_can
+                        break
+
+    if not id_to_team:
+        print("  WARN: no WC teams matched between football-data and API-Football",
+              file=sys.stderr)
+        return out
+
+    time.sleep(RATE_DELAY)
+
+    # 2) All injuries for the WC season
+    try:
+        data = _api_football_get("/injuries", key,
+                                 {"league": LEAGUE_WC, "season": SEASON})
+    except requests.HTTPError as e:
+        print(f"  WARN injuries: {e}", file=sys.stderr)
+        return out
+
+    for r in data.get("response", []) or []:
+        team_obj = (r.get("team") or {})
+        tid = team_obj.get("id")
+        if tid is None:
+            continue
+        team_name = id_to_team.get(int(tid))
+        if not team_name:
+            continue
+        player = (r.get("player") or {})
+        fixture = (r.get("fixture") or {})
+        out.setdefault(team_name, []).append({
+            "player": player.get("name"),
+            "type": player.get("type"),
+            "reason": player.get("reason"),
+            "fixtureDate": (fixture.get("date") or "")[:10],
+        })
 
     return out
 
@@ -252,15 +283,22 @@ def main() -> int:
         sources_tried.append({"source": "api-football", "ok": False,
                               "error": "API_FOOTBALL_KEY not set"})
 
-    if not used_source and wiki_fallback and teams:
+    # Wikipedia se ejecuta como FALLBACK COMPLEMENTARIO: llena los equipos que
+    # API-Football no cubrió, sin sobreescribir los que sí cubrió.
+    if wiki_fallback and teams:
         try:
-            res = fetch_wikipedia_fallback(teams)
-            non_empty = sum(1 for v in res.values() if v)
+            wiki_res = fetch_wikipedia_fallback(teams)
+            non_empty = sum(1 for v in wiki_res.values() if v)
             sources_tried.append({"source": "wikipedia", "ok": True,
                                   "teams_with_data": non_empty})
             if non_empty:
-                by_team = res
-                used_source = "wikipedia"
+                # Solo añade equipos vacíos
+                for team, items in wiki_res.items():
+                    if not by_team.get(team) and items:
+                        by_team[team] = items
+                used_source = used_source or "wikipedia"
+                if used_source != "wikipedia":
+                    used_source = used_source + "+wikipedia"
         except Exception as e:  # noqa: BLE001
             sources_tried.append({"source": "wikipedia", "ok": False,
                                   "error": str(e)[:200]})
