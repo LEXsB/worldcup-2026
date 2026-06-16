@@ -1,0 +1,637 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FIFA World Cup 2026 — Calendario y Resultados</title>
+  <style>
+    :root {
+      --bg: #0b1020;
+      --panel: #131a33;
+      --panel-2: #1b2447;
+      --text: #e9ecf5;
+      --muted: #8a93b4;
+      --accent: #00b894;
+      --accent-2: #ffcc00;
+      --border: #2a3563;
+      --row-hover: #1f2a55;
+      --header-grad: linear-gradient(135deg, #0b1020, #1b2447);
+    }
+    html[data-theme="light"] {
+      --bg: #f5f7fb;
+      --panel: #ffffff;
+      --panel-2: #eef1f8;
+      --text: #14172a;
+      --muted: #5d6584;
+      --accent: #00945e;
+      --accent-2: #b58900;
+      --border: #d8dde8;
+      --row-hover: #f0f3fa;
+      --header-grad: linear-gradient(135deg, #ffffff, #eef1f8);
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); font: 14px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; transition: background .15s ease, color .15s ease; }
+    header { padding: 18px 20px; background: var(--header-grad); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 5; }
+    header .top { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+    header h1 { margin: 0 0 6px; font-size: 18px; letter-spacing: .3px; }
+    header .meta { font-size: 12px; color: var(--muted); }
+    header .meta b { color: var(--text); }
+    .theme-toggle { background: var(--panel-2); color: var(--text); border: 1px solid var(--border); border-radius: 999px; padding: 6px 12px; font-size: 13px; cursor: pointer; }
+    .theme-toggle:hover { filter: brightness(1.08); }
+    .tabs { display: flex; gap: 6px; margin-top: 10px; }
+    .tab-btn { background: transparent; color: var(--muted); border: 1px solid var(--border); border-bottom: none; border-radius: 8px 8px 0 0; padding: 8px 14px; font-size: 13px; font-weight: 600; cursor: pointer; }
+    .tab-btn.active { background: var(--panel); color: var(--text); }
+    .tab-panel { display: none; }
+    .tab-panel.active { display: block; }
+    main { padding: 14px 20px 40px; max-width: 1200px; margin: 0 auto; }
+    .filters { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 10px; margin: 14px 0 18px; }
+    .filters label { display: flex; flex-direction: column; gap: 4px; font-size: 12px; color: var(--muted); }
+    .filters input, .filters select {
+      background: var(--panel); color: var(--text);
+      border: 1px solid var(--border); border-radius: 6px;
+      padding: 8px 10px; font-size: 13px;
+    }
+    .filters input::placeholder { color: var(--muted); }
+    .toolbar { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+    button {
+      background: var(--accent); color: #00261a; border: none;
+      padding: 8px 14px; border-radius: 6px; font-weight: 600;
+      cursor: pointer; font-size: 13px;
+    }
+    button.secondary { background: var(--panel-2); color: var(--text); border: 1px solid var(--border); }
+    button:hover { filter: brightness(1.1); }
+    table { width: 100%; border-collapse: collapse; background: var(--panel); border-radius: 8px; overflow: hidden; }
+    th, td { padding: 9px 10px; text-align: left; border-bottom: 1px solid var(--border); vertical-align: middle; }
+    th { background: var(--panel-2); color: var(--muted); font-weight: 600; font-size: 12px; text-transform: uppercase; letter-spacing: .4px; position: sticky; top: 0; }
+    tbody tr:hover { background: var(--row-hover); }
+    .team { display: inline-flex; align-items: center; gap: 6px; }
+    .team img { width: 18px; height: 18px; object-fit: contain; }
+    .score { font-weight: 700; font-variant-numeric: tabular-nums; text-align: center; min-width: 60px; }
+    .score.tbd { color: var(--muted); font-weight: 400; }
+    .badge { display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: 11px; font-weight: 600; }
+    .b-FINISHED { background: #243b27; color: #7ee08a; }
+    .b-LIVE, .b-IN_PLAY, .b-PAUSED { background: #4a1e1e; color: #ff8a8a; }
+    .b-TIMED, .b-SCHEDULED { background: #1f2a55; color: #9fb0ff; }
+    .b-POSTPONED, .b-SUSPENDED, .b-CANCELLED { background: #4a3a1e; color: #ffd58a; }
+    .stage { color: var(--accent-2); font-size: 12px; }
+    .group { color: var(--muted); font-size: 12px; }
+    .empty { padding: 30px; text-align: center; color: var(--muted); }
+    .error { padding: 14px; background: #4a1e1e; color: #ffb8b8; border-radius: 8px; margin-bottom: 14px; }
+    html[data-theme="light"] .error { background: #ffe2e2; color: #7a1a1a; }
+    .standings { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 14px; }
+    .standings-group { background: var(--panel); border-radius: 8px; overflow: hidden; }
+    .standings-group h3 { margin: 0; padding: 10px 12px; background: var(--panel-2); font-size: 14px; color: var(--accent-2); border-bottom: 1px solid var(--border); }
+    .standings-group table { border-radius: 0; }
+    .standings-group th, .standings-group td { padding: 6px 8px; font-size: 12px; text-align: center; }
+    .standings-group th:nth-child(2), .standings-group td:nth-child(2) { text-align: left; }
+    .standings-group td.team-name { white-space: nowrap; }
+    .standings-group tr.qualifies td { background: rgba(0, 184, 148, 0.08); }
+    .standings-group .pts { font-weight: 700; color: var(--accent); }
+    .config { background: var(--panel-2); border: 1px dashed var(--border); padding: 12px; border-radius: 8px; margin-bottom: 14px; font-size: 13px; }
+    .config code { background: #000; padding: 2px 6px; border-radius: 4px; }
+    @media (max-width: 700px) {
+      .hide-sm { display: none; }
+      th, td { padding: 7px 6px; font-size: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="top">
+      <div>
+        <h1>🏆 FIFA World Cup 2026 — Calendario &amp; Resultados</h1>
+        <div class="meta">
+          Última actualización: <b id="updatedAt">—</b> · Partidos: <b id="count">—</b> · Fuente: <b id="source">—</b>
+        </div>
+      </div>
+      <button id="themeToggle" class="theme-toggle" title="Cambiar tema">🌙 Oscuro</button>
+    </div>
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="calendar">📅 Calendario</button>
+      <button class="tab-btn" data-tab="standings">📊 Posiciones</button>
+      <button class="tab-btn" data-tab="odds">💰 Cuotas</button>
+      <button class="tab-btn" data-tab="stats">🔢 Stats equipos</button>
+      <button class="tab-btn" data-tab="injuries">🩺 Lesiones</button>
+    </div>
+  </header>
+
+  <main>
+    <div id="configBanner" class="config" hidden>
+      <b>Configura la URL base.</b> Edita la constante <code>BASE_URL</code> en <code>viewer/index.html</code>
+      apuntando a la carpeta <code>data/</code> de tu repo, por ejemplo:<br>
+      <code>https://raw.githubusercontent.com/&lt;usuario&gt;/&lt;repo&gt;/main/data</code>
+    </div>
+
+    <div id="errorBox" class="error" hidden></div>
+
+    <section id="tab-calendar" class="tab-panel active">
+    <div class="filters">
+      <label>Buscar equipo
+        <input id="fTeam" type="search" placeholder="Ej. Argentina, Spain…" />
+      </label>
+      <label>Etapa
+        <select id="fStage"><option value="">Todas</option></select>
+      </label>
+      <label>Grupo
+        <select id="fGroup"><option value="">Todos</option></select>
+      </label>
+      <label>Estado
+        <select id="fStatus">
+          <option value="">Todos</option>
+          <option value="SCHEDULED">Programado</option>
+          <option value="TIMED">Programado (hora)</option>
+          <option value="IN_PLAY">En juego</option>
+          <option value="PAUSED">Pausado</option>
+          <option value="FINISHED">Finalizado</option>
+          <option value="POSTPONED">Pospuesto</option>
+          <option value="SUSPENDED">Suspendido</option>
+          <option value="CANCELLED">Cancelado</option>
+        </select>
+      </label>
+      <label>Desde
+        <input id="fFrom" type="date" />
+      </label>
+      <label>Hasta
+        <input id="fTo" type="date" />
+      </label>
+      <label>&nbsp;
+        <div class="toolbar">
+          <button id="btnReload">↻ Recargar</button>
+          <button id="btnClear" class="secondary">Limpiar filtros</button>
+        </div>
+      </label>
+    </div>
+
+    <div id="tableWrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Fecha (local)</th>
+            <th class="hide-sm">Etapa</th>
+            <th style="text-align:right">Local</th>
+            <th>Resultado</th>
+            <th>Visitante</th>
+            <th class="hide-sm">Estado</th>
+            <th class="hide-sm">Sede</th>
+          </tr>
+        </thead>
+        <tbody id="rows"></tbody>
+      </table>
+      <div id="empty" class="empty" hidden>No hay partidos que coincidan con los filtros.</div>
+    </div>
+    </section>
+
+    <section id="tab-standings" class="tab-panel">
+      <div id="standings" class="standings"></div>
+      <div id="standingsEmpty" class="empty" hidden>Aún no hay datos suficientes para calcular posiciones.</div>
+    </section>
+
+    <section id="tab-odds" class="tab-panel">
+      <div class="meta" style="margin-bottom:10px">
+        Fuente: <b id="oddsSource">—</b> · Actualizado: <b id="oddsUpdatedAt">—</b> · Filas: <b id="oddsCount">—</b>
+      </div>
+      <table>
+        <thead><tr>
+          <th>Fecha</th><th>Local</th><th style="text-align:center">Cuota 1</th>
+          <th style="text-align:center">X</th><th style="text-align:center">Cuota 2</th>
+          <th>Visitante</th>
+          <th class="hide-sm">Prob. (sin vig)</th><th class="hide-sm">Casa</th>
+        </tr></thead>
+        <tbody id="oddsRows"></tbody>
+      </table>
+      <div id="oddsEmpty" class="empty" hidden>No hay cuotas disponibles.</div>
+    </section>
+
+    <section id="tab-stats" class="tab-panel">
+      <div class="meta" style="margin-bottom:10px">
+        Ventana: <b id="statsWindow">—</b> partidos previos · Actualizado: <b id="statsUpdatedAt">—</b>
+      </div>
+      <table>
+        <thead><tr>
+          <th>Equipo</th><th>PJ</th><th>W-D-L</th>
+          <th>GF/p</th><th>GC/p</th><th>Último</th>
+          <th class="hide-sm">🟨 (WC)</th><th class="hide-sm">🟥 (WC)</th>
+          <th class="hide-sm">🟨/p (WC)</th>
+        </tr></thead>
+        <tbody id="statsRows"></tbody>
+      </table>
+      <div id="statsEmpty" class="empty" hidden>No hay stats de equipos todavía. Configura BAYESIAN_RESULTS_URL.</div>
+    </section>
+
+    <section id="tab-injuries" class="tab-panel">
+      <div class="meta" style="margin-bottom:10px">
+        Fuente: <b id="injSource">—</b> · Actualizado: <b id="injUpdatedAt">—</b>
+      </div>
+      <div id="injuriesGrid" class="standings"></div>
+      <div id="injEmpty" class="empty" hidden>No hay datos de lesiones. Configura el secret API_FOOTBALL_KEY.</div>
+    </section>
+  </main>
+
+  <script>
+    // ============================================================
+    // CONFIG: edita BASE_URL una sola vez tras crear el repo en GitHub.
+    // Formato:
+    //   https://raw.githubusercontent.com/<usuario>/<repo>/main/data
+    // Si la dejas en "", el visor intentará leer ../data/ local.
+    // ============================================================
+    const BASE_URL = "";
+    // Compatibilidad: si alguien ya había configurado DATA_URL apuntando
+    // directo a matches.json, derivamos BASE_URL desde ahí.
+    const DATA_URL = "";
+
+    const $ = (id) => document.getElementById(id);
+    let allMatches = [];
+    let oddsByKey = {};      // "date|home|away" -> odds row
+    let teamStats = {};      // team -> { form, wc_bookings }
+    let injuriesByTeam = {}; // team -> [items]
+
+    function resolveBase() {
+      if (BASE_URL) return BASE_URL.replace(/\/$/, "");
+      if (DATA_URL) return DATA_URL.replace(/\/matches\.json.*$/, "");
+      return "../data";
+    }
+    function fileUrl(name) {
+      return `${resolveBase()}/${name}?t=${Date.now()}`;
+    }
+    async function loadJson(name, optional = false) {
+      try {
+        const resp = await fetch(fileUrl(name), { cache: "no-store" });
+        if (!resp.ok) {
+          if (optional) return null;
+          throw new Error("HTTP " + resp.status);
+        }
+        return await resp.json();
+      } catch (e) {
+        if (optional) return null;
+        throw e;
+      }
+    }
+
+    async function load() {
+      $("errorBox").hidden = true;
+      $("configBanner").hidden = !!(BASE_URL || DATA_URL);
+      try {
+        const matchesData = await loadJson("matches.json");
+        allMatches = matchesData.matches || [];
+        $("updatedAt").textContent = matchesData.updatedAt
+          ? new Date(matchesData.updatedAt).toLocaleString()
+          : "—";
+        $("count").textContent = matchesData.count ?? allMatches.length;
+        $("source").textContent = matchesData.source || "—";
+        populateFilters();
+
+        // Optional companion files. If absent, sections show empty state.
+        const [oddsData, statsData, injData] = await Promise.all([
+          loadJson("odds.json", true),
+          loadJson("team_stats.json", true),
+          loadJson("injuries.json", true),
+        ]);
+        loadOdds(oddsData);
+        loadStats(statsData);
+        loadInjuries(injData);
+
+        render();
+        renderStandings();
+      } catch (e) {
+        $("errorBox").hidden = false;
+        $("errorBox").textContent =
+          "No se pudieron cargar los datos: " + e.message +
+          ". Verifica BASE_URL en index.html o que data/matches.json exista.";
+      }
+    }
+
+    function loadOdds(data) {
+      oddsByKey = {};
+      if (!data) {
+        $("oddsSource").textContent = "(sin datos)";
+        $("oddsUpdatedAt").textContent = "—";
+        $("oddsCount").textContent = "0";
+        return;
+      }
+      $("oddsSource").textContent = data.source || "—";
+      $("oddsUpdatedAt").textContent = data.updatedAt
+        ? new Date(data.updatedAt).toLocaleString() : "—";
+      $("oddsCount").textContent = data.count ?? (data.odds || []).length;
+      for (const o of data.odds || []) {
+        oddsByKey[`${o.date}|${o.home}|${o.away}`] = o;
+      }
+    }
+
+    function loadStats(data) {
+      teamStats = {};
+      if (!data) {
+        $("statsWindow").textContent = "—";
+        $("statsUpdatedAt").textContent = "—";
+        return;
+      }
+      $("statsWindow").textContent = data.window ?? "—";
+      $("statsUpdatedAt").textContent = data.updatedAt
+        ? new Date(data.updatedAt).toLocaleString() : "—";
+      teamStats = data.teams || {};
+    }
+
+    function loadInjuries(data) {
+      injuriesByTeam = {};
+      if (!data) {
+        $("injSource").textContent = "(sin datos)";
+        $("injUpdatedAt").textContent = "—";
+        return;
+      }
+      $("injSource").textContent = data.source || "(no configurado)";
+      $("injUpdatedAt").textContent = data.updatedAt
+        ? new Date(data.updatedAt).toLocaleString() : "—";
+      injuriesByTeam = data.teams || {};
+    }
+
+    function populateFilters() {
+      const stages = [...new Set(allMatches.map(m => m.stage).filter(Boolean))].sort();
+      const groups = [...new Set(allMatches.map(m => m.group).filter(Boolean))].sort();
+      const stageSel = $("fStage");
+      const groupSel = $("fGroup");
+      stageSel.innerHTML = '<option value="">Todas</option>' +
+        stages.map(s => `<option value="${s}">${s}</option>`).join("");
+      groupSel.innerHTML = '<option value="">Todos</option>' +
+        groups.map(g => `<option value="${g}">${g}</option>`).join("");
+    }
+
+    function matchesFilter(m) {
+      const team = $("fTeam").value.trim().toLowerCase();
+      const stage = $("fStage").value;
+      const group = $("fGroup").value;
+      const status = $("fStatus").value;
+      const from = $("fFrom").value;
+      const to = $("fTo").value;
+
+      if (team) {
+        const h = (m.homeTeam?.name || "").toLowerCase();
+        const a = (m.awayTeam?.name || "").toLowerCase();
+        if (!h.includes(team) && !a.includes(team)) return false;
+      }
+      if (stage && m.stage !== stage) return false;
+      if (group && m.group !== group) return false;
+      if (status && m.status !== status) return false;
+      if (m.utcDate) {
+        const d = m.utcDate.slice(0, 10);
+        if (from && d < from) return false;
+        if (to && d > to) return false;
+      }
+      return true;
+    }
+
+    function teamCell(t, align) {
+      if (!t) return "";
+      const name = t.name || t.shortName || t.tla || "TBD";
+      const crest = t.crest
+        ? `<img src="${t.crest}" alt="" onerror="this.style.display='none'">`
+        : "";
+      return align === "right"
+        ? `<span class="team">${name} ${crest}</span>`
+        : `<span class="team">${crest} ${name}</span>`;
+    }
+
+    function scoreCell(m) {
+      const h = m.score?.home, a = m.score?.away;
+      if (h == null || a == null) {
+        return `<div class="score tbd">vs</div>`;
+      }
+      return `<div class="score">${h} – ${a}</div>`;
+    }
+
+    function render() {
+      const tbody = $("rows");
+      const rows = allMatches
+        .filter(matchesFilter)
+        .sort((a, b) => (a.utcDate || "").localeCompare(b.utcDate || ""));
+      $("empty").hidden = rows.length > 0;
+      tbody.innerHTML = rows.map(m => {
+        const date = m.utcDate ? new Date(m.utcDate).toLocaleString() : "TBD";
+        const stage = m.stage
+          ? `<div class="stage">${m.stage.replaceAll("_", " ")}</div>${m.group ? `<div class="group">${m.group.replaceAll("_", " ")}</div>` : ""}`
+          : "";
+        const status = m.status
+          ? `<span class="badge b-${m.status}">${m.status}</span>`
+          : "";
+        return `
+          <tr>
+            <td>${date}</td>
+            <td class="hide-sm">${stage}</td>
+            <td style="text-align:right">${teamCell(m.homeTeam, "right")}</td>
+            <td>${scoreCell(m)}</td>
+            <td>${teamCell(m.awayTeam, "left")}</td>
+            <td class="hide-sm">${status}</td>
+            <td class="hide-sm">${m.venue || ""}</td>
+          </tr>
+        `;
+      }).join("");
+    }
+
+    // Wiring
+    ["fTeam", "fStage", "fGroup", "fStatus", "fFrom", "fTo"].forEach(id => {
+      $(id).addEventListener("input", render);
+      $(id).addEventListener("change", render);
+    });
+    $("btnReload").addEventListener("click", load);
+    $("btnClear").addEventListener("click", () => {
+      ["fTeam", "fStage", "fGroup", "fStatus", "fFrom", "fTo"].forEach(id => $(id).value = "");
+      render();
+    });
+
+    // ---------- Theme toggle ----------
+    function applyTheme(theme) {
+      document.documentElement.setAttribute("data-theme", theme);
+      $("themeToggle").textContent = theme === "light" ? "☀️ Claro" : "🌙 Oscuro";
+    }
+    const savedTheme = localStorage.getItem("wc-theme") || "dark";
+    applyTheme(savedTheme);
+    $("themeToggle").addEventListener("click", () => {
+      const next = document.documentElement.getAttribute("data-theme") === "light" ? "dark" : "light";
+      localStorage.setItem("wc-theme", next);
+      applyTheme(next);
+    });
+
+    // ---------- Tabs ----------
+    document.querySelectorAll(".tab-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        document.querySelectorAll(".tab-btn").forEach(b => b.classList.remove("active"));
+        document.querySelectorAll(".tab-panel").forEach(p => p.classList.remove("active"));
+        btn.classList.add("active");
+        document.getElementById("tab-" + btn.dataset.tab).classList.add("active");
+        if (btn.dataset.tab === "standings") renderStandings();
+        if (btn.dataset.tab === "odds") renderOdds();
+        if (btn.dataset.tab === "stats") renderStats();
+        if (btn.dataset.tab === "injuries") renderInjuries();
+      });
+    });
+
+    // ---------- Standings ----------
+    function computeStandings() {
+      // 12 groups of 4 — top 2 + 8 best 3rd qualify to round of 32.
+      const groups = {};
+      for (const m of allMatches) {
+        if (!m.group) continue;
+        const g = m.group;
+        groups[g] ||= {};
+        for (const side of ["homeTeam", "awayTeam"]) {
+          const t = m[side];
+          if (!t || !t.name) continue;
+          groups[g][t.name] ||= {
+            name: t.name, crest: t.crest,
+            played: 0, won: 0, drawn: 0, lost: 0,
+            gf: 0, ga: 0, gd: 0, pts: 0,
+          };
+        }
+        if (m.status !== "FINISHED") continue;
+        const h = m.score?.home, a = m.score?.away;
+        if (h == null || a == null) continue;
+        const home = groups[g][m.homeTeam.name];
+        const away = groups[g][m.awayTeam.name];
+        if (!home || !away) continue;
+        home.played++; away.played++;
+        home.gf += h; home.ga += a;
+        away.gf += a; away.ga += h;
+        if (h > a)      { home.won++;  home.pts += 3; away.lost++; }
+        else if (h < a) { away.won++;  away.pts += 3; home.lost++; }
+        else            { home.drawn++; away.drawn++; home.pts++; away.pts++; }
+      }
+      // Sort each group: pts desc, gd desc, gf desc, name asc
+      const sorted = {};
+      for (const [g, teams] of Object.entries(groups)) {
+        sorted[g] = Object.values(teams).map(t => ({ ...t, gd: t.gf - t.ga }))
+          .sort((x, y) =>
+            y.pts - x.pts ||
+            (y.gf - y.ga) - (x.gf - x.ga) ||
+            y.gf - x.gf ||
+            x.name.localeCompare(y.name)
+          );
+      }
+      return sorted;
+    }
+
+    function renderStandings() {
+      const standings = computeStandings();
+      const groupNames = Object.keys(standings).sort();
+      const container = $("standings");
+      if (groupNames.length === 0) {
+        container.innerHTML = "";
+        $("standingsEmpty").hidden = false;
+        return;
+      }
+      $("standingsEmpty").hidden = true;
+      container.innerHTML = groupNames.map(g => {
+        const rows = standings[g].map((t, i) => {
+          // Top 2 of each group qualify directly to round of 32.
+          const qualifies = i < 2 ? "qualifies" : "";
+          const crest = t.crest
+            ? `<img src="${t.crest}" alt="" style="width:14px;height:14px;vertical-align:middle;margin-right:4px" onerror="this.style.display='none'">`
+            : "";
+          return `
+            <tr class="${qualifies}">
+              <td>${i + 1}</td>
+              <td class="team-name">${crest}${t.name}</td>
+              <td>${t.played}</td>
+              <td>${t.won}</td>
+              <td>${t.drawn}</td>
+              <td>${t.lost}</td>
+              <td>${t.gf}</td>
+              <td>${t.ga}</td>
+              <td>${t.gd > 0 ? "+" + t.gd : t.gd}</td>
+              <td class="pts">${t.pts}</td>
+            </tr>`;
+        }).join("");
+        return `
+          <div class="standings-group">
+            <h3>${g.replaceAll("_", " ")}</h3>
+            <table>
+              <thead><tr>
+                <th>#</th><th>Equipo</th><th>PJ</th><th>G</th><th>E</th><th>P</th>
+                <th>GF</th><th>GC</th><th>DG</th><th>Pts</th>
+              </tr></thead>
+              <tbody>${rows}</tbody>
+            </table>
+          </div>`;
+      }).join("");
+    }
+
+    // ---------- Odds ----------
+    function renderOdds() {
+      const tbody = $("oddsRows");
+      const rows = Object.values(oddsByKey).sort((a, b) =>
+        (a.date || "").localeCompare(b.date || "") ||
+        (a.home || "").localeCompare(b.home || "")
+      );
+      $("oddsEmpty").hidden = rows.length > 0;
+      const fmt = (p) => p == null ? "—" : (p * 100).toFixed(0) + "%";
+      tbody.innerHTML = rows.map(o => `
+        <tr>
+          <td>${o.date}</td>
+          <td>${o.home}</td>
+          <td style="text-align:center"><b>${o.home_odds}</b></td>
+          <td style="text-align:center">${o.draw_odds}</td>
+          <td style="text-align:center"><b>${o.away_odds}</b></td>
+          <td>${o.away}</td>
+          <td class="hide-sm">${fmt(o.p_home)} / ${fmt(o.p_draw)} / ${fmt(o.p_away)}</td>
+          <td class="hide-sm">${o.bookmaker || ""}</td>
+        </tr>
+      `).join("");
+    }
+
+    // ---------- Team stats ----------
+    function renderStats() {
+      const tbody = $("statsRows");
+      const teams = Object.values(teamStats).sort((a, b) =>
+        (a.team || "").localeCompare(b.team || ""));
+      $("statsEmpty").hidden = teams.length > 0;
+      tbody.innerHTML = teams.map(t => {
+        const f = t.form || {};
+        const b = t.wc_bookings || {};
+        const last = (f.last_matches || []).slice(0, 5).map(m =>
+          `<span title="${m.date} vs ${m.opponent} (${m.gf}-${m.ga})"
+                 style="display:inline-block;width:14px;text-align:center;
+                        margin:0 1px;border-radius:3px;font-weight:700;
+                        background:${m.result === 'W' ? '#243b27' : m.result === 'D' ? '#3a3a52' : '#4a1e1e'};
+                        color:${m.result === 'W' ? '#7ee08a' : m.result === 'D' ? '#cfd2e4' : '#ff8a8a'}">${m.result}</span>`).join("");
+        return `
+          <tr>
+            <td>${t.team} <span style="color:var(--muted);font-size:11px">${last}</span></td>
+            <td style="text-align:center">${f.matches ?? 0}</td>
+            <td style="text-align:center">${f.record || "0-0-0"}</td>
+            <td style="text-align:center">${f.gf_avg ?? "—"}</td>
+            <td style="text-align:center">${f.ga_avg ?? "—"}</td>
+            <td style="color:var(--muted);font-size:12px">${f.last_match_date || ""}</td>
+            <td class="hide-sm" style="text-align:center">${b.yellow ?? 0}</td>
+            <td class="hide-sm" style="text-align:center">${b.red ?? 0}</td>
+            <td class="hide-sm" style="text-align:center">${b.yellow_avg ?? "—"}</td>
+          </tr>
+        `;
+      }).join("");
+    }
+
+    // ---------- Injuries ----------
+    function renderInjuries() {
+      const grid = $("injuriesGrid");
+      const teams = Object.entries(injuriesByTeam)
+        .filter(([_, items]) => Array.isArray(items) && items.length > 0)
+        .sort(([a], [b]) => a.localeCompare(b));
+      $("injEmpty").hidden = teams.length > 0;
+      grid.innerHTML = teams.map(([team, items]) => `
+        <div class="standings-group">
+          <h3>🩼 ${team} (${items.length})</h3>
+          <table>
+            <thead><tr><th>Jugador</th><th>Estado</th><th>Motivo</th></tr></thead>
+            <tbody>
+              ${items.map(it => `
+                <tr>
+                  <td>${it.player || it.note || "—"}</td>
+                  <td>${it.type || ""}</td>
+                  <td style="font-size:12px;color:var(--muted)">${it.reason || ""}</td>
+                </tr>`).join("")}
+            </tbody>
+          </table>
+        </div>
+      `).join("");
+    }
+
+    load();
+  </script>
+</body>
+</html>

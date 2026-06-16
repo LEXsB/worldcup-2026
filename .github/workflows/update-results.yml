@@ -1,0 +1,95 @@
+name: Update World Cup 2026 results
+
+on:
+  schedule:
+    # Every 4 hours, on the hour (UTC).
+    - cron: "0 */4 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: update-wc-results
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Save previous data snapshot
+        run: |
+          mkdir -p /tmp/wc/prev
+          for f in matches.json odds.json team_stats.json injuries.json; do
+            if [[ -f "data/$f" ]]; then
+              cp "data/$f" "/tmp/wc/prev/$f"
+            else
+              echo '{}' > "/tmp/wc/prev/$f"
+            fi
+          done
+
+      - name: Fetch matches (football-data.org)
+        env:
+          FOOTBALL_DATA_API_KEY: ${{ secrets.FOOTBALL_DATA_API_KEY }}
+        run: python scripts/fetch_matches.py
+
+      - name: Fetch market odds (3-source fallback)
+        continue-on-error: true
+        env:
+          THE_ODDS_API_KEY: ${{ secrets.THE_ODDS_API_KEY }}
+          BAYESIAN_ODDS_URL: ${{ vars.BAYESIAN_ODDS_URL }}
+        run: python scripts/fetch_odds.py
+
+      - name: Fetch team stats (last-10 form + WC bookings)
+        continue-on-error: true
+        env:
+          FOOTBALL_DATA_API_KEY: ${{ secrets.FOOTBALL_DATA_API_KEY }}
+          BAYESIAN_RESULTS_URL: ${{ vars.BAYESIAN_RESULTS_URL }}
+        run: python scripts/fetch_team_stats.py
+
+      - name: Fetch injuries (API-Football, optional)
+        continue-on-error: true
+        env:
+          API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
+          WIKI_INJURIES_FALLBACK: ${{ vars.WIKI_INJURIES_FALLBACK }}
+        run: python scripts/fetch_injuries.py
+
+      - name: Validate data and open Issue on anomalies
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          WC_PREV_DIR: /tmp/wc/prev
+        run: python scripts/validate_data.py
+
+      - name: Notify Telegram (newly finished matches)
+        continue-on-error: true
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python scripts/notify_telegram.py /tmp/wc/prev/matches.json data/matches.json
+
+      - name: Commit & push if changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/
+          if [[ -n "$(git status --porcelain data/)" ]]; then
+            git commit -m "chore(data): refresh WC2026 data [skip ci]"
+            git push
+          else
+            echo "No changes to commit."
+          fi
