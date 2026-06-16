@@ -360,19 +360,34 @@
       if (!data) return;
       broadcasts = {
         default: Array.isArray(data.default) ? data.default
-                 : (data.default ? [data.default] : ["DIRECTV GO"]),
+                 : (data.default ? [data.default] : ["DSports"]),
         priority: Array.isArray(data.priority) ? data.priority : [],
-        overrides: data.overrides || {},
+        // New schema: matches: { "YYYY-MM-DD Home-Away": [channels] }
+        // Backward-compatible with old "overrides" field.
+        matches: data.matches || data.overrides || {},
       };
+    }
+
+    // Convierte un timestamp UTC a fecha LOCAL DE COLOMBIA (UTC-5, sin DST).
+    // Necesario porque los canales son de Colombia y la tabla del usuario
+    // está en hora colombiana.
+    function colombiaDateKey(utcISO) {
+      const dt = new Date(utcISO);
+      if (isNaN(dt)) return "";
+      const co = new Date(dt.getTime() - 5 * 3600 * 1000); // UTC-5
+      const y = co.getUTCFullYear();
+      const m = String(co.getUTCMonth() + 1).padStart(2, "0");
+      const d = String(co.getUTCDate()).padStart(2, "0");
+      return `${y}-${m}-${d}`;
     }
 
     // Returns ordered list of broadcasters for a match (no exclusion).
     function tvFor(match) {
-      const date = (match.utcDate || "").slice(0, 10);
+      const date = colombiaDateKey(match.utcDate);
       const home = match.homeTeam?.name || "";
       const away = match.awayTeam?.name || "";
       const key = `${date} ${home}-${away}`;
-      const raw = broadcasts.overrides[key];
+      const raw = broadcasts.matches[key];
       let list;
       if (Array.isArray(raw) && raw.length > 0) {
         list = raw.slice();
@@ -381,7 +396,7 @@
       } else {
         list = broadcasts.default.slice();
       }
-      // Order by configured priority (channels not in priority go last in original order).
+      // Order by configured priority; channels not in priority go last.
       const prio = broadcasts.priority || [];
       list.sort((a, b) => {
         const ia = prio.indexOf(a); const ib = prio.indexOf(b);
@@ -421,23 +436,13 @@
       if (group && m.group !== group) return false;
       if (status && m.status !== status) return false;
       if (m.utcDate) {
-        // Usar fecha LOCAL del usuario (no UTC) para que coincida con
-        // la fecha mostrada en la columna y con los inputs de fecha.
-        const d = localDateKey(m.utcDate);
+        // Filtrar por fecha LOCAL DE COLOMBIA (UTC-5) para que coincida
+        // con el calendario de transmisiones y la percepción del usuario.
+        const d = colombiaDateKey(m.utcDate);
         if (from && d < from) return false;
         if (to && d > to) return false;
       }
       return true;
-    }
-
-    // Convierte un timestamp UTC ISO a "YYYY-MM-DD" en la zona local del usuario.
-    function localDateKey(utcISO) {
-      const dt = new Date(utcISO);
-      if (isNaN(dt)) return "";
-      const y = dt.getFullYear();
-      const m = String(dt.getMonth() + 1).padStart(2, "0");
-      const d = String(dt.getDate()).padStart(2, "0");
-      return `${y}-${m}-${d}`;
     }
 
     function teamCell(t, align) {
@@ -501,7 +506,7 @@
       render();
     });
     $("btnToday").addEventListener("click", () => {
-      const today = localDateKey(new Date().toISOString());
+      const today = colombiaDateKey(new Date().toISOString());
       $("fFrom").value = today;
       $("fTo").value = today;
       render();
