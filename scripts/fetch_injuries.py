@@ -137,24 +137,57 @@ def fetch_wikipedia_squads_page(teams: list[str]) -> dict[str, list[dict]]:
 
         # Look for explicit replacement / injury / withdrawal patterns.
         notes: list[dict] = []
-        # Pattern 1: "X was replaced by Y due to (injury|...)
+        seen_notes: set[str] = set()
+
+        def add_note(player: str | None, raw: str) -> None:
+            # Clean wikitext: [[A|B]] -> B, [[A]] -> A, refs, templates, html
+            clean = re.sub(r"\{\{[^}]+\}\}", "", raw)
+            clean = re.sub(r"<ref[^>]*>.*?</ref>", "", clean, flags=re.S)
+            clean = re.sub(r"<ref[^>]*/\s*>", "", clean)
+            clean = re.sub(r"\[\[[^|\]]*\|([^\]]+)\]\]", r"\1", clean)
+            clean = re.sub(r"\[\[([^\]]+)\]\]", r"\1", clean)
+            clean = re.sub(r"\[https?://[^\s\]]+\s+([^\]]+)\]", r"\1", clean)
+            clean = re.sub(r"\[https?://[^\s\]]+\]", "", clean)
+            clean = re.sub(r"<[^>]+>", "", clean)
+            clean = re.sub(r"'{2,}", "", clean)
+            clean = re.sub(r"\s+", " ", clean).strip().rstrip(".,;:")
+            if not (25 < len(clean) < 280):
+                return
+            if clean in seen_notes:
+                return
+            # Filter out reference-style residues
+            if re.search(r"^(retrieved|archived from)", clean, re.I):
+                return
+            seen_notes.add(clean)
+            entry: dict = {"note": clean, "source": "wikipedia-squads"}
+            # Only attach player name if it looks like a real proper noun:
+            # at least 2 words, capitalized, not generic English glue.
+            if player:
+                p = re.sub(r"\s+", " ", player).strip().rstrip(",.;:")
+                # Reject common wikitext glue captured by greedy regex
+                if p and not re.match(
+                    r"^(and|but|the|on|in|with|by|withdrew|injured|replaced)\b",
+                    p, re.I,
+                ) and " " in p and len(p) < 60:
+                    entry["player"] = p
+            notes.append(entry)
+
+        # Pattern 1: "FirstName LastName was replaced by ..."
+        # Anchor on a name candidate that's NOT "and|but|...".
         for m in re.finditer(
-            r"([A-Z][\wÀ-ž' \-]+?)\s+was\s+(?:replaced|withdrew|ruled out)[^.\n]{0,200}",
-            body, flags=re.IGNORECASE,
+            r"(?<![\w\-])([A-ZÀ-Ž][\wÀ-ž'\-]+(?:\s+[A-ZÀ-Ž][\wÀ-ž'\-]+){1,3})"
+            r"\s+(?:withdrew\s+(?:injured\s+)?|was\s+(?:replaced|ruled\s+out))"
+            r"[^.\n]{0,220}",
+            body,
         ):
-            note = m.group(0).strip()[:240]
-            notes.append({"player": m.group(1).strip(), "note": note,
-                          "source": "wikipedia-squads"})
-        # Pattern 2: "due to injury" / "withdrew due to" — sentence-level
+            add_note(m.group(1), m.group(0))
+
+        # Pattern 2: standalone sentences that mention injury/withdrawal but
+        # didn't match the structured pattern above.
         for sentence in re.split(r"(?<=[.\n])\s+", body):
-            if re.search(r"\b(injury|injuries|withdrew|ruled out|replaced)\b",
+            if re.search(r"\b(injury|injuries|withdrew|ruled\s+out|sidelined)\b",
                          sentence, re.I):
-                clean = re.sub(r"\{\{[^}]+\}\}", "", sentence)
-                clean = re.sub(r"\[\[(?:[^|\]]+\|)?([^\]]+)\]\]", r"\1", clean)
-                clean = re.sub(r"<[^>]+>", "", clean)
-                clean = re.sub(r"'{2,}", "", clean).strip()
-                if 20 < len(clean) < 280 and not any(n.get("note") == clean for n in notes):
-                    notes.append({"note": clean[:280], "source": "wikipedia-squads"})
+                add_note(None, sentence)
             if len(notes) >= 8:
                 break
 
