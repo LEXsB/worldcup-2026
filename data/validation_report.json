@@ -1,12 +1,7 @@
 {
-  "checkedAt": "2026-06-16T16:10:17+00:00",
-  "anomalyCount": 2,
+  "checkedAt": "2026-06-16T16:20:13+00:00",
+  "anomalyCount": 1,
   "anomalies": [
-    {
-      "area": "team_stats",
-      "level": "warn",
-      "msg": "no team has recent-form data — check BAYESIAN_RESULTS_URL"
-    },
     {
       "area": "injuries",
       "level": "info",
@@ -31,7 +26,7 @@
     },
     "team_stats": {
       "team_count": 48,
-      "teams_without_form": 48,
+      "teams_without_form": 4,
       "teams_without_card_data": 48
     },
     "injuries": {
@@ -41,8 +36,7 @@
     }
   },
   "issue": {
-    "opened": true,
-    "number": 1,
-    "fp": "3641a1ddf859"
+    "opened": false,
+    "reason": "no severe anomalies"
   }
 }
