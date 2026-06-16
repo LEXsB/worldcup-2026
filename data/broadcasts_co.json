@@ -1,0 +1,15 @@
+{
+  "_comment": "Transmisión en Colombia partido-a-partido. NO es excluyente: si varios canales transmiten el mismo partido, se muestran TODOS en el orden definido en 'priority'. DGO (DIRECTV GO) transmite todos, así que sirve solo como FALLBACK cuando 'overrides' no tiene la lista para ese partido. La clave es 'YYYY-MM-DD Home-Away' usando los nombres canónicos de football-data.org (los mismos del data/matches.json). El valor es una lista de canales.",
+  "_sources": [
+    "Win Sports (winsports.co, 5-nov-2025): confirmado para Mundial 2026 en Colombia",
+    "Disney+ Premium / ESPN Latam (17-abr-2026): Mundial 2026 en Sudamérica",
+    "Caracol y RCN: pendiente confirmar asignación partido-a-partido",
+    "DIRECTV GO (DGO): cobertura total del torneo"
+  ],
+  "default": ["DIRECTV GO"],
+  "priority": ["Caracol", "RCN", "Win Sports", "Disney+", "DSports", "DIRECTV GO"],
+  "overrides": {
+    "_comment_format": "Cada clave: 'YYYY-MM-DD Home-Away'. Valor: lista de canales (NO excluyente). Si un partido NO está aquí, se usa 'default'.",
+    "_example_2026-06-11 Mexico-South Africa": ["Caracol", "Win Sports", "Disney+"]
+  }
+}

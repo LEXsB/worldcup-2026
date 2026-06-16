@@ -73,6 +73,14 @@
     .b-LIVE, .b-IN_PLAY, .b-PAUSED { background: #4a1e1e; color: #ff8a8a; }
     .b-TIMED, .b-SCHEDULED { background: #1f2a55; color: #9fb0ff; }
     .b-POSTPONED, .b-SUSPENDED, .b-CANCELLED { background: #4a3a1e; color: #ffd58a; }
+    .tv-chip {
+      display: inline-block; margin: 1px 2px;
+      padding: 2px 8px; border-radius: 6px;
+      font-size: 11px; font-weight: 600;
+      background: var(--panel-2); color: var(--text);
+      border: 1px solid var(--border);
+      white-space: nowrap;
+    }
     .stage { color: var(--accent-2); font-size: 12px; }
     .group { color: var(--muted); font-size: 12px; }
     .empty { padding: 30px; text-align: center; color: var(--muted); }
@@ -156,6 +164,7 @@
       </label>
       <label>&nbsp;
         <div class="toolbar">
+          <button id="btnToday" title="Mostrar solo los partidos de hoy">📅 Hoy</button>
           <button id="btnReload">↻ Recargar</button>
           <button id="btnClear" class="secondary">Limpiar filtros</button>
         </div>
@@ -173,6 +182,7 @@
             <th>Visitante</th>
             <th class="hide-sm">Estado</th>
             <th class="hide-sm">Sede</th>
+            <th>📺 TV (CO)</th>
           </tr>
         </thead>
         <tbody id="rows"></tbody>
@@ -244,6 +254,7 @@
     let oddsByKey = {};      // "date|home|away" -> odds row
     let teamStats = {};      // team -> { form, wc_bookings }
     let injuriesByTeam = {}; // team -> [items]
+    let broadcasts = { default: ["DIRECTV GO"], priority: [], overrides: {} };
 
     function resolveBase() {
       if (BASE_URL) return BASE_URL.replace(/\/$/, "");
@@ -281,14 +292,16 @@
         populateFilters();
 
         // Optional companion files. If absent, sections show empty state.
-        const [oddsData, statsData, injData] = await Promise.all([
+        const [oddsData, statsData, injData, broadcastsData] = await Promise.all([
           loadJson("odds.json", true),
           loadJson("team_stats.json", true),
           loadJson("injuries.json", true),
+          loadJson("broadcasts_co.json", true),
         ]);
         loadOdds(oddsData);
         loadStats(statsData);
         loadInjuries(injData);
+        loadBroadcasts(broadcastsData);
 
         render();
         renderStandings();
@@ -343,6 +356,43 @@
       injuriesByTeam = data.teams || {};
     }
 
+    function loadBroadcasts(data) {
+      if (!data) return;
+      broadcasts = {
+        default: Array.isArray(data.default) ? data.default
+                 : (data.default ? [data.default] : ["DIRECTV GO"]),
+        priority: Array.isArray(data.priority) ? data.priority : [],
+        overrides: data.overrides || {},
+      };
+    }
+
+    // Returns ordered list of broadcasters for a match (no exclusion).
+    function tvFor(match) {
+      const date = (match.utcDate || "").slice(0, 10);
+      const home = match.homeTeam?.name || "";
+      const away = match.awayTeam?.name || "";
+      const key = `${date} ${home}-${away}`;
+      const raw = broadcasts.overrides[key];
+      let list;
+      if (Array.isArray(raw) && raw.length > 0) {
+        list = raw.slice();
+      } else if (typeof raw === "string" && raw.trim()) {
+        list = [raw];
+      } else {
+        list = broadcasts.default.slice();
+      }
+      // Order by configured priority (channels not in priority go last in original order).
+      const prio = broadcasts.priority || [];
+      list.sort((a, b) => {
+        const ia = prio.indexOf(a); const ib = prio.indexOf(b);
+        if (ia === -1 && ib === -1) return 0;
+        if (ia === -1) return 1;
+        if (ib === -1) return -1;
+        return ia - ib;
+      });
+      return list;
+    }
+
     function populateFilters() {
       const stages = [...new Set(allMatches.map(m => m.stage).filter(Boolean))].sort();
       const groups = [...new Set(allMatches.map(m => m.group).filter(Boolean))].sort();
@@ -371,11 +421,23 @@
       if (group && m.group !== group) return false;
       if (status && m.status !== status) return false;
       if (m.utcDate) {
-        const d = m.utcDate.slice(0, 10);
+        // Usar fecha LOCAL del usuario (no UTC) para que coincida con
+        // la fecha mostrada en la columna y con los inputs de fecha.
+        const d = localDateKey(m.utcDate);
         if (from && d < from) return false;
         if (to && d > to) return false;
       }
       return true;
+    }
+
+    // Convierte un timestamp UTC ISO a "YYYY-MM-DD" en la zona local del usuario.
+    function localDateKey(utcISO) {
+      const dt = new Date(utcISO);
+      if (isNaN(dt)) return "";
+      const y = dt.getFullYear();
+      const m = String(dt.getMonth() + 1).padStart(2, "0");
+      const d = String(dt.getDate()).padStart(2, "0");
+      return `${y}-${m}-${d}`;
     }
 
     function teamCell(t, align) {
@@ -411,6 +473,8 @@
         const status = m.status
           ? `<span class="badge b-${m.status}">${m.status}</span>`
           : "";
+        const tv = tvFor(m).map(c =>
+          `<span class="tv-chip">${c}</span>`).join(" ");
         return `
           <tr>
             <td>${date}</td>
@@ -420,6 +484,7 @@
             <td>${teamCell(m.awayTeam, "left")}</td>
             <td class="hide-sm">${status}</td>
             <td class="hide-sm">${m.venue || ""}</td>
+            <td>${tv}</td>
           </tr>
         `;
       }).join("");
@@ -433,6 +498,12 @@
     $("btnReload").addEventListener("click", load);
     $("btnClear").addEventListener("click", () => {
       ["fTeam", "fStage", "fGroup", "fStatus", "fFrom", "fTo"].forEach(id => $(id).value = "");
+      render();
+    });
+    $("btnToday").addEventListener("click", () => {
+      const today = localDateKey(new Date().toISOString());
+      $("fFrom").value = today;
+      $("fTo").value = today;
       render();
     });
 
