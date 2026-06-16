@@ -175,7 +175,7 @@
       <table>
         <thead>
           <tr>
-            <th>Fecha (local)</th>
+            <th>Fecha (CO)</th>
             <th class="hide-sm">Etapa</th>
             <th style="text-align:right">Local</th>
             <th>Resultado</th>
@@ -381,6 +381,19 @@
       return `${y}-${m}-${d}`;
     }
 
+    // "16/06/2026 14:00 (CO)" — hora oficial de Colombia (UTC-5).
+    function formatColombiaDateTime(utcISO) {
+      const dt = new Date(utcISO);
+      if (isNaN(dt)) return "";
+      const co = new Date(dt.getTime() - 5 * 3600 * 1000);
+      const dd = String(co.getUTCDate()).padStart(2, "0");
+      const mm = String(co.getUTCMonth() + 1).padStart(2, "0");
+      const yy = co.getUTCFullYear();
+      const hh = String(co.getUTCHours()).padStart(2, "0");
+      const mi = String(co.getUTCMinutes()).padStart(2, "0");
+      return `${dd}/${mm}/${yy} ${hh}:${mi}`;
+    }
+
     // Returns ordered list of broadcasters for a match (no exclusion).
     function tvFor(match) {
       const date = colombiaDateKey(match.utcDate);
@@ -471,7 +484,7 @@
         .sort((a, b) => (a.utcDate || "").localeCompare(b.utcDate || ""));
       $("empty").hidden = rows.length > 0;
       tbody.innerHTML = rows.map(m => {
-        const date = m.utcDate ? new Date(m.utcDate).toLocaleString() : "TBD";
+        const date = m.utcDate ? formatColombiaDateTime(m.utcDate) : "TBD";
         const stage = m.stage
           ? `<div class="stage">${m.stage.replaceAll("_", " ")}</div>${m.group ? `<div class="group">${m.group.replaceAll("_", " ")}</div>` : ""}`
           : "";
