@@ -1,29 +1,13 @@
 {
-  "checkedAt": "2026-06-16T21:08:48+00:00",
-  "anomalyCount": 3,
-  "anomalies": [
-    {
-      "area": "odds",
-      "level": "warn",
-      "msg": "2026-06-16 France vs Senegal: draw_odds 17.9186 → 139.7363 (drift 680%)"
-    },
-    {
-      "area": "odds",
-      "level": "warn",
-      "msg": "2026-06-16 France vs Senegal: away_odds 113.495 → 368.5337 (drift 225%)"
-    },
-    {
-      "area": "injuries",
-      "level": "info",
-      "msg": "no injury source configured (set API_FOOTBALL_KEY)"
-    }
-  ],
+  "checkedAt": "2026-06-16T21:14:51+00:00",
+  "anomalyCount": 0,
+  "anomalies": [],
   "summary": {
     "matches": {
       "count": 104,
       "out_of_window": 0,
-      "missing_status": 1,
-      "finished": 16,
+      "missing_status": 0,
+      "finished": 17,
       "scheduled": 87
     },
     "odds": {
@@ -32,7 +16,7 @@
       "sources_failed": [
         "espn"
       ],
-      "drift_warnings": 2
+      "drift_warnings": 0
     },
     "team_stats": {
       "team_count": 48,
@@ -41,13 +25,12 @@
     },
     "injuries": {
       "team_count": 48,
-      "teams_with_injuries": 0,
-      "source": null
+      "teams_with_injuries": 19,
+      "source": "wikipedia-squads"
     }
   },
   "issue": {
-    "opened": true,
-    "number": 5,
-    "fp": "701972d4a8ef"
+    "opened": false,
+    "reason": "no severe anomalies"
   }
 }

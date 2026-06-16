@@ -1,28 +1,86 @@
 {
-  "updatedAt": "2026-06-16T21:08:47+00:00",
-  "source": null,
+  "updatedAt": "2026-06-16T21:14:51+00:00",
+  "source": "wikipedia-squads",
   "sourcesTried": [
     {
       "source": "api-football",
       "ok": true,
-      "teams_with_data": 0
+      "items_added": 0
     },
     {
-      "source": "wikipedia",
+      "source": "wikipedia-squads",
       "ok": true,
-      "teams_with_data": 0
+      "items_added": 35
+    },
+    {
+      "source": "openfootball",
+      "ok": true,
+      "items_added": 0
+    },
+    {
+      "source": "wikipedia-team-pages",
+      "ok": true,
+      "items_added": 0
     }
   ],
   "teamCount": 48,
   "teams": {
     "Algeria": [],
-    "Argentina": [],
+    "Argentina": [
+      {
+        "player": "and",
+        "note": "and was replaced by [[Marcos Senesi]] on June 11",
+        "source": "wikipedia-squads"
+      },
+      {
+        "note": "June 6, 2026. and was replaced by Marcos Senesi on June 11.Alcheva, Martina (June 11, 2026).",
+        "source": "wikipedia-squads"
+      },
+      {
+        "note": "[https://worldsoccertalk.com/amp/world-cup/argentina-confirm-final-26-man-squad-for-the-2026-world-cup-senesi-joins-messis-team-after-balerdi-injury/ \"Argentina confirm final 26-man squad for the 2026 World Cup: Senesi joins Messi’s team after Balerdi injury\"].",
+        "source": "wikipedia-squads"
+      }
+    ],
     "Australia": [],
-    "Austria": [],
+    "Austria": [
+      {
+        "player": "and",
+        "note": "and was replaced by [[Dejan Ljubičić]] on June 10",
+        "source": "wikipedia-squads"
+      },
+      {
+        "note": "Retrieved May 18, 2026. Christoph Baumgartner withdrew injured on June 2[https://www.oefb.at/oefb/News/Baumgartner-faellt-fuer-WM-aus \"Christoph Baumgartner fällt für WM aus\"] [Christoph Baumgartner will miss the World Cup] (in German).",
+        "source": "wikipedia-squads"
+      },
+      {
+        "note": "Retrieved June 2, 2026. and was replaced by Dejan Ljubičić on June 10.[https://sport.orf.at/stories/3156891/ \"Ljubicic löst verspätet WM-Ticket\"] [Ljubicic belatedly secures World Championship ticket] (in German).",
+        "source": "wikipedia-squads"
+      }
+    ],
     "Belgium": [],
     "Bosnia & Herzegovina": [],
-    "Brazil": [],
-    "Canada": [],
+    "Brazil": [
+      {
+        "player": "withdrew injured and",
+        "note": "withdrew injured and was replaced by [[Éderson (footballer, born 1999)|Éderson Silva]] on June 7",
+        "source": "wikipedia-squads"
+      }
+    ],
+    "Canada": [
+      {
+        "player": "withdrew injured on May 31 and",
+        "note": "withdrew injured on May 31 and was replaced by [[Jayden Nelson]] on June 9",
+        "source": "wikipedia-squads"
+      },
+      {
+        "note": "Retrieved May 29, 2026. Marcelo Flores withdrew injured on May 31 and was replaced by Jayden Nelson on June 9.[https://www.foxsports.com/stories/soccer/canadas-marcelo-flores-ruled-out-world-cup-acl-injury \"Canada's Marcelo Flores Ruled Out Of World Cup With ACL Injury\"].",
+        "source": "wikipedia-squads"
+      },
+      {
+        "note": "[https://web.archive.org/web/20260601041136/https://www.foxsports.com/stories/soccer/canadas-marcelo-flores-ruled-out-world-cup-acl-injury Archived] from the original on June 1, 2026.",
+        "source": "wikipedia-squads"
+      }
+    ],
     "Cape Verde Islands": [],
     "Colombia": [],
     "Congo DR": [],
@@ -32,36 +90,165 @@
     "Côte d'Ivoire": [],
     "Ecuador": [],
     "Egypt": [],
-    "England": [],
+    "England": [
+      {
+        "player": "withdrew injured and",
+        "note": "withdrew injured and was replaced by [[Trevoh Chalobah]] on June 16",
+        "source": "wikipedia-squads"
+      },
+      {
+        "note": "Retrieved May 22, 2026. Tino Livramento withdrew injured and was replaced by Trevoh Chalobah on June 16.",
+        "source": "wikipedia-squads"
+      }
+    ],
     "France": [],
-    "Germany": [],
-    "Ghana": [],
-    "Haiti": [],
+    "Germany": [
+      {
+        "player": "withdrew injured and",
+        "note": "withdrew injured and was replaced by [[Assan Ouédraogo]] on June 5",
+        "source": "wikipedia-squads"
+      }
+    ],
+    "Ghana": [
+      {
+        "player": "withdrew injured and",
+        "note": "withdrew injured and was replaced by [[Derrick Luckassen]] on June 1",
+        "source": "wikipedia-squads"
+      },
+      {
+        "note": "Retrieved May 25, 2026. Alexander Djiku withdrew injured and was replaced by Derrick Luckassen on June 1.[https://www.straitstimes.com/sport/football/ghana-delay-naming-world-cup-squad \"Ghana delay naming World Cup squad\"].",
+        "source": "wikipedia-squads"
+      }
+    ],
+    "Haiti": [
+      {
+        "player": "withdrew injured and",
+        "note": "withdrew injured and was replaced by [[Garven Metusala]] on June 11",
+        "source": "wikipedia-squads"
+      }
+    ],
     "Iran": [],
-    "Iraq": [],
-    "Japan": [],
-    "Jordan": [],
+    "Iraq": [
+      {
+        "player": "withdrew injured with a hamstring injury and",
+        "note": "withdrew injured with a hamstring injury and was replaced by [[Ahmed Maknzi]] on June 6",
+        "source": "wikipedia-squads"
+      }
+    ],
+    "Japan": [
+      {
+        "player": "withdrew injured and",
+        "note": "withdrew injured and was replaced by [[Shūto Machino]] on June 11",
+        "source": "wikipedia-squads"
+      }
+    ],
+    "Jordan": [
+      {
+        "player": "and",
+        "note": "and was replaced by [[Mohammad Taha (footballer)|Mohammad Taha]] on June 8",
+        "source": "wikipedia-squads"
+      }
+    ],
     "Mexico": [],
     "Morocco": [],
-    "Netherlands": [],
-    "New Zealand": [],
+    "Netherlands": [
+      {
+        "player": "withdrew injured and",
+        "note": "withdrew injured and was replaced by [[Lutsharel Geertruida]] on June 8",
+        "source": "wikipedia-squads"
+      }
+    ],
+    "New Zealand": [
+      {
+        "player": "withdrew injured with a hamstring injury and",
+        "note": "withdrew injured with a hamstring injury and was replaced by [[Logan Rogerson]] on June 15",
+        "source": "wikipedia-squads"
+      },
+      {
+        "note": "Retrieved May 14, 2026. Matthew Garbett withdrew injured with a hamstring injury and was replaced by Logan Rogerson on June 15.[https://aucklandfc.co.nz/news/logan-rogerson-called-up-to-all-whites/ Logan Rogerson Called Up to All Whites ].",
+        "source": "wikipedia-squads"
+      }
+    ],
     "Norway": [],
     "Panama": [],
     "Paraguay": [],
-    "Portugal": [],
+    "Portugal": [
+      {
+        "note": "\"Martinez confirmed that fourth-choice goalkeeper Ricardo Velho of Genclerbirligi Ankara will travel with the squad but can only be added to the official 26-man list in the event of an injury to one of the three registered goalkeepers.\"",
+        "source": "wikipedia-squads"
+      }
+    ],
     "Qatar": [],
     "Saudi Arabia": [],
-    "Scotland": [],
+    "Scotland": [
+      {
+        "player": "and",
+        "note": "and was replaced by [[Tyler Fletcher]] on May 31",
+        "source": "wikipedia-squads"
+      },
+      {
+        "note": "Retrieved May 19, 2026. Billy Gilmour withdrew injured on May 30,[https://www.scottishfa.co.uk/news/fifa-world-cup-2026-squad-update/ \"FIFA World Cup 2026 squad update\"].",
+        "source": "wikipedia-squads"
+      },
+      {
+        "note": "Retrieved June 1, 2026. and was replaced by Tyler Fletcher on May 31.[https://www.bbc.com/sport/football/articles/cn8pmj99jk7o \"Fletcher chosen to replace Gilmour in Scotland squad\"].",
+        "source": "wikipedia-squads"
+      }
+    ],
     "Senegal": [],
     "South Africa": [],
-    "South Korea": [],
+    "South Korea": [
+      {
+        "player": "withdrew injured and",
+        "note": "withdrew injured and was replaced by [[Cho Wi-je]] on May 31",
+        "source": "wikipedia-squads"
+      },
+      {
+        "note": "Retrieved May 15, 2026. Cho Yu-min withdrew injured and was replaced by Cho Wi-je on May 31.[https://www.reuters.com/sports/soccer/south-korea-defender-cho-ruled-out-world-cup-2026-06-01/ \"South Korea defender Cho ruled out of World Cup\"].",
+        "source": "wikipedia-squads"
+      }
+    ],
     "Spain": [],
-    "Sweden": [],
+    "Sweden": [
+      {
+        "player": "withdrew injured and",
+        "note": "withdrew injured and was replaced by [[Herman Johansson]] on May 30",
+        "source": "wikipedia-squads"
+      },
+      {
+        "note": "Retrieved May 12, 2026. Emil Holm withdrew injured and was replaced by Herman Johansson on May 30.[https://www.svenskfotboll.se/nyheter/landslag/2026/05/johansson-ersatter-holm/ \"Herman Johansson ersätter Emil Holm\"] [Herman Johansson replaces Emil Holm] (in Swedish).",
+        "source": "wikipedia-squads"
+      }
+    ],
     "Switzerland": [],
-    "Tunisia": [],
+    "Tunisia": [
+      {
+        "player": "and",
+        "note": "and was replaced by [[Hervé Renard]] the next day",
+        "source": "wikipedia-squads"
+      }
+    ],
     "Türkiye": [],
     "United States": [],
     "Uruguay": [],
-    "Uzbekistan": []
+    "Uzbekistan": [
+      {
+        "player": "withdrew due to a back injury and",
+        "note": "withdrew due to a back injury and was replaced by [[Ruslanbek Jiyanov]] on June 15",
+        "source": "wikipedia-squads"
+      },
+      {
+        "note": "Retrieved May 5, 2026 – via Facebook. The squad was reduced to 39 players on May 22 as Ibrokhimkhalil Yuldoshev withdrew injured,Zoirov, Shohrux (May 22, 2026).",
+        "source": "wikipedia-squads"
+      },
+      {
+        "note": "[https://tribuna.uz/news/ibrohimxalil-yoldoshev-jarohat-sababli-jchni-otkazib-yuboradi-1215344/ \"Ibrohimxalil Yoʻldoshev jarohat sababli JChni oʻtkazib yuboradi\"] [Ibrokhimkhalil Yuldoshev to miss World Cup due to injury] (in Uzbek).",
+        "source": "wikipedia-squads"
+      },
+      {
+        "note": "Retrieved June 2, 2026. Jaloliddin Masharipov withdrew due to a back injury and was replaced by Ruslanbek Jiyanov on June 15.[https://kun.uz/news/2026/06/16/jaloliddin-masharipov-milliy-jamoa-tarkibidan-chiqarildi Jaloliddin Masharipov milliy jamoa tarkibidan chiqarildi ].",
+        "source": "wikipedia-squads"
+      }
+    ]
   }
 }
