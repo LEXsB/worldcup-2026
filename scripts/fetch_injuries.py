@@ -77,6 +77,150 @@ def collect_teams() -> list[str]:
 
 
 # ---------------------------------------------------------------------------
+# Wikipedia consolidated squads page (MediaWiki API → wikitext)
+# ---------------------------------------------------------------------------
+
+WIKI_API = "https://en.wikipedia.org/w/api.php"
+WIKI_SQUADS_PAGE = "2026_FIFA_World_Cup_squads"
+
+
+def fetch_wikipedia_squads_page(teams: list[str]) -> dict[str, list[dict]]:
+    """Parse the consolidated squads article via MediaWiki API.
+
+    Strategy: download raw wikitext (way more stable than HTML scraping) and
+    look for replacement notes per-team. Wikipedia uses a fairly consistent
+    format like:
+        '''Team Name'''
+        ...
+        Replaces: ''Player A'' (injury) was replaced by '''Player B''' on...
+    """
+    out: dict[str, list[dict]] = {t: [] for t in teams}
+    try:
+        resp = requests.get(WIKI_API, params={
+            "action": "parse",
+            "page": WIKI_SQUADS_PAGE,
+            "prop": "wikitext",
+            "format": "json",
+            "formatversion": "2",
+        }, timeout=TIMEOUT, headers={"User-Agent": "wc2026-bot/1.0"})
+        resp.raise_for_status()
+        data = resp.json() or {}
+    except (requests.RequestException, ValueError) as e:
+        print(f"  WARN wiki-squads: {e}", file=sys.stderr)
+        return out
+
+    text = ((data.get("parse") or {}).get("wikitext") or "")
+    if not text:
+        return out
+
+    # Build a lookup: lowercased team variants -> canonical
+    variants_lookup: dict[str, str] = {}
+    for canon_name in teams:
+        variants_lookup[canon_name.lower()] = canon_name
+    for canon_name, variants in _ALIASES.items():
+        if canon_name not in teams:
+            continue
+        if isinstance(variants, list):
+            for v in variants:
+                variants_lookup[v.lower()] = canon_name
+
+    # Section headers in this article are level-3: "===Team Name==="
+    # Capture each team's chunk of wikitext.
+    sections = re.split(r"\n===\s*([^=]+?)\s*===\n", text)
+    # sections = [preamble, h1_name, h1_body, h2_name, h2_body, ...]
+    for i in range(1, len(sections), 2):
+        header = sections[i].strip()
+        body = sections[i + 1] if i + 1 < len(sections) else ""
+        canon_team = variants_lookup.get(header.lower())
+        if not canon_team:
+            continue
+
+        # Look for explicit replacement / injury / withdrawal patterns.
+        notes: list[dict] = []
+        # Pattern 1: "X was replaced by Y due to (injury|...)
+        for m in re.finditer(
+            r"([A-Z][\wÀ-ž' \-]+?)\s+was\s+(?:replaced|withdrew|ruled out)[^.\n]{0,200}",
+            body, flags=re.IGNORECASE,
+        ):
+            note = m.group(0).strip()[:240]
+            notes.append({"player": m.group(1).strip(), "note": note,
+                          "source": "wikipedia-squads"})
+        # Pattern 2: "due to injury" / "withdrew due to" — sentence-level
+        for sentence in re.split(r"(?<=[.\n])\s+", body):
+            if re.search(r"\b(injury|injuries|withdrew|ruled out|replaced)\b",
+                         sentence, re.I):
+                clean = re.sub(r"\{\{[^}]+\}\}", "", sentence)
+                clean = re.sub(r"\[\[(?:[^|\]]+\|)?([^\]]+)\]\]", r"\1", clean)
+                clean = re.sub(r"<[^>]+>", "", clean)
+                clean = re.sub(r"'{2,}", "", clean).strip()
+                if 20 < len(clean) < 280 and not any(n.get("note") == clean for n in notes):
+                    notes.append({"note": clean[:280], "source": "wikipedia-squads"})
+            if len(notes) >= 8:
+                break
+
+        if notes:
+            out[canon_team] = notes
+
+    return out
+
+
+# ---------------------------------------------------------------------------
+# OpenFootball: openfootball/world-cup community-maintained squads
+# ---------------------------------------------------------------------------
+
+OPENFOOTBALL_RAW = "https://raw.githubusercontent.com/openfootball/world-cup/master/2026/squads/wc.csv"
+
+
+def fetch_openfootball_squads(teams: list[str]) -> dict[str, list[dict]]:
+    """OpenFootball maintains squads in plain CSV (community-driven).
+
+    The CSV layout varies between editions; for 2026 it commonly has
+    columns like team,player,position,club,note. If the file or layout
+    isn't there we just return empty (graceful fallback).
+    """
+    out: dict[str, list[dict]] = {t: [] for t in teams}
+    try:
+        resp = requests.get(OPENFOOTBALL_RAW, timeout=TIMEOUT,
+                            headers={"User-Agent": "wc2026-bot/1.0"})
+        if resp.status_code == 404:
+            return out  # not yet published, that's fine
+        resp.raise_for_status()
+    except requests.RequestException as e:
+        print(f"  WARN openfootball: {e}", file=sys.stderr)
+        return out
+
+    import csv
+    import io
+    rows = list(csv.DictReader(io.StringIO(resp.text)))
+    if not rows:
+        return out
+
+    notes_keys = {"note", "notes", "status", "comment"}
+    for r in rows:
+        team_raw = r.get("team") or r.get("Team") or ""
+        canon_team = canon(team_raw)
+        if canon_team not in out:
+            continue
+        # Find any free-text note column
+        note_text = ""
+        for k, v in r.items():
+            if v and k.lower() in notes_keys:
+                note_text = str(v).strip()
+                break
+        if not note_text:
+            continue
+        if not re.search(r"injur|withdrew|ruled out|replaced|out\s+of\b|baja",
+                         note_text, re.I):
+            continue
+        out[canon_team].append({
+            "player": r.get("player") or r.get("Player"),
+            "note": note_text[:240],
+            "source": "openfootball",
+        })
+    return out
+
+
+# ---------------------------------------------------------------------------
 # API-Football (RapidAPI tier or direct key)
 # ---------------------------------------------------------------------------
 
@@ -261,21 +405,39 @@ def main() -> int:
         print("WARN: no teams found in matches.json — run fetch_matches first.", file=sys.stderr)
 
     sources_tried: list[dict] = []
-    used_source: str | None = None
+    used_sources: list[str] = []
     by_team: dict[str, list[dict]] = {t: [] for t in teams}
 
     api_key = os.environ.get("API_FOOTBALL_KEY", "").strip()
     wiki_fallback = os.environ.get("WIKI_INJURIES_FALLBACK", "").strip() == "1"
 
+    def merge(name: str, results: dict[str, list[dict]]) -> int:
+        """Add new findings without overwriting existing ones (dedup by note)."""
+        added = 0
+        for team, items in (results or {}).items():
+            if team not in by_team:
+                continue
+            existing_keys = {(it.get("player"), it.get("note") or "") for it in by_team[team]}
+            for it in items:
+                key = (it.get("player"), it.get("note") or "")
+                if key in existing_keys:
+                    continue
+                # Tag the source so the viewer can show provenance
+                it.setdefault("source", name)
+                by_team[team].append(it)
+                existing_keys.add(key)
+                added += 1
+        return added
+
+    # 1) API-Football (best when available — provides player + reason structured)
     if api_key and teams:
         try:
             res = fetch_api_football(api_key, teams)
-            non_empty = sum(1 for v in res.values() if v)
+            added = merge("api-football", res)
             sources_tried.append({"source": "api-football", "ok": True,
-                                  "teams_with_data": non_empty})
-            if non_empty:
-                by_team = res
-                used_source = "api-football"
+                                  "items_added": added})
+            if added > 0:
+                used_sources.append("api-football")
         except Exception as e:  # noqa: BLE001
             sources_tried.append({"source": "api-football", "ok": False,
                                   "error": str(e)[:200]})
@@ -283,25 +445,46 @@ def main() -> int:
         sources_tried.append({"source": "api-football", "ok": False,
                               "error": "API_FOOTBALL_KEY not set"})
 
-    # Wikipedia se ejecuta como FALLBACK COMPLEMENTARIO: llena los equipos que
-    # API-Football no cubrió, sin sobreescribir los que sí cubrió.
+    # 2) Wikipedia consolidated squads page (free, no key, all 48 teams in one fetch)
+    if teams:
+        try:
+            res = fetch_wikipedia_squads_page(teams)
+            added = merge("wikipedia-squads", res)
+            sources_tried.append({"source": "wikipedia-squads", "ok": True,
+                                  "items_added": added})
+            if added > 0:
+                used_sources.append("wikipedia-squads")
+        except Exception as e:  # noqa: BLE001
+            sources_tried.append({"source": "wikipedia-squads", "ok": False,
+                                  "error": str(e)[:200]})
+
+    # 3) OpenFootball community CSV (free, no key)
+    if teams:
+        try:
+            res = fetch_openfootball_squads(teams)
+            added = merge("openfootball", res)
+            sources_tried.append({"source": "openfootball", "ok": True,
+                                  "items_added": added})
+            if added > 0:
+                used_sources.append("openfootball")
+        except Exception as e:  # noqa: BLE001
+            sources_tried.append({"source": "openfootball", "ok": False,
+                                  "error": str(e)[:200]})
+
+    # 4) Wikipedia per-team article fallback (more aggressive, gated by env var)
     if wiki_fallback and teams:
         try:
-            wiki_res = fetch_wikipedia_fallback(teams)
-            non_empty = sum(1 for v in wiki_res.values() if v)
-            sources_tried.append({"source": "wikipedia", "ok": True,
-                                  "teams_with_data": non_empty})
-            if non_empty:
-                # Solo añade equipos vacíos
-                for team, items in wiki_res.items():
-                    if not by_team.get(team) and items:
-                        by_team[team] = items
-                used_source = used_source or "wikipedia"
-                if used_source != "wikipedia":
-                    used_source = used_source + "+wikipedia"
+            res = fetch_wikipedia_fallback(teams)
+            added = merge("wikipedia-team-pages", res)
+            sources_tried.append({"source": "wikipedia-team-pages", "ok": True,
+                                  "items_added": added})
+            if added > 0:
+                used_sources.append("wikipedia-team-pages")
         except Exception as e:  # noqa: BLE001
-            sources_tried.append({"source": "wikipedia", "ok": False,
+            sources_tried.append({"source": "wikipedia-team-pages", "ok": False,
                                   "error": str(e)[:200]})
+
+    used_source: str | None = "+".join(used_sources) if used_sources else None
 
     payload = {
         "updatedAt": datetime.now(timezone.utc).isoformat(timespec="seconds"),
