@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-17T17:07:10+00:00",
+  "updatedAt": "2026-06-17T19:32:59+00:00",
   "source": "football-data.org / competitions/WC/matches",
   "competition": "FIFA World Cup",
   "count": 104,
@@ -547,7 +547,7 @@
     {
       "id": 537403,
       "utcDate": "2026-06-17T17:00:00Z",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "stage": "GROUP_STAGE",
       "group": "GROUP_K",
       "matchday": 1,
@@ -564,8 +564,8 @@
         "crest": "https://crests.football-data.org/congo_dr.svg"
       },
       "score": {
-        "home": 0,
-        "away": 0,
+        "home": 1,
+        "away": 1,
         "winner": "DRAW",
         "duration": "REGULAR"
       },
