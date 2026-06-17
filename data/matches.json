@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-17T20:48:34+00:00",
+  "updatedAt": "2026-06-17T21:01:10+00:00",
   "source": "football-data.org / competitions/WC/matches",
   "competition": "FIFA World Cup",
   "count": 104,
@@ -398,7 +398,7 @@
       "awayTeam": {
         "name": "Uruguay",
         "shortName": "Uruguay",
-        "tla": "URU",
+        "tla": "URY",
         "crest": "https://crests.football-data.org/758.svg"
       },
       "score": {
@@ -574,7 +574,7 @@
     {
       "id": 537409,
       "utcDate": "2026-06-17T20:00:00Z",
-      "status": "IN_PLAY",
+      "status": "PAUSED",
       "stage": "GROUP_STAGE",
       "group": "GROUP_L",
       "matchday": 1,
@@ -592,8 +592,8 @@
       },
       "score": {
         "home": 2,
-        "away": 1,
-        "winner": "HOME_TEAM",
+        "away": 2,
+        "winner": "DRAW",
         "duration": "REGULAR"
       },
       "venue": null
@@ -1040,7 +1040,7 @@
       "homeTeam": {
         "name": "Uruguay",
         "shortName": "Uruguay",
-        "tla": "URU",
+        "tla": "URY",
         "crest": "https://crests.football-data.org/758.svg"
       },
       "awayTeam": {
@@ -1688,7 +1688,7 @@
       "homeTeam": {
         "name": "Uruguay",
         "shortName": "Uruguay",
-        "tla": "URU",
+        "tla": "URY",
         "crest": "https://crests.football-data.org/758.svg"
       },
       "awayTeam": {
