@@ -9,6 +9,7 @@ env/
 # Env / secrets
 .env
 *.env.local
+viewer/config.local.js
 
 # Editors
 .vscode/

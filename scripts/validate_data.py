@@ -123,7 +123,7 @@ def _check_team_stats(curr: dict, anomalies: list[dict]) -> dict:
     no_form = sum(1 for t in teams.values()
                   if not (t.get("form") or {}).get("matches"))
     no_cards = sum(1 for t in teams.values()
-                   if not (t.get("wc_bookings") or {}).get("matches_with_data"))
+                   if not (t.get("cards_last10") or {}).get("matches_with_data"))
     summary = {"team_count": len(teams),
                "teams_without_form": no_form,
                "teams_without_card_data": no_cards}

@@ -4,7 +4,16 @@ on:
   schedule:
     # Every 4 hours, on the hour (UTC).
     - cron: "0 */4 * * *"
-  workflow_dispatch: {}
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "fast = solo matches+odds (~30-60s). full = todo (matches, odds, team_stats, injuries, validate, telegram)."
+        required: false
+        default: "full"
+        type: choice
+        options:
+          - fast
+          - full
 
 permissions:
   contents: write
@@ -17,6 +26,10 @@ concurrency:
 jobs:
   update:
     runs-on: ubuntu-latest
+    env:
+      # Si lo dispara el cron => 'full'; si es manual usa el input; si
+      # alguien lo lanza con la API sin input, default 'full'.
+      RUN_MODE: ${{ github.event_name == 'schedule' && 'full' || (inputs.mode || 'full') }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -53,14 +66,18 @@ jobs:
           BAYESIAN_ODDS_URL: ${{ vars.BAYESIAN_ODDS_URL }}
         run: python scripts/fetch_odds.py
 
-      - name: Fetch team stats (last-10 form + WC bookings)
+      - name: Fetch team stats (last-10 form + cards)
+        if: env.RUN_MODE == 'full'
         continue-on-error: true
         env:
           FOOTBALL_DATA_API_KEY: ${{ secrets.FOOTBALL_DATA_API_KEY }}
+          API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
+          API_FOOTBALL_BUDGET: ${{ vars.API_FOOTBALL_BUDGET }}
           BAYESIAN_RESULTS_URL: ${{ vars.BAYESIAN_RESULTS_URL }}
         run: python scripts/fetch_team_stats.py
 
       - name: Fetch injuries (API-Football, optional)
+        if: env.RUN_MODE == 'full'
         continue-on-error: true
         env:
           API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
@@ -68,6 +85,7 @@ jobs:
         run: python scripts/fetch_injuries.py
 
       - name: Validate data and open Issue on anomalies
+        if: env.RUN_MODE == 'full'
         continue-on-error: true
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -76,6 +94,7 @@ jobs:
         run: python scripts/validate_data.py
 
       - name: Notify Telegram (newly finished matches)
+        if: env.RUN_MODE == 'full'
         continue-on-error: true
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
@@ -88,7 +107,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/
           if [[ -n "$(git status --porcelain data/)" ]]; then
-            git commit -m "chore(data): refresh WC2026 data [skip ci]"
+            git commit -m "chore(data): refresh WC2026 data [mode=$RUN_MODE] [skip ci]"
             git push
           else
             echo "No changes to commit."

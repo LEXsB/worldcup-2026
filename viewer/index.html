@@ -102,6 +102,14 @@
       th, td { padding: 7px 6px; font-size: 12px; }
     }
   </style>
+  <!--
+    Config local OPCIONAL: si existe viewer/config.local.js (gitignored)
+    se carga aquí. Define `window.WC_GH_TOKEN` para que el botón
+    ↻ Recargar dispare el workflow sin pegar el token a mano.
+    Si el archivo no existe, el script falla silenciosamente y el visor
+    sigue funcionando con el token guardado en localStorage (o sin él).
+  -->
+  <script src="config.local.js" onerror="void 0"></script>
 </head>
 <body>
   <header>
@@ -165,11 +173,14 @@
       <label>&nbsp;
         <div class="toolbar">
           <button id="btnToday" title="Mostrar solo los partidos de hoy">📅 Hoy</button>
-          <button id="btnReload">↻ Recargar</button>
+          <button id="btnReload" title="Refresca los datos. Con token GitHub configurado, dispara el workflow para traer datos nuevos.">↻ Recargar</button>
+          <button id="btnRefreshConfig" class="secondary" title="Configurar token de GitHub para refrescar datos en vivo">⚙</button>
           <button id="btnClear" class="secondary">Limpiar filtros</button>
         </div>
       </label>
     </div>
+
+    <div id="refreshStatus" class="config" style="display:none;margin-bottom:10px"></div>
 
     <div id="tableWrap">
       <table>
@@ -220,8 +231,8 @@
         <thead><tr>
           <th>Equipo</th><th>PJ</th><th>W-D-L</th>
           <th>GF/p</th><th>GC/p</th><th>Último</th>
-          <th class="hide-sm">🟨 (WC)</th><th class="hide-sm">🟥 (WC)</th>
-          <th class="hide-sm">🟨/p (WC)</th>
+          <th class="hide-sm">🟨 (últ. 10)</th><th class="hide-sm">🟥 (últ. 10)</th>
+          <th class="hide-sm">🟨/p</th>
         </tr></thead>
         <tbody id="statsRows"></tbody>
       </table>
@@ -252,7 +263,7 @@
     const $ = (id) => document.getElementById(id);
     let allMatches = [];
     let oddsByKey = {};      // "date|home|away" -> odds row
-    let teamStats = {};      // team -> { form, wc_bookings }
+    let teamStats = {};      // team -> { form, cards_last10 }
     let injuriesByTeam = {}; // team -> [items]
     let broadcasts = { default: ["DIRECTV GO"], priority: [], overrides: {} };
 
@@ -513,7 +524,8 @@
       $(id).addEventListener("input", render);
       $(id).addEventListener("change", render);
     });
-    $("btnReload").addEventListener("click", load);
+    $("btnReload").addEventListener("click", handleRefreshClick);
+    $("btnRefreshConfig").addEventListener("click", configureGithubToken);
     $("btnClear").addEventListener("click", () => {
       ["fTeam", "fStage", "fGroup", "fStatus", "fFrom", "fTo"].forEach(id => $(id).value = "");
       render();
@@ -524,6 +536,208 @@
       $("fTo").value = today;
       render();
     });
+
+    // ---------- Live refresh via GitHub Actions workflow_dispatch ----------
+    // Token vive solo en localStorage del navegador del usuario; nunca en el HTML.
+    const GH_WORKFLOW_FILE = "update-results.yml";
+    const GH_TOKEN_KEY = "wc-gh-token";
+    const REFRESH_TIMEOUT_MS = 5 * 60 * 1000; // 5 min
+    const REFRESH_POLL_MS = 5000;
+
+    function getStoredToken() {
+      // Prioridad: window.WC_GH_TOKEN (config.local.js) > localStorage.
+      const fromFile = (typeof window !== "undefined" && window.WC_GH_TOKEN) || "";
+      if (fromFile && fromFile !== "PEGA_TU_TOKEN_AQUI") return String(fromFile).trim();
+      try { return localStorage.getItem(GH_TOKEN_KEY) || ""; }
+      catch { return ""; }
+    }
+    function setStoredToken(v) {
+      try {
+        if (v) localStorage.setItem(GH_TOKEN_KEY, v);
+        else localStorage.removeItem(GH_TOKEN_KEY);
+      } catch {}
+    }
+
+    function getRepoCoords() {
+      // Deriva owner/repo del BASE_URL (raw.githubusercontent.com/<owner>/<repo>/<branch>/...)
+      const url = (BASE_URL || "").trim();
+      const m = url.match(/raw\.githubusercontent\.com\/([^/]+)\/([^/]+)\/([^/]+)/);
+      if (!m) return null;
+      return { owner: m[1], repo: m[2], branch: m[3] || "main" };
+    }
+
+    function setRefreshStatus(msg, kind = "info") {
+      const box = $("refreshStatus");
+      if (!msg) { box.style.display = "none"; box.textContent = ""; return; }
+      const colors = {
+        info: "var(--text)",
+        ok: "#7ee08a",
+        err: "#ff8a8a",
+      };
+      box.style.display = "block";
+      box.style.color = colors[kind] || colors.info;
+      box.textContent = msg;
+    }
+
+    function configureGithubToken() {
+      const coords = getRepoCoords();
+      if (!coords) {
+        alert("No puedo derivar el repo del BASE_URL. Edita BASE_URL en index.html primero.");
+        return;
+      }
+      const current = getStoredToken();
+      const help =
+        `Pega un GitHub Personal Access Token con permisos para disparar workflows en ${coords.owner}/${coords.repo}.\n\n` +
+        `• Fine-grained PAT: dale acceso SOLO a este repo, con permiso "Actions: Read and write".\n` +
+        `• Classic PAT: scopes "public_repo" + "workflow" (o "repo" si es privado).\n\n` +
+        `Dejar vacío y aceptar = borrar el token guardado.\n` +
+        `El token vive solo en tu navegador (localStorage), nunca se sube al repo.`;
+      const v = prompt(help, current ? "(token guardado — pega uno nuevo o deja vacío para borrar)" : "");
+      if (v === null) return; // cancel
+      const trimmed = v.trim();
+      if (!trimmed || trimmed.startsWith("(token guardado")) {
+        if (current && confirm("¿Borrar el token guardado?")) {
+          setStoredToken("");
+          setRefreshStatus("Token borrado. El botón Recargar volverá a solo refrescar JSON.", "info");
+          setTimeout(() => setRefreshStatus(""), 4000);
+        }
+        return;
+      }
+      setStoredToken(trimmed);
+      setRefreshStatus("✓ Token guardado. Ahora ↻ Recargar disparará el workflow.", "ok");
+      setTimeout(() => setRefreshStatus(""), 4000);
+    }
+
+    async function ghApi(path, token, opts = {}) {
+      const resp = await fetch(`https://api.github.com${path}`, {
+        ...opts,
+        headers: {
+          "Accept": "application/vnd.github+json",
+          "X-GitHub-Api-Version": "2022-11-28",
+          "Authorization": `Bearer ${token}`,
+          ...(opts.body ? { "Content-Type": "application/json" } : {}),
+          ...(opts.headers || {}),
+        },
+      });
+      if (!resp.ok) {
+        let detail = "";
+        try { detail = (await resp.json()).message || ""; } catch {}
+        throw new Error(`GitHub API ${resp.status}${detail ? ": " + detail : ""}`);
+      }
+      // 204 No Content -> null
+      if (resp.status === 204) return null;
+      return resp.json();
+    }
+
+    async function triggerWorkflowAndWait(coords, token, mode = "fast") {
+      const dispatchedAt = Date.now();
+      setRefreshStatus(`Disparando workflow (modo ${mode})…`, "info");
+      const dispatchUrl =
+        `/repos/${coords.owner}/${coords.repo}/actions/workflows/${GH_WORKFLOW_FILE}/dispatches`;
+      try {
+        await ghApi(dispatchUrl, token, {
+          method: "POST",
+          body: JSON.stringify({ ref: coords.branch, inputs: { mode } }),
+        });
+      } catch (e) {
+        // 422 "Unexpected inputs" => el YAML del repo todavía no tiene
+        // el input "mode" (no se ha hecho push del workflow nuevo).
+        // Reintentamos sin inputs para no bloquear al usuario.
+        if (/422/.test(e.message) && /mode/.test(e.message)) {
+          setRefreshStatus("Workflow viejo en GitHub (sin input 'mode'). Disparando sin parámetros…", "info");
+          await ghApi(dispatchUrl, token, {
+            method: "POST",
+            body: JSON.stringify({ ref: coords.branch }),
+          });
+        } else {
+          throw e;
+        }
+      }
+
+      // Espera hasta encontrar el run que acabamos de disparar
+      setRefreshStatus("Esperando que aparezca la corrida…", "info");
+      let runId = null;
+      const findDeadline = Date.now() + 60_000;
+      while (!runId && Date.now() < findDeadline) {
+        await new Promise(r => setTimeout(r, 3000));
+        const runs = await ghApi(
+          `/repos/${coords.owner}/${coords.repo}/actions/runs?event=workflow_dispatch&per_page=10`,
+          token
+        );
+        const candidate = (runs.workflow_runs || []).find(r => {
+          const created = Date.parse(r.created_at || "");
+          // Toleramos 30s de skew hacia atrás
+          return created && created >= (dispatchedAt - 30_000);
+        });
+        if (candidate) runId = candidate.id;
+      }
+      if (!runId) throw new Error("No encontré la corrida del workflow tras 60s.");
+
+      // Polling hasta completed
+      const runDeadline = Date.now() + REFRESH_TIMEOUT_MS;
+      let lastStatus = "";
+      while (Date.now() < runDeadline) {
+        const run = await ghApi(
+          `/repos/${coords.owner}/${coords.repo}/actions/runs/${runId}`,
+          token
+        );
+        if (run.status !== lastStatus) {
+          lastStatus = run.status;
+          const elapsed = Math.round((Date.now() - dispatchedAt) / 1000);
+          setRefreshStatus(`Workflow: ${run.status}${run.conclusion ? " (" + run.conclusion + ")" : ""} · ${elapsed}s`, "info");
+        }
+        if (run.status === "completed") {
+          if (run.conclusion === "success") return run;
+          throw new Error(`Workflow terminó con: ${run.conclusion || "fallo"}`);
+        }
+        await new Promise(r => setTimeout(r, REFRESH_POLL_MS));
+      }
+      throw new Error("Timeout esperando el workflow (>5min).");
+    }
+
+    let refreshing = false;
+    async function handleRefreshClick(ev) {
+      if (refreshing) return;
+      const btn = $("btnReload");
+      const token = getStoredToken();
+      const coords = getRepoCoords();
+
+      // Sin token o sin coords válidas: solo recarga JSON (comportamiento previo).
+      if (!token || !coords) {
+        await load();
+        return;
+      }
+
+      // Shift+click => modo full (todo: matches+odds+stats+injuries+validate).
+      // Click normal => modo fast (solo matches+odds, ~30-60s).
+      const mode = (ev && ev.shiftKey) ? "full" : "fast";
+
+      refreshing = true;
+      const originalText = btn.textContent;
+      btn.disabled = true;
+      btn.textContent = mode === "full" ? "⏳ Full…" : "⏳ Fast…";
+      try {
+        await triggerWorkflowAndWait(coords, token, mode);
+        setRefreshStatus("✓ Workflow OK. Recargando datos…", "ok");
+        // El commit del bot puede tardar unos segundos en propagarse al raw CDN.
+        await new Promise(r => setTimeout(r, 3000));
+        await load();
+        setRefreshStatus(`✓ Datos actualizados (modo ${mode}).`, "ok");
+        setTimeout(() => setRefreshStatus(""), 4000);
+      } catch (e) {
+        setRefreshStatus("Error: " + e.message + " — recargando JSON existente.", "err");
+        try { await load(); } catch {}
+      } finally {
+        btn.disabled = false;
+        btn.textContent = originalText;
+        refreshing = false;
+      }
+    }
+
+    // Si hay token guardado, deja claro que el botón hace refresh real.
+    if (getStoredToken() && getRepoCoords()) {
+      $("btnReload").title = "Click = refresh rápido (matches+cuotas, ~30-60s). Shift+click = refresh completo (incluye stats y lesiones, ~3-5min).";
+    }
 
     // ---------- Theme toggle ----------
     function applyTheme(theme) {
@@ -672,8 +886,8 @@
       $("statsEmpty").hidden = teams.length > 0;
       tbody.innerHTML = teams.map(t => {
         const f = t.form || {};
-        const b = t.wc_bookings || {};
-        const last = (f.last_matches || []).slice(0, 5).map(m =>
+        const b = t.cards_last10 || {};
+        const last = (f.last_matches || []).slice(0, 10).map(m =>
           `<span title="${m.date} vs ${m.opponent} (${m.gf}-${m.ga})"
                  style="display:inline-block;width:14px;text-align:center;
                         margin:0 1px;border-radius:3px;font-weight:700;
