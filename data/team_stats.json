@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-17T19:35:31+00:00",
+  "updatedAt": "2026-06-17T20:48:38+00:00",
   "window": 10,
   "teamCount": 48,
   "sourcesTried": [
@@ -9,9 +9,13 @@
       "rows": 49425
     },
     {
-      "source": "fd-bookings",
+      "source": "api-football-cards-last10",
       "ok": true,
-      "teams_with_data": 0
+      "calls_used": 1,
+      "budget": 90,
+      "teams_refreshed": 0,
+      "teams_with_data": 0,
+      "budget_exhausted": false
     }
   ],
   "teams": {
@@ -123,11 +127,13 @@
           }
         ]
       },
-      "wc_bookings": {
+      "cards_last10": {
+        "team": "Algeria",
+        "window": 10,
         "yellow": 0,
         "red": 0,
-        "second_yellow": 0,
         "yellow_avg": null,
+        "red_avg": null,
         "matches_with_data": 0,
         "matches": []
       }
@@ -240,11 +246,13 @@
           }
         ]
       },
-      "wc_bookings": {
+      "cards_last10": {
+        "team": "Argentina",
+        "window": 10,
         "yellow": 0,
         "red": 0,
-        "second_yellow": 0,
         "yellow_avg": null,
+        "red_avg": null,
         "matches_with_data": 0,
         "matches": []
       }
@@ -357,11 +365,13 @@
           }
         ]
       },
-      "wc_bookings": {
+      "cards_last10": {
+        "team": "Australia",
+        "window": 10,
         "yellow": 0,
         "red": 0,
-        "second_yellow": 0,
         "yellow_avg": null,
+        "red_avg": null,
         "matches_with_data": 0,
         "matches": []
       }
@@ -474,11 +484,13 @@
           }
         ]
       },
-      "wc_bookings": {
+      "cards_last10": {
+        "team": "Austria",
+        "window": 10,
         "yellow": 0,
         "red": 0,
-        "second_yellow": 0,
         "yellow_avg": null,
+        "red_avg": null,
         "matches_with_data": 0,
         "matches": []
       }
@@ -591,11 +603,13 @@
           }
         ]
       },
-      "wc_bookings": {
+      "cards_last10": {
+        "team": "Belgium",
+        "window": 10,
         "yellow": 0,
         "red": 0,
-        "second_yellow": 0,
         "yellow_avg": null,
+        "red_avg": null,
         "matches_with_data": 0,
         "matches": []
       }
@@ -708,11 +722,13 @@
           }
         ]
       },
-      "wc_bookings": {
+      "cards_last10": {
+        "team": "Bosnia & Herzegovina",
+        "window": 10,
         "yellow": 0,
         "red": 0,
-        "second_yellow": 0,
         "yellow_avg": null,
+        "red_avg": null,
         "matches_with_data": 0,
         "matches": []
       }
@@ -825,11 +841,13 @@
           }
         ]
       },
-      "wc_bookings": {
+      "cards_last10": {
+        "team": "Brazil",
+        "window": 10,
         "yellow": 0,
         "red": 0,
-        "second_yellow": 0,
         "yellow_avg": null,
+        "red_avg": null,
         "matches_with_data": 0,
         "matches": []
       }
@@ -942,11 +960,13 @@
           }
         ]
       },
-      "wc_bookings": {
+      "cards_last10": {
+        "team": "Canada",
+        "window": 10,
         "yellow": 0,
         "red": 0,
-        "second_yellow": 0,
         "yellow_avg": null,
+        "red_avg": null,
         "matches_with_data": 0,
         "matches": []
       }
@@ -1059,11 +1079,13 @@
           }
         ]
       },
-      "wc_bookings": {
+      "cards_last10": {
+        "team": "Cape Verde Islands",
+        "window": 10,
         "yellow": 0,
         "red": 0,
-        "second_yellow": 0,
         "yellow_avg": null,
+        "red_avg": null,
         "matches_with_data": 0,
         "matches": []
       }
@@ -1176,11 +1198,13 @@
           }
         ]
       },
-      "wc_bookings": {
+      "cards_last10": {
+        "team": "Colombia",
+        "window": 10,
         "yellow": 0,
         "red": 0,
-        "second_yellow": 0,
         "yellow_avg": null,
+        "red_avg": null,
         "matches_with_data": 0,
         "matches": []
       }
@@ -1293,11 +1317,13 @@
           }
         ]
       },
-      "wc_bookings": {
+      "cards_last10": {
+        "team": "Congo DR",
+        "window": 10,
         "yellow": 0,
         "red": 0,
-        "second_yellow": 0,
         "yellow_avg": null,
+        "red_avg": null,
         "matches_with_data": 0,
         "matches": []
       }
@@ -1410,11 +1436,13 @@
           }
         ]
       },
-      "wc_bookings": {
+      "cards_last10": {
+        "team": "Croatia",
+        "window": 10,
         "yellow": 0,
         "red": 0,
-        "second_yellow": 0,
         "yellow_avg": null,
+        "red_avg": null,
         "matches_with_data": 0,
         "matches": []
       }
@@ -1527,11 +1555,13 @@
           }
         ]
       },
-      "wc_bookings": {
+      "cards_last10": {
+        "team": "Curaçao",
+        "window": 10,
         "yellow": 0,
         "red": 0,
-        "second_yellow": 0,
         "yellow_avg": null,
+        "red_avg": null,
         "matches_with_data": 0,
         "matches": []
       }
@@ -1644,11 +1674,13 @@
           }
         ]
       },
-      "wc_bookings": {
+      "cards_last10": {
+        "team": "Czechia",
+        "window": 10,
         "yellow": 0,
         "red": 0,
-        "second_yellow": 0,
         "yellow_avg": null,
+        "red_avg": null,
         "matches_with_data": 0,
         "matches": []
       }
@@ -1761,11 +1793,13 @@
           }
         ]
       },
-      "wc_bookings": {
+      "cards_last10": {
+        "team": "Côte d'Ivoire",
+        "window": 10,
         "yellow": 0,
         "red": 0,
-        "second_yellow": 0,
         "yellow_avg": null,
+        "red_avg": null,
         "matches_with_data": 0,
         "matches": []
       }
@@ -1878,11 +1912,13 @@
           }
         ]
       },
-      "wc_bookings": {
+      "cards_last10": {
+        "team": "Ecuador",
+        "window": 10,
         "yellow": 0,
         "red": 0,
-        "second_yellow": 0,
         "yellow_avg": null,
+        "red_avg": null,
         "matches_with_data": 0,
         "matches": []
       }
@@ -1995,11 +2031,13 @@
           }
         ]
       },
-      "wc_bookings": {
+      "cards_last10": {
+        "team": "Egypt",
+        "window": 10,
         "yellow": 0,
         "red": 0,
-        "second_yellow": 0,
         "yellow_avg": null,
+        "red_avg": null,
         "matches_with_data": 0,
         "matches": []
       }
@@ -2112,11 +2150,13 @@
           }
         ]
       },
-      "wc_bookings": {
+      "cards_last10": {
+        "team": "England",
+        "window": 10,
         "yellow": 0,
         "red": 0,
-        "second_yellow": 0,
         "yellow_avg": null,
+        "red_avg": null,
         "matches_with_data": 0,
         "matches": []
       }
@@ -2229,11 +2269,13 @@
           }
         ]
       },
-      "wc_bookings": {
+      "cards_last10": {
+        "team": "France",
+        "window": 10,
         "yellow": 0,
         "red": 0,
-        "second_yellow": 0,
         "yellow_avg": null,
+        "red_avg": null,
         "matches_with_data": 0,
         "matches": []
       }
@@ -2346,11 +2388,13 @@
           }
         ]
       },
-      "wc_bookings": {
+      "cards_last10": {
+        "team": "Germany",
+        "window": 10,
         "yellow": 0,
         "red": 0,
-        "second_yellow": 0,
         "yellow_avg": null,
+        "red_avg": null,
         "matches_with_data": 0,
         "matches": []
       }
@@ -2463,11 +2507,13 @@
           }
         ]
       },
-      "wc_bookings": {
+      "cards_last10": {
+        "team": "Ghana",
+        "window": 10,
         "yellow": 0,
         "red": 0,
-        "second_yellow": 0,
         "yellow_avg": null,
+        "red_avg": null,
         "matches_with_data": 0,
         "matches": []
       }
@@ -2580,11 +2626,13 @@
           }
         ]
       },
-      "wc_bookings": {
+      "cards_last10": {
+        "team": "Haiti",
+        "window": 10,
         "yellow": 0,
         "red": 0,
-        "second_yellow": 0,
         "yellow_avg": null,
+        "red_avg": null,
         "matches_with_data": 0,
         "matches": []
       }
@@ -2697,11 +2745,13 @@
           }
         ]
       },
-      "wc_bookings": {
+      "cards_last10": {
+        "team": "Iran",
+        "window": 10,
         "yellow": 0,
         "red": 0,
-        "second_yellow": 0,
         "yellow_avg": null,
+        "red_avg": null,
         "matches_with_data": 0,
         "matches": []
       }
@@ -2814,11 +2864,13 @@
           }
         ]
       },
-      "wc_bookings": {
+      "cards_last10": {
+        "team": "Iraq",
+        "window": 10,
         "yellow": 0,
         "red": 0,
-        "second_yellow": 0,
         "yellow_avg": null,
+        "red_avg": null,
         "matches_with_data": 0,
         "matches": []
       }
@@ -2931,11 +2983,13 @@
           }
         ]
       },
-      "wc_bookings": {
+      "cards_last10": {
+        "team": "Japan",
+        "window": 10,
         "yellow": 0,
         "red": 0,
-        "second_yellow": 0,
         "yellow_avg": null,
+        "red_avg": null,
         "matches_with_data": 0,
         "matches": []
       }
@@ -3048,11 +3102,13 @@
           }
         ]
       },
-      "wc_bookings": {
+      "cards_last10": {
+        "team": "Jordan",
+        "window": 10,
         "yellow": 0,
         "red": 0,
-        "second_yellow": 0,
         "yellow_avg": null,
+        "red_avg": null,
         "matches_with_data": 0,
         "matches": []
       }
@@ -3165,11 +3221,13 @@
           }
         ]
       },
-      "wc_bookings": {
+      "cards_last10": {
+        "team": "Mexico",
+        "window": 10,
         "yellow": 0,
         "red": 0,
-        "second_yellow": 0,
         "yellow_avg": null,
+        "red_avg": null,
         "matches_with_data": 0,
         "matches": []
       }
@@ -3282,11 +3340,13 @@
           }
         ]
       },
-      "wc_bookings": {
+      "cards_last10": {
+        "team": "Morocco",
+        "window": 10,
         "yellow": 0,
         "red": 0,
-        "second_yellow": 0,
         "yellow_avg": null,
+        "red_avg": null,
         "matches_with_data": 0,
         "matches": []
       }
@@ -3399,11 +3459,13 @@
           }
         ]
       },
-      "wc_bookings": {
+      "cards_last10": {
+        "team": "Netherlands",
+        "window": 10,
         "yellow": 0,
         "red": 0,
-        "second_yellow": 0,
         "yellow_avg": null,
+        "red_avg": null,
         "matches_with_data": 0,
         "matches": []
       }
@@ -3516,11 +3578,13 @@
           }
         ]
       },
-      "wc_bookings": {
+      "cards_last10": {
+        "team": "New Zealand",
+        "window": 10,
         "yellow": 0,
         "red": 0,
-        "second_yellow": 0,
         "yellow_avg": null,
+        "red_avg": null,
         "matches_with_data": 0,
         "matches": []
       }
@@ -3633,11 +3697,13 @@
           }
         ]
       },
-      "wc_bookings": {
+      "cards_last10": {
+        "team": "Norway",
+        "window": 10,
         "yellow": 0,
         "red": 0,
-        "second_yellow": 0,
         "yellow_avg": null,
+        "red_avg": null,
         "matches_with_data": 0,
         "matches": []
       }
@@ -3750,11 +3816,13 @@
           }
         ]
       },
-      "wc_bookings": {
+      "cards_last10": {
+        "team": "Panama",
+        "window": 10,
         "yellow": 0,
         "red": 0,
-        "second_yellow": 0,
         "yellow_avg": null,
+        "red_avg": null,
         "matches_with_data": 0,
         "matches": []
       }
@@ -3867,11 +3935,13 @@
           }
         ]
       },
-      "wc_bookings": {
+      "cards_last10": {
+        "team": "Paraguay",
+        "window": 10,
         "yellow": 0,
         "red": 0,
-        "second_yellow": 0,
         "yellow_avg": null,
+        "red_avg": null,
         "matches_with_data": 0,
         "matches": []
       }
@@ -3984,11 +4054,13 @@
           }
         ]
       },
-      "wc_bookings": {
+      "cards_last10": {
+        "team": "Portugal",
+        "window": 10,
         "yellow": 0,
         "red": 0,
-        "second_yellow": 0,
         "yellow_avg": null,
+        "red_avg": null,
         "matches_with_data": 0,
         "matches": []
       }
@@ -4101,11 +4173,13 @@
           }
         ]
       },
-      "wc_bookings": {
+      "cards_last10": {
+        "team": "Qatar",
+        "window": 10,
         "yellow": 0,
         "red": 0,
-        "second_yellow": 0,
         "yellow_avg": null,
+        "red_avg": null,
         "matches_with_data": 0,
         "matches": []
       }
@@ -4218,11 +4292,13 @@
           }
         ]
       },
-      "wc_bookings": {
+      "cards_last10": {
+        "team": "Saudi Arabia",
+        "window": 10,
         "yellow": 0,
         "red": 0,
-        "second_yellow": 0,
         "yellow_avg": null,
+        "red_avg": null,
         "matches_with_data": 0,
         "matches": []
       }
@@ -4335,11 +4411,13 @@
           }
         ]
       },
-      "wc_bookings": {
+      "cards_last10": {
+        "team": "Scotland",
+        "window": 10,
         "yellow": 0,
         "red": 0,
-        "second_yellow": 0,
         "yellow_avg": null,
+        "red_avg": null,
         "matches_with_data": 0,
         "matches": []
       }
@@ -4452,11 +4530,13 @@
           }
         ]
       },
-      "wc_bookings": {
+      "cards_last10": {
+        "team": "Senegal",
+        "window": 10,
         "yellow": 0,
         "red": 0,
-        "second_yellow": 0,
         "yellow_avg": null,
+        "red_avg": null,
         "matches_with_data": 0,
         "matches": []
       }
@@ -4569,11 +4649,13 @@
           }
         ]
       },
-      "wc_bookings": {
+      "cards_last10": {
+        "team": "South Africa",
+        "window": 10,
         "yellow": 0,
         "red": 0,
-        "second_yellow": 0,
         "yellow_avg": null,
+        "red_avg": null,
         "matches_with_data": 0,
         "matches": []
       }
@@ -4686,11 +4768,13 @@
           }
         ]
       },
-      "wc_bookings": {
+      "cards_last10": {
+        "team": "South Korea",
+        "window": 10,
         "yellow": 0,
         "red": 0,
-        "second_yellow": 0,
         "yellow_avg": null,
+        "red_avg": null,
         "matches_with_data": 0,
         "matches": []
       }
@@ -4803,11 +4887,13 @@
           }
         ]
       },
-      "wc_bookings": {
+      "cards_last10": {
+        "team": "Spain",
+        "window": 10,
         "yellow": 0,
         "red": 0,
-        "second_yellow": 0,
         "yellow_avg": null,
+        "red_avg": null,
         "matches_with_data": 0,
         "matches": []
       }
@@ -4920,11 +5006,13 @@
           }
         ]
       },
-      "wc_bookings": {
+      "cards_last10": {
+        "team": "Sweden",
+        "window": 10,
         "yellow": 0,
         "red": 0,
-        "second_yellow": 0,
         "yellow_avg": null,
+        "red_avg": null,
         "matches_with_data": 0,
         "matches": []
       }
@@ -5037,11 +5125,13 @@
           }
         ]
       },
-      "wc_bookings": {
+      "cards_last10": {
+        "team": "Switzerland",
+        "window": 10,
         "yellow": 0,
         "red": 0,
-        "second_yellow": 0,
         "yellow_avg": null,
+        "red_avg": null,
         "matches_with_data": 0,
         "matches": []
       }
@@ -5154,11 +5244,13 @@
           }
         ]
       },
-      "wc_bookings": {
+      "cards_last10": {
+        "team": "Tunisia",
+        "window": 10,
         "yellow": 0,
         "red": 0,
-        "second_yellow": 0,
         "yellow_avg": null,
+        "red_avg": null,
         "matches_with_data": 0,
         "matches": []
       }
@@ -5271,11 +5363,13 @@
           }
         ]
       },
-      "wc_bookings": {
+      "cards_last10": {
+        "team": "Türkiye",
+        "window": 10,
         "yellow": 0,
         "red": 0,
-        "second_yellow": 0,
         "yellow_avg": null,
+        "red_avg": null,
         "matches_with_data": 0,
         "matches": []
       }
@@ -5388,11 +5482,13 @@
           }
         ]
       },
-      "wc_bookings": {
+      "cards_last10": {
+        "team": "United States",
+        "window": 10,
         "yellow": 0,
         "red": 0,
-        "second_yellow": 0,
         "yellow_avg": null,
+        "red_avg": null,
         "matches_with_data": 0,
         "matches": []
       }
@@ -5505,11 +5601,13 @@
           }
         ]
       },
-      "wc_bookings": {
+      "cards_last10": {
+        "team": "Uruguay",
+        "window": 10,
         "yellow": 0,
         "red": 0,
-        "second_yellow": 0,
         "yellow_avg": null,
+        "red_avg": null,
         "matches_with_data": 0,
         "matches": []
       }
@@ -5622,11 +5720,13 @@
           }
         ]
       },
-      "wc_bookings": {
+      "cards_last10": {
+        "team": "Uzbekistan",
+        "window": 10,
         "yellow": 0,
         "red": 0,
-        "second_yellow": 0,
         "yellow_avg": null,
+        "red_avg": null,
         "matches_with_data": 0,
         "matches": []
       }
