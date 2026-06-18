@@ -1,14 +1,20 @@
 {
-  "checkedAt": "2026-06-18T13:17:17+00:00",
-  "anomalyCount": 0,
-  "anomalies": [],
+  "checkedAt": "2026-06-18T17:09:14+00:00",
+  "anomalyCount": 1,
+  "anomalies": [
+    {
+      "area": "odds",
+      "level": "warn",
+      "msg": "2026-06-18 Czechia vs South Africa: away_odds 4.599 → 13.3708 (drift 191%)"
+    }
+  ],
   "summary": {
     "matches": {
       "count": 104,
       "out_of_window": 0,
-      "missing_status": 0,
+      "missing_status": 1,
       "finished": 24,
-      "scheduled": 80
+      "scheduled": 79
     },
     "odds": {
       "count": 48,
@@ -16,7 +22,7 @@
       "sources_failed": [
         "espn"
       ],
-      "drift_warnings": 0
+      "drift_warnings": 1
     },
     "team_stats": {
       "team_count": 48,
@@ -30,7 +36,8 @@
     }
   },
   "issue": {
-    "opened": false,
-    "reason": "no severe anomalies"
+    "opened": true,
+    "number": 8,
+    "fp": "f3818fb41cbf"
   }
 }
