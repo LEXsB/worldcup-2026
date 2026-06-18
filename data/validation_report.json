@@ -1,11 +1,16 @@
 {
-  "checkedAt": "2026-06-18T17:09:14+00:00",
-  "anomalyCount": 1,
+  "checkedAt": "2026-06-18T20:54:33+00:00",
+  "anomalyCount": 2,
   "anomalies": [
     {
       "area": "odds",
       "level": "warn",
-      "msg": "2026-06-18 Czechia vs South Africa: away_odds 4.599 → 13.3708 (drift 191%)"
+      "msg": "2026-06-18 Switzerland vs Bosnia & Herzegovina: draw_odds 4.1234 → 109.7709 (drift 2562%)"
+    },
+    {
+      "area": "odds",
+      "level": "warn",
+      "msg": "2026-06-18 Switzerland vs Bosnia & Herzegovina: away_odds 6.2343 → 224.7186 (drift 3505%)"
     }
   ],
   "summary": {
@@ -13,16 +18,16 @@
       "count": 104,
       "out_of_window": 0,
       "missing_status": 1,
-      "finished": 24,
-      "scheduled": 79
+      "finished": 25,
+      "scheduled": 78
     },
     "odds": {
-      "count": 48,
+      "count": 47,
       "source": "the-odds-api",
       "sources_failed": [
         "espn"
       ],
-      "drift_warnings": 1
+      "drift_warnings": 2
     },
     "team_stats": {
       "team_count": 48,
@@ -37,7 +42,7 @@
   },
   "issue": {
     "opened": true,
-    "number": 8,
-    "fp": "f3818fb41cbf"
+    "number": 9,
+    "fp": "e1d19ac868a3"
   }
 }
