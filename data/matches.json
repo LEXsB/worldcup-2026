@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-18T05:41:29+00:00",
+  "updatedAt": "2026-06-18T09:36:01+00:00",
   "source": "football-data.org / competitions/WC/matches",
   "competition": "FIFA World Cup",
   "count": 104,
@@ -601,7 +601,7 @@
     {
       "id": 537410,
       "utcDate": "2026-06-17T23:00:00Z",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "stage": "GROUP_STAGE",
       "group": "GROUP_L",
       "matchday": 1,
