@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-17T21:01:10+00:00",
+  "updatedAt": "2026-06-18T05:41:29+00:00",
   "source": "football-data.org / competitions/WC/matches",
   "competition": "FIFA World Cup",
   "count": 104,
@@ -398,7 +398,7 @@
       "awayTeam": {
         "name": "Uruguay",
         "shortName": "Uruguay",
-        "tla": "URY",
+        "tla": "URU",
         "crest": "https://crests.football-data.org/758.svg"
       },
       "score": {
@@ -574,7 +574,7 @@
     {
       "id": 537409,
       "utcDate": "2026-06-17T20:00:00Z",
-      "status": "PAUSED",
+      "status": "FINISHED",
       "stage": "GROUP_STAGE",
       "group": "GROUP_L",
       "matchday": 1,
@@ -591,9 +591,9 @@
         "crest": "https://crests.football-data.org/799.svg"
       },
       "score": {
-        "home": 2,
+        "home": 4,
         "away": 2,
-        "winner": "DRAW",
+        "winner": "HOME_TEAM",
         "duration": "REGULAR"
       },
       "venue": null
@@ -601,7 +601,7 @@
     {
       "id": 537410,
       "utcDate": "2026-06-17T23:00:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "stage": "GROUP_STAGE",
       "group": "GROUP_L",
       "matchday": 1,
@@ -618,9 +618,9 @@
         "crest": "https://crests.football-data.org/panama.svg"
       },
       "score": {
-        "home": null,
-        "away": null,
-        "winner": null,
+        "home": 1,
+        "away": 0,
+        "winner": "HOME_TEAM",
         "duration": "REGULAR"
       },
       "venue": null
@@ -628,7 +628,7 @@
     {
       "id": 537404,
       "utcDate": "2026-06-18T02:00:00Z",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "GROUP_STAGE",
       "group": "GROUP_K",
       "matchday": 1,
@@ -645,9 +645,9 @@
         "crest": "https://crests.football-data.org/818.svg"
       },
       "score": {
-        "home": null,
-        "away": null,
-        "winner": null,
+        "home": 1,
+        "away": 3,
+        "winner": "AWAY_TEAM",
         "duration": "REGULAR"
       },
       "venue": null
@@ -1040,7 +1040,7 @@
       "homeTeam": {
         "name": "Uruguay",
         "shortName": "Uruguay",
-        "tla": "URY",
+        "tla": "URU",
         "crest": "https://crests.football-data.org/758.svg"
       },
       "awayTeam": {
@@ -1688,7 +1688,7 @@
       "homeTeam": {
         "name": "Uruguay",
         "shortName": "Uruguay",
-        "tla": "URY",
+        "tla": "URU",
         "crest": "https://crests.football-data.org/758.svg"
       },
       "awayTeam": {

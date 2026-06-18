@@ -1,28 +1,22 @@
 {
-  "checkedAt": "2026-06-17T20:48:55+00:00",
-  "anomalyCount": 1,
-  "anomalies": [
-    {
-      "area": "odds",
-      "level": "warn",
-      "msg": "2026-06-17 England vs Croatia: away_odds 5.3615 → 16.9986 (drift 217%)"
-    }
-  ],
+  "checkedAt": "2026-06-18T05:41:42+00:00",
+  "anomalyCount": 0,
+  "anomalies": [],
   "summary": {
     "matches": {
       "count": 104,
       "out_of_window": 0,
       "missing_status": 1,
-      "finished": 21,
-      "scheduled": 82
+      "finished": 23,
+      "scheduled": 80
     },
     "odds": {
-      "count": 51,
+      "count": 48,
       "source": "the-odds-api",
       "sources_failed": [
         "espn"
       ],
-      "drift_warnings": 1
+      "drift_warnings": 0
     },
     "team_stats": {
       "team_count": 48,
@@ -36,8 +30,7 @@
     }
   },
   "issue": {
-    "opened": true,
-    "number": 7,
-    "fp": "34e2a837c60e"
+    "opened": false,
+    "reason": "no severe anomalies"
   }
 }
