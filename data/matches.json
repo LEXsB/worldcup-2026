@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-18T20:54:22+00:00",
+  "updatedAt": "2026-06-19T01:08:35+00:00",
   "source": "football-data.org / competitions/WC/matches",
   "competition": "FIFA World Cup",
   "count": 104,
@@ -682,7 +682,7 @@
     {
       "id": 537335,
       "utcDate": "2026-06-18T19:00:00Z",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "stage": "GROUP_STAGE",
       "group": "GROUP_B",
       "matchday": 2,
@@ -699,8 +699,8 @@
         "crest": "https://crests.football-data.org/bosnia.svg"
       },
       "score": {
-        "home": 1,
-        "away": 0,
+        "home": 4,
+        "away": 1,
         "winner": "HOME_TEAM",
         "duration": "REGULAR"
       },
@@ -709,7 +709,7 @@
     {
       "id": 537336,
       "utcDate": "2026-06-18T22:00:00Z",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "GROUP_STAGE",
       "group": "GROUP_B",
       "matchday": 2,
@@ -726,9 +726,9 @@
         "crest": "https://crests.football-data.org/8030.svg"
       },
       "score": {
-        "home": null,
-        "away": null,
-        "winner": null,
+        "home": 6,
+        "away": 0,
+        "winner": "HOME_TEAM",
         "duration": "REGULAR"
       },
       "venue": null
@@ -736,7 +736,7 @@
     {
       "id": 537330,
       "utcDate": "2026-06-19T01:00:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "stage": "GROUP_STAGE",
       "group": "GROUP_A",
       "matchday": 2,
@@ -753,9 +753,9 @@
         "crest": "https://crests.football-data.org/772.png"
       },
       "score": {
-        "home": null,
-        "away": null,
-        "winner": null,
+        "home": 0,
+        "away": 0,
+        "winner": "DRAW",
         "duration": "REGULAR"
       },
       "venue": null
