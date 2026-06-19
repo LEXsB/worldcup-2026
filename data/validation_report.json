@@ -1,14 +1,25 @@
 {
-  "checkedAt": "2026-06-19T16:53:11+00:00",
-  "anomalyCount": 0,
-  "anomalies": [],
+  "checkedAt": "2026-06-19T20:35:44+00:00",
+  "anomalyCount": 2,
+  "anomalies": [
+    {
+      "area": "odds",
+      "level": "warn",
+      "msg": "2026-06-19 United States vs Australia: draw_odds 4.3517 → 36.6008 (drift 741%)"
+    },
+    {
+      "area": "odds",
+      "level": "warn",
+      "msg": "2026-06-19 United States vs Australia: away_odds 5.0683 → 183.6228 (drift 3523%)"
+    }
+  ],
   "summary": {
     "matches": {
       "count": 104,
       "out_of_window": 0,
-      "missing_status": 0,
+      "missing_status": 1,
       "finished": 28,
-      "scheduled": 76
+      "scheduled": 75
     },
     "odds": {
       "count": 44,
@@ -16,7 +27,7 @@
       "sources_failed": [
         "espn"
       ],
-      "drift_warnings": 0
+      "drift_warnings": 2
     },
     "team_stats": {
       "team_count": 48,
@@ -30,7 +41,8 @@
     }
   },
   "issue": {
-    "opened": false,
-    "reason": "no severe anomalies"
+    "opened": true,
+    "number": 10,
+    "fp": "562aad0e11fa"
   }
 }
