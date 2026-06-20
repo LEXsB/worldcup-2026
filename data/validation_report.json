@@ -1,16 +1,11 @@
 {
-  "checkedAt": "2026-06-19T20:35:44+00:00",
-  "anomalyCount": 2,
+  "checkedAt": "2026-06-20T00:58:20+00:00",
+  "anomalyCount": 1,
   "anomalies": [
     {
       "area": "odds",
       "level": "warn",
-      "msg": "2026-06-19 United States vs Australia: draw_odds 4.3517 → 36.6008 (drift 741%)"
-    },
-    {
-      "area": "odds",
-      "level": "warn",
-      "msg": "2026-06-19 United States vs Australia: away_odds 5.0683 → 183.6228 (drift 3523%)"
+      "msg": "2026-06-20 Brazil vs Haiti: away_odds 21.5908 → 56.2429 (drift 160%)"
     }
   ],
   "summary": {
@@ -18,16 +13,16 @@
       "count": 104,
       "out_of_window": 0,
       "missing_status": 1,
-      "finished": 28,
-      "scheduled": 75
+      "finished": 30,
+      "scheduled": 73
     },
     "odds": {
-      "count": 44,
+      "count": 42,
       "source": "the-odds-api",
       "sources_failed": [
         "espn"
       ],
-      "drift_warnings": 2
+      "drift_warnings": 1
     },
     "team_stats": {
       "team_count": 48,
@@ -42,7 +37,7 @@
   },
   "issue": {
     "opened": true,
-    "number": 10,
-    "fp": "562aad0e11fa"
+    "number": 11,
+    "fp": "4d5970680262"
   }
 }
