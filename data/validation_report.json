@@ -1,22 +1,33 @@
 {
-  "checkedAt": "2026-06-20T16:36:43+00:00",
-  "anomalyCount": 0,
-  "anomalies": [],
+  "checkedAt": "2026-06-20T20:33:09+00:00",
+  "anomalyCount": 2,
+  "anomalies": [
+    {
+      "area": "odds",
+      "level": "warn",
+      "msg": "2026-06-20 Germany vs Côte d'Ivoire: home_odds 1.4752 → 2.4714 (drift 68%)"
+    },
+    {
+      "area": "odds",
+      "level": "warn",
+      "msg": "2026-06-20 Germany vs Côte d'Ivoire: away_odds 6.4094 → 2.7169 (drift 58%)"
+    }
+  ],
   "summary": {
     "matches": {
       "count": 104,
       "out_of_window": 0,
-      "missing_status": 0,
-      "finished": 32,
-      "scheduled": 72
+      "missing_status": 1,
+      "finished": 33,
+      "scheduled": 70
     },
     "odds": {
-      "count": 40,
+      "count": 39,
       "source": "the-odds-api",
       "sources_failed": [
         "espn"
       ],
-      "drift_warnings": 0
+      "drift_warnings": 2
     },
     "team_stats": {
       "team_count": 48,
@@ -30,7 +41,8 @@
     }
   },
   "issue": {
-    "opened": false,
-    "reason": "no severe anomalies"
+    "opened": true,
+    "number": 12,
+    "fp": "eadd064ffe8e"
   }
 }
