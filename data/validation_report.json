@@ -1,11 +1,16 @@
 {
-  "checkedAt": "2026-06-21T01:05:12+00:00",
-  "anomalyCount": 1,
+  "checkedAt": "2026-06-21T05:42:39+00:00",
+  "anomalyCount": 2,
   "anomalies": [
     {
       "area": "odds",
       "level": "warn",
-      "msg": "2026-06-21 Ecuador vs Curaçao: draw_odds 7.9929 → 3.9691 (drift 50%)"
+      "msg": "2026-06-21 Tunisia vs Japan: home_odds 7.6191 → 400.6471 (drift 5158%)"
+    },
+    {
+      "area": "odds",
+      "level": "warn",
+      "msg": "2026-06-21 Tunisia vs Japan: draw_odds 4.356 → 179.8253 (drift 4028%)"
     }
   ],
   "summary": {
@@ -13,16 +18,16 @@
       "count": 104,
       "out_of_window": 0,
       "missing_status": 1,
-      "finished": 34,
-      "scheduled": 69
+      "finished": 35,
+      "scheduled": 68
     },
     "odds": {
-      "count": 38,
+      "count": 37,
       "source": "the-odds-api",
       "sources_failed": [
         "espn"
       ],
-      "drift_warnings": 1
+      "drift_warnings": 2
     },
     "team_stats": {
       "team_count": 48,
@@ -37,7 +42,7 @@
   },
   "issue": {
     "opened": true,
-    "number": 13,
-    "fp": "14a0f16949d9"
+    "number": 14,
+    "fp": "02b8e222e1ff"
   }
 }
