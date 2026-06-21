@@ -1,14 +1,25 @@
 {
-  "checkedAt": "2026-06-21T12:46:57+00:00",
-  "anomalyCount": 0,
-  "anomalies": [],
+  "checkedAt": "2026-06-21T16:37:44+00:00",
+  "anomalyCount": 2,
+  "anomalies": [
+    {
+      "area": "odds",
+      "level": "warn",
+      "msg": "2026-06-21 Spain vs Saudi Arabia: draw_odds 11.2333 → 174.6154 (drift 1454%)"
+    },
+    {
+      "area": "odds",
+      "level": "warn",
+      "msg": "2026-06-21 Spain vs Saudi Arabia: away_odds 24.3988 → 378.3846 (drift 1451%)"
+    }
+  ],
   "summary": {
     "matches": {
       "count": 104,
       "out_of_window": 0,
-      "missing_status": 0,
+      "missing_status": 1,
       "finished": 36,
-      "scheduled": 68
+      "scheduled": 67
     },
     "odds": {
       "count": 36,
@@ -16,7 +27,7 @@
       "sources_failed": [
         "espn"
       ],
-      "drift_warnings": 0
+      "drift_warnings": 2
     },
     "team_stats": {
       "team_count": 48,
@@ -30,7 +41,8 @@
     }
   },
   "issue": {
-    "opened": false,
-    "reason": "no severe anomalies"
+    "opened": true,
+    "number": 15,
+    "fp": "b7e1d4aff0b0"
   }
 }
