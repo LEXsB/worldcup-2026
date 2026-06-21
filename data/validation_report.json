@@ -1,16 +1,16 @@
 {
-  "checkedAt": "2026-06-21T16:37:44+00:00",
+  "checkedAt": "2026-06-21T20:36:37+00:00",
   "anomalyCount": 2,
   "anomalies": [
     {
       "area": "odds",
       "level": "warn",
-      "msg": "2026-06-21 Spain vs Saudi Arabia: draw_odds 11.2333 → 174.6154 (drift 1454%)"
+      "msg": "2026-06-21 Belgium vs Iran: home_odds 1.4096 → 3.3167 (drift 135%)"
     },
     {
       "area": "odds",
       "level": "warn",
-      "msg": "2026-06-21 Spain vs Saudi Arabia: away_odds 24.3988 → 378.3846 (drift 1451%)"
+      "msg": "2026-06-21 Belgium vs Iran: draw_odds 4.7585 → 1.8178 (drift 62%)"
     }
   ],
   "summary": {
@@ -18,11 +18,11 @@
       "count": 104,
       "out_of_window": 0,
       "missing_status": 1,
-      "finished": 36,
-      "scheduled": 67
+      "finished": 37,
+      "scheduled": 66
     },
     "odds": {
-      "count": 36,
+      "count": 35,
       "source": "the-odds-api",
       "sources_failed": [
         "espn"
@@ -42,7 +42,7 @@
   },
   "issue": {
     "opened": true,
-    "number": 15,
-    "fp": "b7e1d4aff0b0"
+    "number": 16,
+    "fp": "6d9b0265017d"
   }
 }
