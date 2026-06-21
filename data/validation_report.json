@@ -1,33 +1,22 @@
 {
-  "checkedAt": "2026-06-21T05:42:39+00:00",
-  "anomalyCount": 2,
-  "anomalies": [
-    {
-      "area": "odds",
-      "level": "warn",
-      "msg": "2026-06-21 Tunisia vs Japan: home_odds 7.6191 → 400.6471 (drift 5158%)"
-    },
-    {
-      "area": "odds",
-      "level": "warn",
-      "msg": "2026-06-21 Tunisia vs Japan: draw_odds 4.356 → 179.8253 (drift 4028%)"
-    }
-  ],
+  "checkedAt": "2026-06-21T09:21:16+00:00",
+  "anomalyCount": 0,
+  "anomalies": [],
   "summary": {
     "matches": {
       "count": 104,
       "out_of_window": 0,
-      "missing_status": 1,
-      "finished": 35,
+      "missing_status": 0,
+      "finished": 36,
       "scheduled": 68
     },
     "odds": {
-      "count": 37,
+      "count": 36,
       "source": "the-odds-api",
       "sources_failed": [
         "espn"
       ],
-      "drift_warnings": 2
+      "drift_warnings": 0
     },
     "team_stats": {
       "team_count": 48,
@@ -41,8 +30,7 @@
     }
   },
   "issue": {
-    "opened": true,
-    "number": 14,
-    "fp": "02b8e222e1ff"
+    "opened": false,
+    "reason": "no severe anomalies"
   }
 }
