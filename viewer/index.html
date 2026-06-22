@@ -255,9 +255,18 @@
     //   https://raw.githubusercontent.com/<usuario>/<repo>/main/data
     // Si la dejas en "", el visor intentará leer ../data/ local.
     // ============================================================
-    const BASE_URL = "https://raw.githubusercontent.com/LEXsB/worldcup-2026/main/data";
-    // Compatibilidad: si alguien ya había configurado DATA_URL apuntando
-    // directo a matches.json, derivamos BASE_URL desde ahí.
+    const REPO = "LEXsB/worldcup-2026";
+    const BRANCH = "main";
+    // Lista de bases que el visor probará EN ORDEN hasta encontrar una que
+    // responda. Útil porque algunos firewalls bloquean raw.githubusercontent
+    // pero permiten jsDelivr (CDN público).
+    const BASE_URLS = [
+      `https://cdn.jsdelivr.net/gh/${REPO}@${BRANCH}/data`,
+      `https://raw.githubusercontent.com/${REPO}/${BRANCH}/data`,
+      "../data", // fallback local (requiere abrir con un static server)
+    ];
+    // Backwards-compat
+    const BASE_URL = BASE_URLS[0];
     const DATA_URL = "";
 
     const $ = (id) => document.getElementById(id);
@@ -266,27 +275,38 @@
     let teamStats = {};      // team -> { form, cards_last10 }
     let injuriesByTeam = {}; // team -> [items]
     let broadcasts = { default: ["DIRECTV GO"], priority: [], overrides: {} };
+    let activeBase = null;   // base that actually responded ok
 
-    function resolveBase() {
-      if (BASE_URL) return BASE_URL.replace(/\/$/, "");
-      if (DATA_URL) return DATA_URL.replace(/\/matches\.json.*$/, "");
-      return "../data";
+    function fileUrlsFor(name) {
+      const t = Date.now();
+      // Si ya sabemos qué base funciona, sólo intenta esa.
+      const bases = activeBase ? [activeBase] : BASE_URLS;
+      return bases.map(b => `${b.replace(/\/$/, "")}/${name}?t=${t}`);
     }
-    function fileUrl(name) {
-      return `${resolveBase()}/${name}?t=${Date.now()}`;
-    }
+
     async function loadJson(name, optional = false) {
-      try {
-        const resp = await fetch(fileUrl(name), { cache: "no-store" });
-        if (!resp.ok) {
-          if (optional) return null;
-          throw new Error("HTTP " + resp.status);
+      const urls = fileUrlsFor(name);
+      let lastError = null;
+      for (const url of urls) {
+        try {
+          const resp = await fetch(url, { cache: "no-store" });
+          if (!resp.ok) {
+            lastError = new Error("HTTP " + resp.status + " — " + url);
+            continue;
+          }
+          const data = await resp.json();
+          // Memoriza la primera base que funcionó para acelerar siguientes loads.
+          if (!activeBase) {
+            const m = url.match(/^(.*)\/[^/]+\?/);
+            if (m) activeBase = m[1];
+          }
+          return data;
+        } catch (e) {
+          lastError = e;
         }
-        return await resp.json();
-      } catch (e) {
-        if (optional) return null;
-        throw e;
       }
+      if (optional) return null;
+      throw lastError || new Error("no source available for " + name);
     }
 
     async function load() {
