@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-06-22T01:04:23+00:00",
+  "checkedAt": "2026-06-22T05:55:46+00:00",
   "anomalyCount": 0,
   "anomalies": [],
   "summary": {
@@ -7,11 +7,11 @@
       "count": 104,
       "out_of_window": 0,
       "missing_status": 0,
-      "finished": 39,
-      "scheduled": 65
+      "finished": 40,
+      "scheduled": 64
     },
     "odds": {
-      "count": 33,
+      "count": 32,
       "source": "the-odds-api",
       "sources_failed": [
         "espn"
