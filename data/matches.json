@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-21T20:36:26+00:00",
+  "updatedAt": "2026-06-22T01:04:13+00:00",
   "source": "football-data.org / competitions/WC/matches",
   "competition": "FIFA World Cup",
   "count": 104,
@@ -996,7 +996,7 @@
         "crest": "https://crests.football-data.org/saudi_arabia.svg"
       },
       "score": {
-        "home": 5,
+        "home": 4,
         "away": 0,
         "winner": "HOME_TEAM",
         "duration": "REGULAR"
@@ -1006,7 +1006,7 @@
     {
       "id": 537365,
       "utcDate": "2026-06-21T19:00:00Z",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "stage": "GROUP_STAGE",
       "group": "GROUP_G",
       "matchday": 2,
@@ -1033,7 +1033,7 @@
     {
       "id": 537372,
       "utcDate": "2026-06-21T22:00:00Z",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "GROUP_STAGE",
       "group": "GROUP_H",
       "matchday": 2,
@@ -1050,9 +1050,9 @@
         "crest": "https://crests.football-data.org/cape_verde.svg"
       },
       "score": {
-        "home": null,
-        "away": null,
-        "winner": null,
+        "home": 2,
+        "away": 2,
+        "winner": "DRAW",
         "duration": "REGULAR"
       },
       "venue": null

@@ -1,33 +1,22 @@
 {
-  "checkedAt": "2026-06-21T20:36:37+00:00",
-  "anomalyCount": 2,
-  "anomalies": [
-    {
-      "area": "odds",
-      "level": "warn",
-      "msg": "2026-06-21 Belgium vs Iran: home_odds 1.4096 → 3.3167 (drift 135%)"
-    },
-    {
-      "area": "odds",
-      "level": "warn",
-      "msg": "2026-06-21 Belgium vs Iran: draw_odds 4.7585 → 1.8178 (drift 62%)"
-    }
-  ],
+  "checkedAt": "2026-06-22T01:04:23+00:00",
+  "anomalyCount": 0,
+  "anomalies": [],
   "summary": {
     "matches": {
       "count": 104,
       "out_of_window": 0,
-      "missing_status": 1,
-      "finished": 37,
-      "scheduled": 66
+      "missing_status": 0,
+      "finished": 39,
+      "scheduled": 65
     },
     "odds": {
-      "count": 35,
+      "count": 33,
       "source": "the-odds-api",
       "sources_failed": [
         "espn"
       ],
-      "drift_warnings": 2
+      "drift_warnings": 0
     },
     "team_stats": {
       "team_count": 48,
@@ -41,8 +30,7 @@
     }
   },
   "issue": {
-    "opened": true,
-    "number": 16,
-    "fp": "6d9b0265017d"
+    "opened": false,
+    "reason": "no severe anomalies"
   }
 }
