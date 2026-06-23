@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-23T00:54:49+00:00",
+  "updatedAt": "2026-06-23T05:26:18+00:00",
   "source": "football-data.org / competitions/WC/matches",
   "competition": "FIFA World Cup",
   "count": 104,
@@ -398,7 +398,7 @@
       "awayTeam": {
         "name": "Uruguay",
         "shortName": "Uruguay",
-        "tla": "URU",
+        "tla": "URY",
         "crest": "https://crests.football-data.org/758.svg"
       },
       "score": {
@@ -1040,7 +1040,7 @@
       "homeTeam": {
         "name": "Uruguay",
         "shortName": "Uruguay",
-        "tla": "URU",
+        "tla": "URY",
         "crest": "https://crests.football-data.org/758.svg"
       },
       "awayTeam": {
@@ -1141,7 +1141,7 @@
     {
       "id": 537394,
       "utcDate": "2026-06-23T00:00:00Z",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "stage": "GROUP_STAGE",
       "group": "GROUP_I",
       "matchday": 2,
@@ -1158,8 +1158,8 @@
         "crest": "https://crests.football-data.org/senegal.svg"
       },
       "score": {
-        "home": 1,
-        "away": 0,
+        "home": 3,
+        "away": 2,
         "winner": "HOME_TEAM",
         "duration": "REGULAR"
       },
@@ -1168,7 +1168,7 @@
     {
       "id": 537400,
       "utcDate": "2026-06-23T03:00:00Z",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "GROUP_STAGE",
       "group": "GROUP_J",
       "matchday": 2,
@@ -1185,9 +1185,9 @@
         "crest": "https://crests.football-data.org/algeria.svg"
       },
       "score": {
-        "home": null,
-        "away": null,
-        "winner": null,
+        "home": 1,
+        "away": 2,
+        "winner": "AWAY_TEAM",
         "duration": "REGULAR"
       },
       "venue": null
@@ -1688,7 +1688,7 @@
       "homeTeam": {
         "name": "Uruguay",
         "shortName": "Uruguay",
-        "tla": "URU",
+        "tla": "URY",
         "crest": "https://crests.football-data.org/758.svg"
       },
       "awayTeam": {
