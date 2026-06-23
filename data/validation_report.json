@@ -1,22 +1,28 @@
 {
-  "checkedAt": "2026-06-23T16:53:50+00:00",
-  "anomalyCount": 0,
-  "anomalies": [],
+  "checkedAt": "2026-06-23T20:48:40+00:00",
+  "anomalyCount": 1,
+  "anomalies": [
+    {
+      "area": "odds",
+      "level": "warn",
+      "msg": "2026-06-23 England vs Ghana: draw_odds 7.2969 → 3.4556 (drift 53%)"
+    }
+  ],
   "summary": {
     "matches": {
       "count": 104,
       "out_of_window": 0,
-      "missing_status": 0,
-      "finished": 44,
-      "scheduled": 60
+      "missing_status": 1,
+      "finished": 45,
+      "scheduled": 58
     },
     "odds": {
-      "count": 28,
+      "count": 27,
       "source": "the-odds-api",
       "sources_failed": [
         "espn"
       ],
-      "drift_warnings": 0
+      "drift_warnings": 1
     },
     "team_stats": {
       "team_count": 48,
@@ -30,7 +36,8 @@
     }
   },
   "issue": {
-    "opened": false,
-    "reason": "no severe anomalies"
+    "opened": true,
+    "number": 18,
+    "fp": "d9fff2ffdcf9"
   }
 }

@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-23T16:53:39+00:00",
+  "updatedAt": "2026-06-23T20:48:19+00:00",
   "source": "football-data.org / competitions/WC/matches",
   "competition": "FIFA World Cup",
   "count": 104,
@@ -398,7 +398,7 @@
       "awayTeam": {
         "name": "Uruguay",
         "shortName": "Uruguay",
-        "tla": "URY",
+        "tla": "URU",
         "crest": "https://crests.football-data.org/758.svg"
       },
       "score": {
@@ -1040,7 +1040,7 @@
       "homeTeam": {
         "name": "Uruguay",
         "shortName": "Uruguay",
-        "tla": "URY",
+        "tla": "URU",
         "crest": "https://crests.football-data.org/758.svg"
       },
       "awayTeam": {
@@ -1195,7 +1195,7 @@
     {
       "id": 537405,
       "utcDate": "2026-06-23T17:00:00Z",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "GROUP_STAGE",
       "group": "GROUP_K",
       "matchday": 2,
@@ -1212,9 +1212,9 @@
         "crest": "https://crests.football-data.org/8070.png"
       },
       "score": {
-        "home": null,
-        "away": null,
-        "winner": null,
+        "home": 5,
+        "away": 0,
+        "winner": "HOME_TEAM",
         "duration": "REGULAR"
       },
       "venue": null
@@ -1222,7 +1222,7 @@
     {
       "id": 537411,
       "utcDate": "2026-06-23T20:00:00Z",
-      "status": "TIMED",
+      "status": "LIVE",
       "stage": "GROUP_STAGE",
       "group": "GROUP_L",
       "matchday": 2,
@@ -1239,9 +1239,9 @@
         "crest": "https://crests.football-data.org/ghana.svg"
       },
       "score": {
-        "home": null,
-        "away": null,
-        "winner": null,
+        "home": 0,
+        "away": 0,
+        "winner": "DRAW",
         "duration": "REGULAR"
       },
       "venue": null
@@ -1688,7 +1688,7 @@
       "homeTeam": {
         "name": "Uruguay",
         "shortName": "Uruguay",
-        "tla": "URY",
+        "tla": "URU",
         "crest": "https://crests.football-data.org/758.svg"
       },
       "awayTeam": {
@@ -2010,10 +2010,10 @@
       "group": null,
       "matchday": null,
       "homeTeam": {
-        "name": null,
-        "shortName": null,
-        "tla": null,
-        "crest": null
+        "name": "Germany",
+        "shortName": "Germany",
+        "tla": "GER",
+        "crest": "https://crests.football-data.org/759.svg"
       },
       "awayTeam": {
         "name": null,
@@ -2118,10 +2118,10 @@
       "group": null,
       "matchday": null,
       "homeTeam": {
-        "name": null,
-        "shortName": null,
-        "tla": null,
-        "crest": null
+        "name": "Mexico",
+        "shortName": "Mexico",
+        "tla": "MEX",
+        "crest": "https://crests.football-data.org/769.svg"
       },
       "awayTeam": {
         "name": null,
@@ -2199,10 +2199,10 @@
       "group": null,
       "matchday": null,
       "homeTeam": {
-        "name": null,
-        "shortName": null,
-        "tla": null,
-        "crest": null
+        "name": "United States",
+        "shortName": "USA",
+        "tla": "USA",
+        "crest": "https://crests.football-data.org/usa.svg"
       },
       "awayTeam": {
         "name": null,
