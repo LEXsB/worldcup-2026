@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-23T20:48:19+00:00",
+  "updatedAt": "2026-06-24T00:52:02+00:00",
   "source": "football-data.org / competitions/WC/matches",
   "competition": "FIFA World Cup",
   "count": 104,
@@ -1222,7 +1222,7 @@
     {
       "id": 537411,
       "utcDate": "2026-06-23T20:00:00Z",
-      "status": "LIVE",
+      "status": "FINISHED",
       "stage": "GROUP_STAGE",
       "group": "GROUP_L",
       "matchday": 2,
@@ -1249,7 +1249,7 @@
     {
       "id": 537412,
       "utcDate": "2026-06-23T23:00:00Z",
-      "status": "TIMED",
+      "status": "LIVE",
       "stage": "GROUP_STAGE",
       "group": "GROUP_L",
       "matchday": 2,
@@ -1266,9 +1266,9 @@
         "crest": "https://crests.football-data.org/799.svg"
       },
       "score": {
-        "home": null,
-        "away": null,
-        "winner": null,
+        "home": 0,
+        "away": 1,
+        "winner": "AWAY_TEAM",
         "duration": "REGULAR"
       },
       "venue": null
@@ -2010,10 +2010,10 @@
       "group": null,
       "matchday": null,
       "homeTeam": {
-        "name": "Germany",
-        "shortName": "Germany",
-        "tla": "GER",
-        "crest": "https://crests.football-data.org/759.svg"
+        "name": null,
+        "shortName": null,
+        "tla": null,
+        "crest": null
       },
       "awayTeam": {
         "name": null,
@@ -2118,10 +2118,10 @@
       "group": null,
       "matchday": null,
       "homeTeam": {
-        "name": "Mexico",
-        "shortName": "Mexico",
-        "tla": "MEX",
-        "crest": "https://crests.football-data.org/769.svg"
+        "name": null,
+        "shortName": null,
+        "tla": null,
+        "crest": null
       },
       "awayTeam": {
         "name": null,
@@ -2199,10 +2199,10 @@
       "group": null,
       "matchday": null,
       "homeTeam": {
-        "name": "United States",
-        "shortName": "USA",
-        "tla": "USA",
-        "crest": "https://crests.football-data.org/usa.svg"
+        "name": null,
+        "shortName": null,
+        "tla": null,
+        "crest": null
       },
       "awayTeam": {
         "name": null,

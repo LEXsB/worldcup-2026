@@ -1,11 +1,16 @@
 {
-  "checkedAt": "2026-06-23T20:48:40+00:00",
-  "anomalyCount": 1,
+  "checkedAt": "2026-06-24T00:52:13+00:00",
+  "anomalyCount": 2,
   "anomalies": [
     {
       "area": "odds",
       "level": "warn",
-      "msg": "2026-06-23 England vs Ghana: draw_odds 7.2969 → 3.4556 (drift 53%)"
+      "msg": "2026-06-23 Panama vs Croatia: home_odds 7.7451 → 229.3903 (drift 2862%)"
+    },
+    {
+      "area": "odds",
+      "level": "warn",
+      "msg": "2026-06-23 Panama vs Croatia: draw_odds 4.5538 → 10.8015 (drift 137%)"
     }
   ],
   "summary": {
@@ -13,16 +18,16 @@
       "count": 104,
       "out_of_window": 0,
       "missing_status": 1,
-      "finished": 45,
-      "scheduled": 58
+      "finished": 46,
+      "scheduled": 57
     },
     "odds": {
-      "count": 27,
+      "count": 26,
       "source": "the-odds-api",
       "sources_failed": [
         "espn"
       ],
-      "drift_warnings": 1
+      "drift_warnings": 2
     },
     "team_stats": {
       "team_count": 48,
@@ -37,7 +42,7 @@
   },
   "issue": {
     "opened": true,
-    "number": 18,
-    "fp": "d9fff2ffdcf9"
+    "number": 19,
+    "fp": "2a37a5ad715b"
   }
 }
