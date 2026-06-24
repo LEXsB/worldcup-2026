@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-24T16:49:00+00:00",
+  "updatedAt": "2026-06-24T20:38:51+00:00",
   "source": "football-data.org / competitions/WC/matches",
   "competition": "FIFA World Cup",
   "count": 104,
@@ -1303,7 +1303,7 @@
     {
       "id": 537337,
       "utcDate": "2026-06-24T19:00:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "stage": "GROUP_STAGE",
       "group": "GROUP_B",
       "matchday": 3,
@@ -1320,9 +1320,9 @@
         "crest": "https://crests.football-data.org/canada.svg"
       },
       "score": {
-        "home": null,
-        "away": null,
-        "winner": null,
+        "home": 2,
+        "away": 0,
+        "winner": "HOME_TEAM",
         "duration": "REGULAR"
       },
       "venue": null
@@ -1330,7 +1330,7 @@
     {
       "id": 537338,
       "utcDate": "2026-06-24T19:00:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "stage": "GROUP_STAGE",
       "group": "GROUP_B",
       "matchday": 3,
@@ -1347,9 +1347,9 @@
         "crest": "https://crests.football-data.org/8030.svg"
       },
       "score": {
-        "home": null,
-        "away": null,
-        "winner": null,
+        "home": 2,
+        "away": 1,
+        "winner": "HOME_TEAM",
         "duration": "REGULAR"
       },
       "venue": null
