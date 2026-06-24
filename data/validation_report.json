@@ -1,33 +1,22 @@
 {
-  "checkedAt": "2026-06-24T00:52:13+00:00",
-  "anomalyCount": 2,
-  "anomalies": [
-    {
-      "area": "odds",
-      "level": "warn",
-      "msg": "2026-06-23 Panama vs Croatia: home_odds 7.7451 → 229.3903 (drift 2862%)"
-    },
-    {
-      "area": "odds",
-      "level": "warn",
-      "msg": "2026-06-23 Panama vs Croatia: draw_odds 4.5538 → 10.8015 (drift 137%)"
-    }
-  ],
+  "checkedAt": "2026-06-24T05:25:21+00:00",
+  "anomalyCount": 0,
+  "anomalies": [],
   "summary": {
     "matches": {
       "count": 104,
       "out_of_window": 0,
-      "missing_status": 1,
-      "finished": 46,
-      "scheduled": 57
+      "missing_status": 0,
+      "finished": 48,
+      "scheduled": 56
     },
     "odds": {
-      "count": 26,
+      "count": 24,
       "source": "the-odds-api",
       "sources_failed": [
         "espn"
       ],
-      "drift_warnings": 2
+      "drift_warnings": 0
     },
     "team_stats": {
       "team_count": 48,
@@ -41,8 +30,7 @@
     }
   },
   "issue": {
-    "opened": true,
-    "number": 19,
-    "fp": "2a37a5ad715b"
+    "opened": false,
+    "reason": "no severe anomalies"
   }
 }
