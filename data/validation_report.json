@@ -1,38 +1,22 @@
 {
-  "checkedAt": "2026-06-24T20:39:12+00:00",
-  "anomalyCount": 3,
-  "anomalies": [
-    {
-      "area": "odds",
-      "level": "warn",
-      "msg": "2026-06-24 Bosnia & Herzegovina vs Qatar: away_odds 8.1562 → 27.2647 (drift 234%)"
-    },
-    {
-      "area": "odds",
-      "level": "warn",
-      "msg": "2026-06-24 Switzerland vs Canada: draw_odds 2.9875 → 4.9658 (drift 66%)"
-    },
-    {
-      "area": "odds",
-      "level": "warn",
-      "msg": "2026-06-24 Switzerland vs Canada: away_odds 3.2385 → 27.3317 (drift 744%)"
-    }
-  ],
+  "checkedAt": "2026-06-25T00:56:27+00:00",
+  "anomalyCount": 0,
+  "anomalies": [],
   "summary": {
     "matches": {
       "count": 104,
       "out_of_window": 0,
-      "missing_status": 2,
-      "finished": 48,
-      "scheduled": 54
+      "missing_status": 0,
+      "finished": 52,
+      "scheduled": 52
     },
     "odds": {
-      "count": 24,
+      "count": 20,
       "source": "the-odds-api",
       "sources_failed": [
         "espn"
       ],
-      "drift_warnings": 3
+      "drift_warnings": 0
     },
     "team_stats": {
       "team_count": 48,
@@ -46,8 +30,7 @@
     }
   },
   "issue": {
-    "opened": true,
-    "number": 20,
-    "fp": "dcab37ec3fe8"
+    "opened": false,
+    "reason": "no severe anomalies"
   }
 }
