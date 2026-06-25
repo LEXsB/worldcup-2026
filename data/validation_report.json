@@ -1,14 +1,20 @@
 {
-  "checkedAt": "2026-06-25T16:50:50+00:00",
-  "anomalyCount": 0,
-  "anomalies": [],
+  "checkedAt": "2026-06-25T20:44:19+00:00",
+  "anomalyCount": 1,
+  "anomalies": [
+    {
+      "area": "odds",
+      "level": "warn",
+      "msg": "2026-06-25 Curaçao vs Côte d'Ivoire: home_odds 15.8231 → 37.5681 (drift 137%)"
+    }
+  ],
   "summary": {
     "matches": {
       "count": 104,
       "out_of_window": 0,
-      "missing_status": 0,
+      "missing_status": 2,
       "finished": 54,
-      "scheduled": 50
+      "scheduled": 48
     },
     "odds": {
       "count": 20,
@@ -16,7 +22,7 @@
       "sources_failed": [
         "espn"
       ],
-      "drift_warnings": 0
+      "drift_warnings": 1
     },
     "team_stats": {
       "team_count": 48,
@@ -30,7 +36,8 @@
     }
   },
   "issue": {
-    "opened": false,
-    "reason": "no severe anomalies"
+    "opened": true,
+    "number": 21,
+    "fp": "60c2e5e6ce39"
   }
 }

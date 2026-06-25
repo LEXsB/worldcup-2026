@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-25T16:50:30+00:00",
+  "updatedAt": "2026-06-25T20:44:09+00:00",
   "source": "football-data.org / competitions/WC/matches",
   "competition": "FIFA World Cup",
   "count": 104,
@@ -1465,7 +1465,7 @@
     {
       "id": 537355,
       "utcDate": "2026-06-25T20:00:00Z",
-      "status": "TIMED",
+      "status": "LIVE",
       "stage": "GROUP_STAGE",
       "group": "GROUP_E",
       "matchday": 3,
@@ -1482,9 +1482,9 @@
         "crest": "https://crests.football-data.org/759.svg"
       },
       "score": {
-        "home": null,
-        "away": null,
-        "winner": null,
+        "home": 1,
+        "away": 1,
+        "winner": "DRAW",
         "duration": "REGULAR"
       },
       "venue": null
@@ -1492,7 +1492,7 @@
     {
       "id": 537356,
       "utcDate": "2026-06-25T20:00:00Z",
-      "status": "TIMED",
+      "status": "LIVE",
       "stage": "GROUP_STAGE",
       "group": "GROUP_E",
       "matchday": 3,
@@ -1509,9 +1509,9 @@
         "crest": "https://crests.football-data.org/787.svg"
       },
       "score": {
-        "home": null,
-        "away": null,
-        "winner": null,
+        "home": 0,
+        "away": 1,
+        "winner": "AWAY_TEAM",
         "duration": "REGULAR"
       },
       "venue": null
