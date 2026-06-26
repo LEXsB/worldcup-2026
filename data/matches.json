@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-25T20:44:09+00:00",
+  "updatedAt": "2026-06-26T00:58:43+00:00",
   "source": "football-data.org / competitions/WC/matches",
   "competition": "FIFA World Cup",
   "count": 104,
@@ -398,7 +398,7 @@
       "awayTeam": {
         "name": "Uruguay",
         "shortName": "Uruguay",
-        "tla": "URY",
+        "tla": "URU",
         "crest": "https://crests.football-data.org/758.svg"
       },
       "score": {
@@ -1040,7 +1040,7 @@
       "homeTeam": {
         "name": "Uruguay",
         "shortName": "Uruguay",
-        "tla": "URY",
+        "tla": "URU",
         "crest": "https://crests.football-data.org/758.svg"
       },
       "awayTeam": {
@@ -1465,7 +1465,7 @@
     {
       "id": 537355,
       "utcDate": "2026-06-25T20:00:00Z",
-      "status": "LIVE",
+      "status": "FINISHED",
       "stage": "GROUP_STAGE",
       "group": "GROUP_E",
       "matchday": 3,
@@ -1482,9 +1482,9 @@
         "crest": "https://crests.football-data.org/759.svg"
       },
       "score": {
-        "home": 1,
+        "home": 2,
         "away": 1,
-        "winner": "DRAW",
+        "winner": "HOME_TEAM",
         "duration": "REGULAR"
       },
       "venue": null
@@ -1492,7 +1492,7 @@
     {
       "id": 537356,
       "utcDate": "2026-06-25T20:00:00Z",
-      "status": "LIVE",
+      "status": "FINISHED",
       "stage": "GROUP_STAGE",
       "group": "GROUP_E",
       "matchday": 3,
@@ -1510,7 +1510,7 @@
       },
       "score": {
         "home": 0,
-        "away": 1,
+        "away": 2,
         "winner": "AWAY_TEAM",
         "duration": "REGULAR"
       },
@@ -1519,7 +1519,7 @@
     {
       "id": 537361,
       "utcDate": "2026-06-25T23:00:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "stage": "GROUP_STAGE",
       "group": "GROUP_F",
       "matchday": 3,
@@ -1536,9 +1536,9 @@
         "crest": "https://crests.football-data.org/8601.svg"
       },
       "score": {
-        "home": null,
-        "away": null,
-        "winner": null,
+        "home": 1,
+        "away": 3,
+        "winner": "AWAY_TEAM",
         "duration": "REGULAR"
       },
       "venue": null
@@ -1546,7 +1546,7 @@
     {
       "id": 537362,
       "utcDate": "2026-06-25T23:00:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "stage": "GROUP_STAGE",
       "group": "GROUP_F",
       "matchday": 3,
@@ -1563,9 +1563,9 @@
         "crest": "https://crests.football-data.org/792.svg"
       },
       "score": {
-        "home": null,
-        "away": null,
-        "winner": null,
+        "home": 1,
+        "away": 1,
+        "winner": "DRAW",
         "duration": "REGULAR"
       },
       "venue": null
@@ -1688,7 +1688,7 @@
       "homeTeam": {
         "name": "Uruguay",
         "shortName": "Uruguay",
-        "tla": "URY",
+        "tla": "URU",
         "crest": "https://crests.football-data.org/758.svg"
       },
       "awayTeam": {
