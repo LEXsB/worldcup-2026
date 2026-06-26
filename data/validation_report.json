@@ -1,48 +1,22 @@
 {
-  "checkedAt": "2026-06-26T00:59:03+00:00",
-  "anomalyCount": 5,
-  "anomalies": [
-    {
-      "area": "odds",
-      "level": "warn",
-      "msg": "2026-06-25 Japan vs Sweden: home_odds 2.0032 → 22.01 (drift 999%)"
-    },
-    {
-      "area": "odds",
-      "level": "warn",
-      "msg": "2026-06-25 Japan vs Sweden: draw_odds 3.3853 → 1.1215 (drift 67%)"
-    },
-    {
-      "area": "odds",
-      "level": "warn",
-      "msg": "2026-06-25 Japan vs Sweden: away_odds 3.9743 → 20.4248 (drift 414%)"
-    },
-    {
-      "area": "odds",
-      "level": "warn",
-      "msg": "2026-06-25 Tunisia vs Netherlands: home_odds 25.9224 → 313.8245 (drift 1111%)"
-    },
-    {
-      "area": "odds",
-      "level": "warn",
-      "msg": "2026-06-25 Tunisia vs Netherlands: draw_odds 10.4448 → 236.6473 (drift 2166%)"
-    }
-  ],
+  "checkedAt": "2026-06-26T05:31:14+00:00",
+  "anomalyCount": 0,
+  "anomalies": [],
   "summary": {
     "matches": {
       "count": 104,
       "out_of_window": 0,
-      "missing_status": 2,
-      "finished": 56,
-      "scheduled": 46
+      "missing_status": 0,
+      "finished": 54,
+      "scheduled": 50
     },
     "odds": {
-      "count": 18,
+      "count": 16,
       "source": "the-odds-api",
       "sources_failed": [
         "espn"
       ],
-      "drift_warnings": 5
+      "drift_warnings": 0
     },
     "team_stats": {
       "team_count": 48,
@@ -56,8 +30,7 @@
     }
   },
   "issue": {
-    "opened": true,
-    "number": 22,
-    "fp": "4365d13eba3a"
+    "opened": false,
+    "reason": "no severe anomalies"
   }
 }
