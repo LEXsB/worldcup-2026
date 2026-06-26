@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-26T16:45:05+00:00",
+  "updatedAt": "2026-06-26T20:38:17+00:00",
   "source": "football-data.org / competitions/WC/matches",
   "competition": "FIFA World Cup",
   "count": 104,
@@ -398,7 +398,7 @@
       "awayTeam": {
         "name": "Uruguay",
         "shortName": "Uruguay",
-        "tla": "URY",
+        "tla": "URU",
         "crest": "https://crests.football-data.org/758.svg"
       },
       "score": {
@@ -1040,7 +1040,7 @@
       "homeTeam": {
         "name": "Uruguay",
         "shortName": "Uruguay",
-        "tla": "URY",
+        "tla": "URU",
         "crest": "https://crests.football-data.org/758.svg"
       },
       "awayTeam": {
@@ -1627,7 +1627,7 @@
     {
       "id": 537395,
       "utcDate": "2026-06-26T19:00:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "stage": "GROUP_STAGE",
       "group": "GROUP_I",
       "matchday": 3,
@@ -1644,9 +1644,9 @@
         "crest": "https://crests.football-data.org/773.svg"
       },
       "score": {
-        "home": null,
-        "away": null,
-        "winner": null,
+        "home": 1,
+        "away": 3,
+        "winner": "AWAY_TEAM",
         "duration": "REGULAR"
       },
       "venue": null
@@ -1654,7 +1654,7 @@
     {
       "id": 537396,
       "utcDate": "2026-06-26T19:00:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "stage": "GROUP_STAGE",
       "group": "GROUP_I",
       "matchday": 3,
@@ -1671,9 +1671,9 @@
         "crest": "https://crests.football-data.org/iraq.svg"
       },
       "score": {
-        "home": null,
-        "away": null,
-        "winner": null,
+        "home": 3,
+        "away": 0,
+        "winner": "HOME_TEAM",
         "duration": "REGULAR"
       },
       "venue": null
@@ -1688,7 +1688,7 @@
       "homeTeam": {
         "name": "Uruguay",
         "shortName": "Uruguay",
-        "tla": "URY",
+        "tla": "URU",
         "crest": "https://crests.football-data.org/758.svg"
       },
       "awayTeam": {
@@ -1956,16 +1956,16 @@
       "group": null,
       "matchday": null,
       "homeTeam": {
-        "name": null,
-        "shortName": null,
-        "tla": null,
-        "crest": null
+        "name": "South Africa",
+        "shortName": "South Africa",
+        "tla": "RSA",
+        "crest": "https://crests.football-data.org/9396.svg"
       },
       "awayTeam": {
-        "name": null,
-        "shortName": null,
-        "tla": null,
-        "crest": null
+        "name": "Canada",
+        "shortName": "Canada",
+        "tla": "CAN",
+        "crest": "https://crests.football-data.org/canada.svg"
       },
       "score": {
         "home": null,
@@ -1983,16 +1983,16 @@
       "group": null,
       "matchday": null,
       "homeTeam": {
-        "name": null,
-        "shortName": null,
-        "tla": null,
-        "crest": null
+        "name": "Brazil",
+        "shortName": "Brazil",
+        "tla": "BRA",
+        "crest": "https://crests.football-data.org/764.svg"
       },
       "awayTeam": {
-        "name": null,
-        "shortName": null,
-        "tla": null,
-        "crest": null
+        "name": "Japan",
+        "shortName": "Japan",
+        "tla": "JPN",
+        "crest": "https://crests.football-data.org/766.svg"
       },
       "score": {
         "home": null,
@@ -2010,10 +2010,10 @@
       "group": null,
       "matchday": null,
       "homeTeam": {
-        "name": null,
-        "shortName": null,
-        "tla": null,
-        "crest": null
+        "name": "Germany",
+        "shortName": "Germany",
+        "tla": "GER",
+        "crest": "https://crests.football-data.org/759.svg"
       },
       "awayTeam": {
         "name": null,
@@ -2037,16 +2037,16 @@
       "group": null,
       "matchday": null,
       "homeTeam": {
-        "name": null,
-        "shortName": null,
-        "tla": null,
-        "crest": null
+        "name": "Netherlands",
+        "shortName": "Netherlands",
+        "tla": "NED",
+        "crest": "https://crests.football-data.org/8601.svg"
       },
       "awayTeam": {
-        "name": null,
-        "shortName": null,
-        "tla": null,
-        "crest": null
+        "name": "Morocco",
+        "shortName": "Morocco",
+        "tla": "MAR",
+        "crest": "https://crests.football-data.org/morocco.svg"
       },
       "score": {
         "home": null,
@@ -2118,10 +2118,10 @@
       "group": null,
       "matchday": null,
       "homeTeam": {
-        "name": null,
-        "shortName": null,
-        "tla": null,
-        "crest": null
+        "name": "Mexico",
+        "shortName": "Mexico",
+        "tla": "MEX",
+        "crest": "https://crests.football-data.org/769.svg"
       },
       "awayTeam": {
         "name": null,
@@ -2199,16 +2199,16 @@
       "group": null,
       "matchday": null,
       "homeTeam": {
-        "name": null,
-        "shortName": null,
-        "tla": null,
-        "crest": null
+        "name": "United States",
+        "shortName": "USA",
+        "tla": "USA",
+        "crest": "https://crests.football-data.org/usa.svg"
       },
       "awayTeam": {
-        "name": null,
-        "shortName": null,
-        "tla": null,
-        "crest": null
+        "name": "Bosnia-Herzegovina",
+        "shortName": "Bosnia-H.",
+        "tla": "BIH",
+        "crest": "https://crests.football-data.org/bosnia.svg"
       },
       "score": {
         "home": null,
@@ -2280,10 +2280,10 @@
       "group": null,
       "matchday": null,
       "homeTeam": {
-        "name": null,
-        "shortName": null,
-        "tla": null,
-        "crest": null
+        "name": "Switzerland",
+        "shortName": "Switzerland",
+        "tla": "SUI",
+        "crest": "https://crests.football-data.org/788.svg"
       },
       "awayTeam": {
         "name": null,
@@ -2307,10 +2307,10 @@
       "group": null,
       "matchday": null,
       "homeTeam": {
-        "name": null,
-        "shortName": null,
-        "tla": null,
-        "crest": null
+        "name": "Australia",
+        "shortName": "Australia",
+        "tla": "AUS",
+        "crest": "https://crests.football-data.org/779.svg"
       },
       "awayTeam": {
         "name": null,
@@ -2334,10 +2334,10 @@
       "group": null,
       "matchday": null,
       "homeTeam": {
-        "name": null,
-        "shortName": null,
-        "tla": null,
-        "crest": null
+        "name": "Argentina",
+        "shortName": "Argentina",
+        "tla": "ARG",
+        "crest": "https://crests.football-data.org/762.png"
       },
       "awayTeam": {
         "name": null,

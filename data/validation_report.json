@@ -1,14 +1,35 @@
 {
-  "checkedAt": "2026-06-26T16:45:16+00:00",
-  "anomalyCount": 0,
-  "anomalies": [],
+  "checkedAt": "2026-06-26T20:38:27+00:00",
+  "anomalyCount": 4,
+  "anomalies": [
+    {
+      "area": "odds",
+      "level": "warn",
+      "msg": "2026-06-26 Norway vs France: home_odds 5.6446 → 137.4129 (drift 2334%)"
+    },
+    {
+      "area": "odds",
+      "level": "warn",
+      "msg": "2026-06-26 Norway vs France: draw_odds 4.8933 → 27.3221 (drift 458%)"
+    },
+    {
+      "area": "odds",
+      "level": "warn",
+      "msg": "2026-06-26 Senegal vs Iraq: draw_odds 6.8375 → 235.3392 (drift 3342%)"
+    },
+    {
+      "area": "odds",
+      "level": "warn",
+      "msg": "2026-06-26 Senegal vs Iraq: away_odds 12.5125 → 241.9225 (drift 1833%)"
+    }
+  ],
   "summary": {
     "matches": {
       "count": 104,
       "out_of_window": 0,
-      "missing_status": 0,
+      "missing_status": 2,
       "finished": 60,
-      "scheduled": 44
+      "scheduled": 42
     },
     "odds": {
       "count": 16,
@@ -16,7 +37,7 @@
       "sources_failed": [
         "espn"
       ],
-      "drift_warnings": 0
+      "drift_warnings": 4
     },
     "team_stats": {
       "team_count": 48,
@@ -30,7 +51,8 @@
     }
   },
   "issue": {
-    "opened": false,
-    "reason": "no severe anomalies"
+    "opened": true,
+    "number": 23,
+    "fp": "85b76a6cce4c"
   }
 }
