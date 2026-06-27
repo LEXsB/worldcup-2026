@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-27T05:21:56+00:00",
+  "updatedAt": "2026-06-27T09:00:16+00:00",
   "source": "football-data.org / competitions/WC/matches",
   "competition": "FIFA World Cup",
   "count": 104,
@@ -2064,10 +2064,10 @@
       "group": null,
       "matchday": null,
       "homeTeam": {
-        "name": null,
-        "shortName": null,
-        "tla": null,
-        "crest": null
+        "name": "Ivory Coast",
+        "shortName": "Ivory Coast",
+        "tla": "CIV",
+        "crest": "https://crests.football-data.org/787.svg"
       },
       "awayTeam": {
         "name": null,
