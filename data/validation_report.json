@@ -1,20 +1,14 @@
 {
-  "checkedAt": "2026-06-27T00:55:17+00:00",
-  "anomalyCount": 1,
-  "anomalies": [
-    {
-      "area": "odds",
-      "level": "warn",
-      "msg": "2026-06-27 Uruguay vs Spain: home_odds 6.0028 → 12.5792 (drift 110%)"
-    }
-  ],
+  "checkedAt": "2026-06-27T05:22:17+00:00",
+  "anomalyCount": 0,
+  "anomalies": [],
   "summary": {
     "matches": {
       "count": 104,
       "out_of_window": 0,
-      "missing_status": 2,
-      "finished": 62,
-      "scheduled": 40
+      "missing_status": 0,
+      "finished": 66,
+      "scheduled": 38
     },
     "odds": {
       "count": 15,
@@ -22,7 +16,7 @@
       "sources_failed": [
         "espn"
       ],
-      "drift_warnings": 1
+      "drift_warnings": 0
     },
     "team_stats": {
       "team_count": 48,
@@ -36,8 +30,7 @@
     }
   },
   "issue": {
-    "opened": true,
-    "number": 24,
-    "fp": "d2ba6709df00"
+    "opened": false,
+    "reason": "no severe anomalies"
   }
 }
