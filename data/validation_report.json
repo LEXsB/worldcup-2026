@@ -1,33 +1,22 @@
 {
-  "checkedAt": "2026-06-28T00:58:30+00:00",
-  "anomalyCount": 2,
-  "anomalies": [
-    {
-      "area": "odds",
-      "level": "warn",
-      "msg": "2026-06-27 Congo DR vs Uzbekistan: home_odds 1.7022 → 6.6141 (drift 289%)"
-    },
-    {
-      "area": "odds",
-      "level": "warn",
-      "msg": "2026-06-27 Congo DR vs Uzbekistan: away_odds 5.1062 → 1.6606 (drift 67%)"
-    }
-  ],
+  "checkedAt": "2026-06-28T05:35:30+00:00",
+  "anomalyCount": 0,
+  "anomalies": [],
   "summary": {
     "matches": {
       "count": 104,
       "out_of_window": 0,
-      "missing_status": 2,
-      "finished": 68,
-      "scheduled": 34
+      "missing_status": 1,
+      "finished": 72,
+      "scheduled": 31
     },
     "odds": {
-      "count": 14,
+      "count": 16,
       "source": "the-odds-api",
       "sources_failed": [
         "espn"
       ],
-      "drift_warnings": 2
+      "drift_warnings": 0
     },
     "team_stats": {
       "team_count": 48,
@@ -41,8 +30,7 @@
     }
   },
   "issue": {
-    "opened": true,
-    "number": 25,
-    "fp": "1f2ee1fb2282"
+    "opened": false,
+    "reason": "no severe anomalies"
   }
 }
