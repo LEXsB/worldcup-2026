@@ -1,14 +1,25 @@
 {
-  "checkedAt": "2026-06-28T16:31:11+00:00",
-  "anomalyCount": 0,
-  "anomalies": [],
+  "checkedAt": "2026-06-28T20:30:47+00:00",
+  "anomalyCount": 2,
+  "anomalies": [
+    {
+      "area": "odds",
+      "level": "warn",
+      "msg": "2026-06-28 South Africa vs Canada: draw_odds 3.6 → 1.7531 (drift 51%)"
+    },
+    {
+      "area": "odds",
+      "level": "warn",
+      "msg": "2026-06-28 South Africa vs Canada: away_odds 1.6717 → 3.0017 (drift 80%)"
+    }
+  ],
   "summary": {
     "matches": {
       "count": 104,
       "out_of_window": 0,
-      "missing_status": 0,
+      "missing_status": 1,
       "finished": 72,
-      "scheduled": 32
+      "scheduled": 31
     },
     "odds": {
       "count": 16,
@@ -16,7 +27,7 @@
       "sources_failed": [
         "espn"
       ],
-      "drift_warnings": 0
+      "drift_warnings": 2
     },
     "team_stats": {
       "team_count": 48,
@@ -30,7 +41,8 @@
     }
   },
   "issue": {
-    "opened": false,
-    "reason": "no severe anomalies"
+    "opened": true,
+    "number": 26,
+    "fp": "ba7a61530858"
   }
 }
