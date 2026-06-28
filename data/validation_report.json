@@ -1,14 +1,14 @@
 {
-  "checkedAt": "2026-06-28T05:35:30+00:00",
+  "checkedAt": "2026-06-28T09:08:17+00:00",
   "anomalyCount": 0,
   "anomalies": [],
   "summary": {
     "matches": {
       "count": 104,
       "out_of_window": 0,
-      "missing_status": 1,
+      "missing_status": 0,
       "finished": 72,
-      "scheduled": 31
+      "scheduled": 32
     },
     "odds": {
       "count": 16,
