@@ -1,12 +1,12 @@
 {
-  "updatedAt": "2026-06-29T05:40:28+00:00",
+  "updatedAt": "2026-06-29T09:42:05+00:00",
   "window": 10,
   "teamCount": 48,
   "sourcesTried": [
     {
       "source": "bayesian-results",
       "ok": true,
-      "rows": 49477
+      "rows": 49478
     },
     {
       "source": "api-football-cards-last10",
@@ -858,16 +858,25 @@
         "team": "Canada",
         "matches": 10,
         "window": 10,
-        "gf_total": 15,
+        "gf_total": 16,
         "ga_total": 6,
-        "gf_avg": 1.5,
+        "gf_avg": 1.6,
         "ga_avg": 0.6,
-        "wins": 3,
-        "draws": 6,
+        "wins": 4,
+        "draws": 5,
         "losses": 1,
-        "record": "3-6-1",
-        "last_match_date": "2026-06-24",
+        "record": "4-5-1",
+        "last_match_date": "2026-06-28",
         "last_matches": [
+          {
+            "date": "2026-06-28",
+            "opponent": "South Africa",
+            "gf": 1,
+            "ga": 0,
+            "result": "W",
+            "tournament": "FIFA World Cup",
+            "venue": "A"
+          },
           {
             "date": "2026-06-24",
             "opponent": "Switzerland",
@@ -943,15 +952,6 @@
           {
             "date": "2025-11-13",
             "opponent": "Ecuador",
-            "gf": 0,
-            "ga": 0,
-            "result": "D",
-            "tournament": "Friendly",
-            "venue": "H"
-          },
-          {
-            "date": "2025-10-14",
-            "opponent": "Colombia",
             "gf": 0,
             "ga": 0,
             "result": "D",
@@ -4555,8 +4555,17 @@
         "draws": 3,
         "losses": 4,
         "record": "3-3-4",
-        "last_match_date": "2026-06-24",
+        "last_match_date": "2026-06-28",
         "last_matches": [
+          {
+            "date": "2026-06-28",
+            "opponent": "Canada",
+            "gf": 0,
+            "ga": 1,
+            "result": "L",
+            "tournament": "FIFA World Cup",
+            "venue": "H"
+          },
           {
             "date": "2026-06-24",
             "opponent": "South Korea",
@@ -4635,15 +4644,6 @@
             "gf": 3,
             "ga": 2,
             "result": "W",
-            "tournament": "African Cup of Nations",
-            "venue": "A"
-          },
-          {
-            "date": "2025-12-26",
-            "opponent": "Egypt",
-            "gf": 0,
-            "ga": 1,
-            "result": "L",
             "tournament": "African Cup of Nations",
             "venue": "A"
           }
