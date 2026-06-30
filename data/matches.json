@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-30T05:28:10+00:00",
+  "updatedAt": "2026-06-30T09:13:11+00:00",
   "source": "football-data.org / competitions/WC/matches",
   "competition": "FIFA World Cup",
   "count": 104,
@@ -2024,7 +2024,7 @@
       "score": {
         "home": 4,
         "away": 5,
-        "winner": null,
+        "winner": "AWAY_TEAM",
         "duration": "PENALTY_SHOOTOUT"
       },
       "venue": null
@@ -2049,9 +2049,9 @@
         "crest": "https://crests.football-data.org/morocco.svg"
       },
       "score": {
-        "home": 4,
+        "home": 3,
         "away": 4,
-        "winner": null,
+        "winner": "AWAY_TEAM",
         "duration": "PENALTY_SHOOTOUT"
       },
       "venue": null
@@ -2394,10 +2394,10 @@
         "crest": "https://crests.football-data.org/canada.svg"
       },
       "awayTeam": {
-        "name": null,
-        "shortName": null,
-        "tla": null,
-        "crest": null
+        "name": "Morocco",
+        "shortName": "Morocco",
+        "tla": "MAR",
+        "crest": "https://crests.football-data.org/morocco.svg"
       },
       "score": {
         "home": null,
@@ -2415,10 +2415,10 @@
       "group": null,
       "matchday": null,
       "homeTeam": {
-        "name": null,
-        "shortName": null,
-        "tla": null,
-        "crest": null
+        "name": "Paraguay",
+        "shortName": "Paraguay",
+        "tla": "PAR",
+        "crest": "https://crests.football-data.org/761.svg"
       },
       "awayTeam": {
         "name": null,
@@ -2442,10 +2442,10 @@
       "group": null,
       "matchday": null,
       "homeTeam": {
-        "name": null,
-        "shortName": null,
-        "tla": null,
-        "crest": null
+        "name": "Brazil",
+        "shortName": "Brazil",
+        "tla": "BRA",
+        "crest": "https://crests.football-data.org/764.svg"
       },
       "awayTeam": {
         "name": null,

@@ -1,12 +1,12 @@
 {
-  "updatedAt": "2026-06-30T05:28:14+00:00",
+  "updatedAt": "2026-06-30T09:13:15+00:00",
   "window": 10,
   "teamCount": 48,
   "sourcesTried": [
     {
       "source": "bayesian-results",
       "ok": true,
-      "rows": 49478
+      "rows": 49481
     },
     {
       "source": "api-football-cards-last10",
@@ -740,15 +740,24 @@
         "matches": 10,
         "window": 10,
         "gf_total": 24,
-        "ga_total": 11,
+        "ga_total": 9,
         "gf_avg": 2.4,
-        "ga_avg": 1.1,
-        "wins": 6,
+        "ga_avg": 0.9,
+        "wins": 7,
         "draws": 2,
-        "losses": 2,
-        "record": "6-2-2",
-        "last_match_date": "2026-06-24",
+        "losses": 1,
+        "record": "7-2-1",
+        "last_match_date": "2026-06-29",
         "last_matches": [
+          {
+            "date": "2026-06-29",
+            "opponent": "Japan",
+            "gf": 2,
+            "ga": 1,
+            "result": "W",
+            "tournament": "FIFA World Cup",
+            "venue": "H"
+          },
           {
             "date": "2026-06-24",
             "opponent": "Scotland",
@@ -829,15 +838,6 @@
             "result": "W",
             "tournament": "Friendly",
             "venue": "H"
-          },
-          {
-            "date": "2025-10-14",
-            "opponent": "Japan",
-            "gf": 2,
-            "ga": 3,
-            "result": "L",
-            "tournament": "Kirin Cup",
-            "venue": "A"
           }
         ]
       },
@@ -2287,15 +2287,24 @@
         "matches": 10,
         "window": 10,
         "gf_total": 31,
-        "ga_total": 9,
+        "ga_total": 10,
         "gf_avg": 3.1,
-        "ga_avg": 0.9,
-        "wins": 9,
-        "draws": 0,
+        "ga_avg": 1.0,
+        "wins": 8,
+        "draws": 1,
         "losses": 1,
-        "record": "9-0-1",
-        "last_match_date": "2026-06-25",
+        "record": "8-1-1",
+        "last_match_date": "2026-06-29",
         "last_matches": [
+          {
+            "date": "2026-06-29",
+            "opponent": "Paraguay",
+            "gf": 1,
+            "ga": 1,
+            "result": "D",
+            "tournament": "FIFA World Cup",
+            "venue": "H"
+          },
           {
             "date": "2026-06-25",
             "opponent": "Ecuador",
@@ -2372,15 +2381,6 @@
             "date": "2025-11-14",
             "opponent": "Luxembourg",
             "gf": 2,
-            "ga": 0,
-            "result": "W",
-            "tournament": "FIFA World Cup qualification",
-            "venue": "A"
-          },
-          {
-            "date": "2025-10-13",
-            "opponent": "Northern Ireland",
-            "gf": 1,
             "ga": 0,
             "result": "W",
             "tournament": "FIFA World Cup qualification",
@@ -2881,16 +2881,25 @@
         "team": "Japan",
         "matches": 10,
         "window": 10,
-        "gf_total": 20,
+        "gf_total": 19,
         "ga_total": 7,
-        "gf_avg": 2.0,
+        "gf_avg": 1.9,
         "ga_avg": 0.7,
         "wins": 7,
-        "draws": 3,
-        "losses": 0,
-        "record": "7-3-0",
-        "last_match_date": "2026-06-25",
+        "draws": 2,
+        "losses": 1,
+        "record": "7-2-1",
+        "last_match_date": "2026-06-29",
         "last_matches": [
+          {
+            "date": "2026-06-29",
+            "opponent": "Brazil",
+            "gf": 1,
+            "ga": 2,
+            "result": "L",
+            "tournament": "FIFA World Cup",
+            "venue": "A"
+          },
           {
             "date": "2026-06-25",
             "opponent": "Sweden",
@@ -2969,15 +2978,6 @@
             "gf": 3,
             "ga": 2,
             "result": "W",
-            "tournament": "Kirin Cup",
-            "venue": "H"
-          },
-          {
-            "date": "2025-10-10",
-            "opponent": "Paraguay",
-            "gf": 2,
-            "ga": 2,
-            "result": "D",
             "tournament": "Kirin Cup",
             "venue": "H"
           }
@@ -3238,16 +3238,25 @@
         "team": "Morocco",
         "matches": 10,
         "window": 10,
-        "gf_total": 22,
-        "ga_total": 6,
-        "gf_avg": 2.2,
-        "ga_avg": 0.6,
+        "gf_total": 23,
+        "ga_total": 7,
+        "gf_avg": 2.3,
+        "ga_avg": 0.7,
         "wins": 6,
         "draws": 4,
         "losses": 0,
         "record": "6-4-0",
-        "last_match_date": "2026-06-24",
+        "last_match_date": "2026-06-29",
         "last_matches": [
+          {
+            "date": "2026-06-29",
+            "opponent": "Netherlands",
+            "gf": 1,
+            "ga": 1,
+            "result": "D",
+            "tournament": "FIFA World Cup",
+            "venue": "A"
+          },
           {
             "date": "2026-06-24",
             "opponent": "Haiti",
@@ -3328,15 +3337,6 @@
             "result": "W",
             "tournament": "African Cup of Nations",
             "venue": "H"
-          },
-          {
-            "date": "2026-01-14",
-            "opponent": "Nigeria",
-            "gf": 0,
-            "ga": 0,
-            "result": "D",
-            "tournament": "African Cup of Nations",
-            "venue": "H"
           }
         ]
       },
@@ -3357,16 +3357,25 @@
         "team": "Netherlands",
         "matches": 10,
         "window": 10,
-        "gf_total": 24,
-        "ga_total": 9,
-        "gf_avg": 2.4,
-        "ga_avg": 0.9,
-        "wins": 6,
-        "draws": 3,
+        "gf_total": 21,
+        "ga_total": 10,
+        "gf_avg": 2.1,
+        "ga_avg": 1.0,
+        "wins": 5,
+        "draws": 4,
         "losses": 1,
-        "record": "6-3-1",
-        "last_match_date": "2026-06-25",
+        "record": "5-4-1",
+        "last_match_date": "2026-06-29",
         "last_matches": [
+          {
+            "date": "2026-06-29",
+            "opponent": "Morocco",
+            "gf": 1,
+            "ga": 1,
+            "result": "D",
+            "tournament": "FIFA World Cup",
+            "venue": "H"
+          },
           {
             "date": "2026-06-25",
             "opponent": "Tunisia",
@@ -3447,15 +3456,6 @@
             "result": "D",
             "tournament": "FIFA World Cup qualification",
             "venue": "A"
-          },
-          {
-            "date": "2025-10-12",
-            "opponent": "Finland",
-            "gf": 4,
-            "ga": 0,
-            "result": "W",
-            "tournament": "FIFA World Cup qualification",
-            "venue": "H"
           }
         ]
       },
@@ -3833,16 +3833,25 @@
         "team": "Paraguay",
         "matches": 10,
         "window": 10,
-        "gf_total": 13,
-        "ga_total": 13,
-        "gf_avg": 1.3,
-        "ga_avg": 1.3,
+        "gf_total": 12,
+        "ga_total": 12,
+        "gf_avg": 1.2,
+        "ga_avg": 1.2,
         "wins": 4,
         "draws": 2,
         "losses": 4,
         "record": "4-2-4",
-        "last_match_date": "2026-06-25",
+        "last_match_date": "2026-06-29",
         "last_matches": [
+          {
+            "date": "2026-06-29",
+            "opponent": "Germany",
+            "gf": 1,
+            "ga": 1,
+            "result": "D",
+            "tournament": "FIFA World Cup",
+            "venue": "A"
+          },
           {
             "date": "2026-06-25",
             "opponent": "Australia",
@@ -3922,15 +3931,6 @@
             "ga": 2,
             "result": "L",
             "tournament": "Friendly",
-            "venue": "A"
-          },
-          {
-            "date": "2025-10-10",
-            "opponent": "Japan",
-            "gf": 2,
-            "ga": 2,
-            "result": "D",
-            "tournament": "Kirin Cup",
             "venue": "A"
           }
         ]
