@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-01T16:50:45+00:00",
+  "updatedAt": "2026-07-01T20:38:32+00:00",
   "source": "football-data.org / competitions/WC/matches",
   "competition": "FIFA World Cup",
   "count": 104,
@@ -2140,7 +2140,7 @@
     {
       "id": 537426,
       "utcDate": "2026-07-01T16:00:00Z",
-      "status": "LIVE",
+      "status": "FINISHED",
       "stage": "LAST_32",
       "group": null,
       "matchday": null,
@@ -2157,9 +2157,9 @@
         "crest": "https://crests.football-data.org/congo_dr.svg"
       },
       "score": {
-        "home": 0,
+        "home": 2,
         "away": 1,
-        "winner": "AWAY_TEAM",
+        "winner": "HOME_TEAM",
         "duration": "REGULAR"
       },
       "venue": null
@@ -2167,7 +2167,7 @@
     {
       "id": 537422,
       "utcDate": "2026-07-01T20:00:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "stage": "LAST_32",
       "group": null,
       "matchday": null,
@@ -2184,9 +2184,9 @@
         "crest": "https://crests.football-data.org/senegal.svg"
       },
       "score": {
-        "home": null,
-        "away": null,
-        "winner": null,
+        "home": 0,
+        "away": 1,
+        "winner": "AWAY_TEAM",
         "duration": "REGULAR"
       },
       "venue": null
