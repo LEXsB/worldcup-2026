@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-01T05:37:37+00:00",
+  "updatedAt": "2026-07-01T09:14:15+00:00",
   "source": "football-data.org / competitions/WC/matches",
   "competition": "FIFA World Cup",
   "count": 104,
@@ -2421,10 +2421,10 @@
         "crest": "https://crests.football-data.org/761.svg"
       },
       "awayTeam": {
-        "name": null,
-        "shortName": null,
-        "tla": null,
-        "crest": null
+        "name": "France",
+        "shortName": "France",
+        "tla": "FRA",
+        "crest": "https://crests.football-data.org/773.svg"
       },
       "score": {
         "home": null,
@@ -2448,10 +2448,10 @@
         "crest": "https://crests.football-data.org/764.svg"
       },
       "awayTeam": {
-        "name": null,
-        "shortName": null,
-        "tla": null,
-        "crest": null
+        "name": "Norway",
+        "shortName": "Norway",
+        "tla": "NOR",
+        "crest": "https://crests.football-data.org/813.svg"
       },
       "score": {
         "home": null,
