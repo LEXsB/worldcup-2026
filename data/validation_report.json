@@ -1,14 +1,25 @@
 {
-  "checkedAt": "2026-07-01T13:03:21+00:00",
-  "anomalyCount": 0,
-  "anomalies": [],
+  "checkedAt": "2026-07-01T16:50:57+00:00",
+  "anomalyCount": 2,
+  "anomalies": [
+    {
+      "area": "odds",
+      "level": "warn",
+      "msg": "2026-07-01 England vs Congo DR: home_odds 1.2948 → 2.2612 (drift 75%)"
+    },
+    {
+      "area": "odds",
+      "level": "warn",
+      "msg": "2026-07-01 England vs Congo DR: away_odds 13.2345 → 3.9136 (drift 70%)"
+    }
+  ],
   "summary": {
     "matches": {
       "count": 104,
       "out_of_window": 0,
-      "missing_status": 0,
+      "missing_status": 1,
       "finished": 79,
-      "scheduled": 25
+      "scheduled": 24
     },
     "odds": {
       "count": 12,
@@ -16,7 +27,7 @@
       "sources_failed": [
         "espn"
       ],
-      "drift_warnings": 0
+      "drift_warnings": 2
     },
     "team_stats": {
       "team_count": 48,
@@ -30,7 +41,8 @@
     }
   },
   "issue": {
-    "opened": false,
-    "reason": "no severe anomalies"
+    "opened": true,
+    "number": 27,
+    "fp": "0b9d321fcf4d"
   }
 }
