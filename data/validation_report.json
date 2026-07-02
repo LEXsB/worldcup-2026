@@ -1,11 +1,16 @@
 {
-  "checkedAt": "2026-07-01T20:38:43+00:00",
-  "anomalyCount": 1,
+  "checkedAt": "2026-07-02T00:56:16+00:00",
+  "anomalyCount": 2,
   "anomalies": [
     {
       "area": "odds",
       "level": "warn",
-      "msg": "2026-07-01 Belgium vs Senegal: home_odds 2.1291 → 4.168 (drift 96%)"
+      "msg": "2026-07-02 United States vs Bosnia & Herzegovina: draw_odds 5.0728 → 7.7611 (drift 53%)"
+    },
+    {
+      "area": "odds",
+      "level": "warn",
+      "msg": "2026-07-02 United States vs Bosnia & Herzegovina: away_odds 8.8333 → 28.4437 (drift 222%)"
     }
   ],
   "summary": {
@@ -13,16 +18,16 @@
       "count": 104,
       "out_of_window": 0,
       "missing_status": 1,
-      "finished": 80,
-      "scheduled": 23
+      "finished": 81,
+      "scheduled": 22
     },
     "odds": {
-      "count": 12,
+      "count": 11,
       "source": "the-odds-api",
       "sources_failed": [
         "espn"
       ],
-      "drift_warnings": 1
+      "drift_warnings": 2
     },
     "team_stats": {
       "team_count": 48,
@@ -37,7 +42,7 @@
   },
   "issue": {
     "opened": true,
-    "number": 28,
-    "fp": "ec34b90962ec"
+    "number": 29,
+    "fp": "98e655e40a65"
   }
 }
