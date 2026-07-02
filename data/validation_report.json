@@ -1,14 +1,25 @@
 {
-  "checkedAt": "2026-07-02T17:49:41+00:00",
-  "anomalyCount": 0,
-  "anomalies": [],
+  "checkedAt": "2026-07-02T21:09:08+00:00",
+  "anomalyCount": 2,
+  "anomalies": [
+    {
+      "area": "odds",
+      "level": "warn",
+      "msg": "2026-07-02 Spain vs Austria: draw_odds 5.4596 → 307.704 (drift 5536%)"
+    },
+    {
+      "area": "odds",
+      "level": "warn",
+      "msg": "2026-07-02 Spain vs Austria: away_odds 11.3683 → 374.804 (drift 3197%)"
+    }
+  ],
   "summary": {
     "matches": {
       "count": 104,
       "out_of_window": 0,
       "missing_status": 0,
-      "finished": 82,
-      "scheduled": 22
+      "finished": 83,
+      "scheduled": 21
     },
     "odds": {
       "count": 11,
@@ -16,7 +27,7 @@
       "sources_failed": [
         "espn"
       ],
-      "drift_warnings": 0
+      "drift_warnings": 2
     },
     "team_stats": {
       "team_count": 48,
@@ -30,7 +41,8 @@
     }
   },
   "issue": {
-    "opened": false,
-    "reason": "no severe anomalies"
+    "opened": true,
+    "number": 30,
+    "fp": "c6b019cbc71b"
   }
 }
