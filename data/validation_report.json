@@ -1,28 +1,22 @@
 {
-  "checkedAt": "2026-07-03T03:21:58+00:00",
-  "anomalyCount": 1,
-  "anomalies": [
-    {
-      "area": "odds",
-      "level": "warn",
-      "msg": "2026-07-03 Switzerland vs Algeria: away_odds 4.2874 → 7.9086 (drift 84%)"
-    }
-  ],
+  "checkedAt": "2026-07-03T07:21:55+00:00",
+  "anomalyCount": 0,
+  "anomalies": [],
   "summary": {
     "matches": {
       "count": 104,
       "out_of_window": 0,
-      "missing_status": 1,
-      "finished": 84,
+      "missing_status": 0,
+      "finished": 85,
       "scheduled": 19
     },
     "odds": {
-      "count": 10,
+      "count": 9,
       "source": "the-odds-api",
       "sources_failed": [
         "espn"
       ],
-      "drift_warnings": 1
+      "drift_warnings": 0
     },
     "team_stats": {
       "team_count": 48,
@@ -36,8 +30,7 @@
     }
   },
   "issue": {
-    "opened": true,
-    "number": 31,
-    "fp": "36ef4d95b0f6"
+    "opened": false,
+    "reason": "no severe anomalies"
   }
 }

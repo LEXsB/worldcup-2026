@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-03T03:21:46+00:00",
+  "updatedAt": "2026-07-03T07:21:33+00:00",
   "source": "football-data.org / competitions/WC/matches",
   "competition": "FIFA World Cup",
   "count": 104,
@@ -2275,7 +2275,7 @@
     {
       "id": 537429,
       "utcDate": "2026-07-03T03:00:00Z",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "stage": "LAST_32",
       "group": null,
       "matchday": null,
@@ -2292,7 +2292,7 @@
         "crest": "https://crests.football-data.org/algeria.svg"
       },
       "score": {
-        "home": 1,
+        "home": 2,
         "away": 0,
         "winner": "HOME_TEAM",
         "duration": "REGULAR"

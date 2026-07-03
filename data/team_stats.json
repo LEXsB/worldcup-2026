@@ -1,12 +1,12 @@
 {
-  "updatedAt": "2026-07-03T03:21:50+00:00",
+  "updatedAt": "2026-07-03T07:21:37+00:00",
   "window": 10,
   "teamCount": 48,
   "sourcesTried": [
     {
       "source": "bayesian-results",
       "ok": true,
-      "rows": 49487
+      "rows": 49490
     },
     {
       "source": "api-football-cards-last10",
@@ -25,16 +25,25 @@
         "team": "Algeria",
         "matches": 10,
         "window": 10,
-        "gf_total": 21,
-        "ga_total": 10,
-        "gf_avg": 2.1,
-        "ga_avg": 1.0,
-        "wins": 6,
+        "gf_total": 18,
+        "ga_total": 11,
+        "gf_avg": 1.8,
+        "ga_avg": 1.1,
+        "wins": 5,
         "draws": 2,
-        "losses": 2,
-        "record": "6-2-2",
-        "last_match_date": "2026-06-27",
+        "losses": 3,
+        "record": "5-2-3",
+        "last_match_date": "2026-07-02",
         "last_matches": [
+          {
+            "date": "2026-07-02",
+            "opponent": "Switzerland",
+            "gf": 0,
+            "ga": 2,
+            "result": "L",
+            "tournament": "FIFA World Cup",
+            "venue": "A"
+          },
           {
             "date": "2026-06-27",
             "opponent": "Austria",
@@ -115,15 +124,6 @@
             "result": "W",
             "tournament": "African Cup of Nations",
             "venue": "H"
-          },
-          {
-            "date": "2025-12-31",
-            "opponent": "Equatorial Guinea",
-            "gf": 3,
-            "ga": 1,
-            "result": "W",
-            "tournament": "African Cup of Nations",
-            "venue": "A"
           }
         ]
       },
@@ -382,16 +382,25 @@
         "team": "Austria",
         "matches": 10,
         "window": 10,
-        "gf_total": 26,
-        "ga_total": 9,
-        "gf_avg": 2.6,
-        "ga_avg": 0.9,
-        "wins": 6,
+        "gf_total": 16,
+        "ga_total": 12,
+        "gf_avg": 1.6,
+        "ga_avg": 1.2,
+        "wins": 5,
         "draws": 2,
-        "losses": 2,
-        "record": "6-2-2",
-        "last_match_date": "2026-06-27",
+        "losses": 3,
+        "record": "5-2-3",
+        "last_match_date": "2026-07-02",
         "last_matches": [
+          {
+            "date": "2026-07-02",
+            "opponent": "Spain",
+            "gf": 0,
+            "ga": 3,
+            "result": "L",
+            "tournament": "FIFA World Cup",
+            "venue": "A"
+          },
           {
             "date": "2026-06-27",
             "opponent": "Algeria",
@@ -472,15 +481,6 @@
             "result": "L",
             "tournament": "FIFA World Cup qualification",
             "venue": "A"
-          },
-          {
-            "date": "2025-10-09",
-            "opponent": "San Marino",
-            "gf": 10,
-            "ga": 0,
-            "result": "W",
-            "tournament": "FIFA World Cup qualification",
-            "venue": "H"
           }
         ]
       },
@@ -1334,16 +1334,25 @@
         "team": "Croatia",
         "matches": 10,
         "window": 10,
-        "gf_total": 19,
-        "ga_total": 15,
-        "gf_avg": 1.9,
-        "ga_avg": 1.5,
-        "wins": 7,
+        "gf_total": 17,
+        "ga_total": 17,
+        "gf_avg": 1.7,
+        "ga_avg": 1.7,
+        "wins": 6,
         "draws": 0,
-        "losses": 3,
-        "record": "7-0-3",
-        "last_match_date": "2026-06-27",
+        "losses": 4,
+        "record": "6-0-4",
+        "last_match_date": "2026-07-02",
         "last_matches": [
+          {
+            "date": "2026-07-02",
+            "opponent": "Portugal",
+            "gf": 1,
+            "ga": 2,
+            "result": "L",
+            "tournament": "FIFA World Cup",
+            "venue": "A"
+          },
           {
             "date": "2026-06-27",
             "opponent": "Ghana",
@@ -1421,15 +1430,6 @@
             "opponent": "Faroe Islands",
             "gf": 3,
             "ga": 1,
-            "result": "W",
-            "tournament": "FIFA World Cup qualification",
-            "venue": "H"
-          },
-          {
-            "date": "2025-10-12",
-            "opponent": "Gibraltar",
-            "gf": 3,
-            "ga": 0,
             "result": "W",
             "tournament": "FIFA World Cup qualification",
             "venue": "H"
@@ -3953,15 +3953,24 @@
         "matches": 10,
         "window": 10,
         "gf_total": 23,
-        "ga_total": 8,
+        "ga_total": 7,
         "gf_avg": 2.3,
-        "ga_avg": 0.8,
-        "wins": 5,
-        "draws": 4,
+        "ga_avg": 0.7,
+        "wins": 6,
+        "draws": 3,
         "losses": 1,
-        "record": "5-4-1",
-        "last_match_date": "2026-06-27",
+        "record": "6-3-1",
+        "last_match_date": "2026-07-02",
         "last_matches": [
+          {
+            "date": "2026-07-02",
+            "opponent": "Croatia",
+            "gf": 2,
+            "ga": 1,
+            "result": "W",
+            "tournament": "FIFA World Cup",
+            "venue": "H"
+          },
           {
             "date": "2026-06-27",
             "opponent": "Colombia",
@@ -4042,15 +4051,6 @@
             "result": "L",
             "tournament": "FIFA World Cup qualification",
             "venue": "A"
-          },
-          {
-            "date": "2025-10-14",
-            "opponent": "Hungary",
-            "gf": 2,
-            "ga": 2,
-            "result": "D",
-            "tournament": "FIFA World Cup qualification",
-            "venue": "H"
           }
         ]
       },
@@ -4785,16 +4785,25 @@
         "team": "Spain",
         "matches": 10,
         "window": 10,
-        "gf_total": 22,
+        "gf_total": 21,
         "ga_total": 4,
-        "gf_avg": 2.2,
+        "gf_avg": 2.1,
         "ga_avg": 0.4,
         "wins": 6,
         "draws": 4,
         "losses": 0,
         "record": "6-4-0",
-        "last_match_date": "2026-06-26",
+        "last_match_date": "2026-07-02",
         "last_matches": [
+          {
+            "date": "2026-07-02",
+            "opponent": "Austria",
+            "gf": 3,
+            "ga": 0,
+            "result": "W",
+            "tournament": "FIFA World Cup",
+            "venue": "H"
+          },
           {
             "date": "2026-06-26",
             "opponent": "Uruguay",
@@ -4875,15 +4884,6 @@
             "result": "W",
             "tournament": "FIFA World Cup qualification",
             "venue": "A"
-          },
-          {
-            "date": "2025-10-14",
-            "opponent": "Bulgaria",
-            "gf": 4,
-            "ga": 0,
-            "result": "W",
-            "tournament": "FIFA World Cup qualification",
-            "venue": "H"
           }
         ]
       },
@@ -5023,16 +5023,25 @@
         "team": "Switzerland",
         "matches": 10,
         "window": 10,
-        "gf_total": 20,
+        "gf_total": 22,
         "ga_total": 11,
-        "gf_avg": 2.0,
+        "gf_avg": 2.2,
         "ga_avg": 1.1,
-        "wins": 4,
-        "draws": 5,
+        "wins": 5,
+        "draws": 4,
         "losses": 1,
-        "record": "4-5-1",
-        "last_match_date": "2026-06-24",
+        "record": "5-4-1",
+        "last_match_date": "2026-07-02",
         "last_matches": [
+          {
+            "date": "2026-07-02",
+            "opponent": "Algeria",
+            "gf": 2,
+            "ga": 0,
+            "result": "W",
+            "tournament": "FIFA World Cup",
+            "venue": "H"
+          },
           {
             "date": "2026-06-24",
             "opponent": "Canada",
@@ -5113,15 +5122,6 @@
             "result": "W",
             "tournament": "FIFA World Cup qualification",
             "venue": "H"
-          },
-          {
-            "date": "2025-10-13",
-            "opponent": "Slovenia",
-            "gf": 0,
-            "ga": 0,
-            "result": "D",
-            "tournament": "FIFA World Cup qualification",
-            "venue": "A"
           }
         ]
       },
