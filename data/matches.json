@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-03T17:27:05+00:00",
+  "updatedAt": "2026-07-03T21:07:50+00:00",
   "source": "football-data.org / competitions/WC/matches",
   "competition": "FIFA World Cup",
   "count": 104,
@@ -2302,7 +2302,7 @@
     {
       "id": 537428,
       "utcDate": "2026-07-03T18:00:00Z",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "LAST_32",
       "group": null,
       "matchday": null,
@@ -2319,10 +2319,10 @@
         "crest": "https://crests.football-data.org/825.svg"
       },
       "score": {
-        "home": null,
-        "away": null,
+        "home": 3,
+        "away": 5,
         "winner": null,
-        "duration": "REGULAR"
+        "duration": "PENALTY_SHOOTOUT"
       },
       "venue": null
     },
