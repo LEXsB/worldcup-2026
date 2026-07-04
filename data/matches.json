@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-04T03:15:25+00:00",
+  "updatedAt": "2026-07-04T06:47:22+00:00",
   "source": "football-data.org / competitions/WC/matches",
   "competition": "FIFA World Cup",
   "count": 104,
@@ -2321,7 +2321,7 @@
       "score": {
         "home": 3,
         "away": 5,
-        "winner": null,
+        "winner": "AWAY_TEAM",
         "duration": "PENALTY_SHOOTOUT"
       },
       "venue": null
@@ -2356,7 +2356,7 @@
     {
       "id": 537430,
       "utcDate": "2026-07-04T01:30:00Z",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "stage": "LAST_32",
       "group": null,
       "matchday": null,
@@ -2373,7 +2373,7 @@
         "crest": "https://crests.football-data.org/ghana.svg"
       },
       "score": {
-        "home": 2,
+        "home": 1,
         "away": 0,
         "winner": "HOME_TEAM",
         "duration": "REGULAR"
@@ -2496,16 +2496,16 @@
       "group": null,
       "matchday": null,
       "homeTeam": {
-        "name": null,
-        "shortName": null,
-        "tla": null,
-        "crest": null
+        "name": "Portugal",
+        "shortName": "Portugal",
+        "tla": "POR",
+        "crest": "https://crests.football-data.org/765.svg"
       },
       "awayTeam": {
-        "name": null,
-        "shortName": null,
-        "tla": null,
-        "crest": null
+        "name": "Spain",
+        "shortName": "Spain",
+        "tla": "ESP",
+        "crest": "https://crests.football-data.org/760.svg"
       },
       "score": {
         "home": null,
@@ -2550,16 +2550,16 @@
       "group": null,
       "matchday": null,
       "homeTeam": {
-        "name": null,
-        "shortName": null,
-        "tla": null,
-        "crest": null
+        "name": "Argentina",
+        "shortName": "Argentina",
+        "tla": "ARG",
+        "crest": "https://crests.football-data.org/762.png"
       },
       "awayTeam": {
-        "name": null,
-        "shortName": null,
-        "tla": null,
-        "crest": null
+        "name": "Egypt",
+        "shortName": "Egypt",
+        "tla": "EGY",
+        "crest": "https://crests.football-data.org/825.svg"
       },
       "score": {
         "home": null,
@@ -2577,16 +2577,16 @@
       "group": null,
       "matchday": null,
       "homeTeam": {
-        "name": null,
-        "shortName": null,
-        "tla": null,
-        "crest": null
+        "name": "Switzerland",
+        "shortName": "Switzerland",
+        "tla": "SUI",
+        "crest": "https://crests.football-data.org/788.svg"
       },
       "awayTeam": {
-        "name": null,
-        "shortName": null,
-        "tla": null,
-        "crest": null
+        "name": "Colombia",
+        "shortName": "Colombia",
+        "tla": "COL",
+        "crest": "https://crests.football-data.org/818.svg"
       },
       "score": {
         "home": null,
