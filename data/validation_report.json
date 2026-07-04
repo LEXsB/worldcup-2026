@@ -1,14 +1,25 @@
 {
-  "checkedAt": "2026-07-03T21:08:09+00:00",
-  "anomalyCount": 0,
-  "anomalies": [],
+  "checkedAt": "2026-07-04T03:15:35+00:00",
+  "anomalyCount": 2,
+  "anomalies": [
+    {
+      "area": "odds",
+      "level": "warn",
+      "msg": "2026-07-04 Colombia vs Ghana: draw_odds 4.3651 → 8.3586 (drift 91%)"
+    },
+    {
+      "area": "odds",
+      "level": "warn",
+      "msg": "2026-07-04 Colombia vs Ghana: away_odds 8.4906 → 64.5071 (drift 660%)"
+    }
+  ],
   "summary": {
     "matches": {
       "count": 104,
       "out_of_window": 0,
-      "missing_status": 0,
-      "finished": 86,
-      "scheduled": 18
+      "missing_status": 1,
+      "finished": 87,
+      "scheduled": 16
     },
     "odds": {
       "count": 8,
@@ -16,7 +27,7 @@
       "sources_failed": [
         "espn"
       ],
-      "drift_warnings": 0
+      "drift_warnings": 2
     },
     "team_stats": {
       "team_count": 48,
@@ -30,7 +41,8 @@
     }
   },
   "issue": {
-    "opened": false,
-    "reason": "no severe anomalies"
+    "opened": true,
+    "number": 32,
+    "fp": "646195d200e9"
   }
 }

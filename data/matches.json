@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-03T21:07:50+00:00",
+  "updatedAt": "2026-07-04T03:15:25+00:00",
   "source": "football-data.org / competitions/WC/matches",
   "competition": "FIFA World Cup",
   "count": 104,
@@ -2329,7 +2329,7 @@
     {
       "id": 537427,
       "utcDate": "2026-07-03T22:00:00Z",
-      "status": "TIMED",
+      "status": "FINISHED",
       "stage": "LAST_32",
       "group": null,
       "matchday": null,
@@ -2346,17 +2346,17 @@
         "crest": "https://crests.football-data.org/cape_verde.svg"
       },
       "score": {
-        "home": null,
-        "away": null,
-        "winner": null,
-        "duration": "REGULAR"
+        "home": 3,
+        "away": 2,
+        "winner": "HOME_TEAM",
+        "duration": "EXTRA_TIME"
       },
       "venue": null
     },
     {
       "id": 537430,
       "utcDate": "2026-07-04T01:30:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "stage": "LAST_32",
       "group": null,
       "matchday": null,
@@ -2373,9 +2373,9 @@
         "crest": "https://crests.football-data.org/ghana.svg"
       },
       "score": {
-        "home": null,
-        "away": null,
-        "winner": null,
+        "home": 2,
+        "away": 0,
+        "winner": "HOME_TEAM",
         "duration": "REGULAR"
       },
       "venue": null
