@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-05T03:30:50+00:00",
+  "updatedAt": "2026-07-05T07:26:53+00:00",
   "source": "football-data.org / competitions/WC/matches",
   "competition": "FIFA World Cup",
   "count": 104,
@@ -2604,16 +2604,16 @@
       "group": null,
       "matchday": null,
       "homeTeam": {
-        "name": null,
-        "shortName": null,
-        "tla": null,
-        "crest": null
+        "name": "France",
+        "shortName": "France",
+        "tla": "FRA",
+        "crest": "https://crests.football-data.org/773.svg"
       },
       "awayTeam": {
-        "name": null,
-        "shortName": null,
-        "tla": null,
-        "crest": null
+        "name": "Morocco",
+        "shortName": "Morocco",
+        "tla": "MAR",
+        "crest": "https://crests.football-data.org/morocco.svg"
       },
       "score": {
         "home": null,
