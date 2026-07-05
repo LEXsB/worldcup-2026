@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-07-04T20:59:18+00:00",
+  "checkedAt": "2026-07-05T03:31:02+00:00",
   "anomalyCount": 0,
   "anomalies": [],
   "summary": {
@@ -7,8 +7,8 @@
       "count": 104,
       "out_of_window": 0,
       "missing_status": 0,
-      "finished": 89,
-      "scheduled": 15
+      "finished": 90,
+      "scheduled": 14
     },
     "odds": {
       "count": 7,
