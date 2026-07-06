@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-06T08:21:44+00:00",
+  "updatedAt": "2026-07-06T15:35:28+00:00",
   "window": 10,
   "teamCount": 48,
   "sourcesTried": [
@@ -739,9 +739,9 @@
         "team": "Brazil",
         "matches": 10,
         "window": 10,
-        "gf_total": 22,
+        "gf_total": 23,
         "ga_total": 11,
-        "gf_avg": 2.2,
+        "gf_avg": 2.3,
         "ga_avg": 1.1,
         "wins": 6,
         "draws": 2,
@@ -752,7 +752,7 @@
           {
             "date": "2026-07-05",
             "opponent": "Norway",
-            "gf": 0,
+            "gf": 1,
             "ga": 2,
             "result": "L",
             "tournament": "FIFA World Cup",
@@ -3596,9 +3596,9 @@
         "matches": 10,
         "window": 10,
         "gf_total": 21,
-        "ga_total": 13,
+        "ga_total": 14,
         "gf_avg": 2.1,
-        "ga_avg": 1.3,
+        "ga_avg": 1.4,
         "wins": 6,
         "draws": 2,
         "losses": 2,
@@ -3609,7 +3609,7 @@
             "date": "2026-07-05",
             "opponent": "Brazil",
             "gf": 2,
-            "ga": 0,
+            "ga": 1,
             "result": "W",
             "tournament": "FIFA World Cup",
             "venue": "A"
