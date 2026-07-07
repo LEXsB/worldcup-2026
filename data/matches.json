@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-07T03:29:31+00:00",
+  "updatedAt": "2026-07-07T07:39:24+00:00",
   "source": "football-data.org / competitions/WC/matches",
   "competition": "FIFA World Cup",
   "count": 104,
@@ -2631,16 +2631,16 @@
       "group": null,
       "matchday": null,
       "homeTeam": {
-        "name": null,
-        "shortName": null,
-        "tla": null,
-        "crest": null
+        "name": "Spain",
+        "shortName": "Spain",
+        "tla": "ESP",
+        "crest": "https://crests.football-data.org/760.svg"
       },
       "awayTeam": {
-        "name": null,
-        "shortName": null,
-        "tla": null,
-        "crest": null
+        "name": "Belgium",
+        "shortName": "Belgium",
+        "tla": "BEL",
+        "crest": "https://crests.football-data.org/805.svg"
       },
       "score": {
         "home": null,
