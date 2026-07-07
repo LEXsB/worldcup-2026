@@ -1,14 +1,30 @@
 {
-  "checkedAt": "2026-07-07T14:36:27+00:00",
-  "anomalyCount": 0,
-  "anomalies": [],
+  "checkedAt": "2026-07-07T18:00:28+00:00",
+  "anomalyCount": 3,
+  "anomalies": [
+    {
+      "area": "odds",
+      "level": "warn",
+      "msg": "2026-07-07 Argentina vs Egypt: home_odds 1.333 → 2.1594 (drift 62%)"
+    },
+    {
+      "area": "odds",
+      "level": "warn",
+      "msg": "2026-07-07 Argentina vs Egypt: draw_odds 4.8826 → 10.6434 (drift 118%)"
+    },
+    {
+      "area": "odds",
+      "level": "warn",
+      "msg": "2026-07-07 Argentina vs Egypt: away_odds 11.1068 → 197.1422 (drift 1675%)"
+    }
+  ],
   "summary": {
     "matches": {
       "count": 104,
       "out_of_window": 0,
-      "missing_status": 0,
+      "missing_status": 1,
       "finished": 94,
-      "scheduled": 10
+      "scheduled": 9
     },
     "odds": {
       "count": 5,
@@ -16,7 +32,7 @@
       "sources_failed": [
         "espn"
       ],
-      "drift_warnings": 0
+      "drift_warnings": 3
     },
     "team_stats": {
       "team_count": 48,
@@ -30,7 +46,8 @@
     }
   },
   "issue": {
-    "opened": false,
-    "reason": "no severe anomalies"
+    "opened": true,
+    "number": 33,
+    "fp": "321cc309ad0a"
   }
 }
