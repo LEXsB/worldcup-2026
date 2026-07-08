@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-08T02:45:56+00:00",
+  "updatedAt": "2026-07-08T06:28:49+00:00",
   "source": "football-data.org / competitions/WC/matches",
   "competition": "FIFA World Cup",
   "count": 104,
@@ -2591,7 +2591,7 @@
       "score": {
         "home": 4,
         "away": 3,
-        "winner": null,
+        "winner": "HOME_TEAM",
         "duration": "PENALTY_SHOOTOUT"
       },
       "venue": null
@@ -2685,16 +2685,16 @@
       "group": null,
       "matchday": null,
       "homeTeam": {
-        "name": null,
-        "shortName": null,
-        "tla": null,
-        "crest": null
+        "name": "Argentina",
+        "shortName": "Argentina",
+        "tla": "ARG",
+        "crest": "https://crests.football-data.org/762.png"
       },
       "awayTeam": {
-        "name": null,
-        "shortName": null,
-        "tla": null,
-        "crest": null
+        "name": "Switzerland",
+        "shortName": "Switzerland",
+        "tla": "SUI",
+        "crest": "https://crests.football-data.org/788.svg"
       },
       "score": {
         "home": null,
