@@ -1,14 +1,20 @@
 {
-  "checkedAt": "2026-07-09T17:57:30+00:00",
-  "anomalyCount": 0,
-  "anomalies": [],
+  "checkedAt": "2026-07-09T21:25:50+00:00",
+  "anomalyCount": 1,
+  "anomalies": [
+    {
+      "area": "odds",
+      "level": "warn",
+      "msg": "2026-07-09 France vs Morocco: away_odds 6.4651 → 22.6217 (drift 250%)"
+    }
+  ],
   "summary": {
     "matches": {
       "count": 104,
       "out_of_window": 0,
-      "missing_status": 0,
+      "missing_status": 1,
       "finished": 96,
-      "scheduled": 8
+      "scheduled": 7
     },
     "odds": {
       "count": 4,
@@ -16,7 +22,7 @@
       "sources_failed": [
         "espn"
       ],
-      "drift_warnings": 0
+      "drift_warnings": 1
     },
     "team_stats": {
       "team_count": 48,
@@ -30,7 +36,8 @@
     }
   },
   "issue": {
-    "opened": false,
-    "reason": "no severe anomalies"
+    "opened": true,
+    "number": 34,
+    "fp": "cb543e7c0166"
   }
 }
