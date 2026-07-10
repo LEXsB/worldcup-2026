@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-07-09T21:25:29+00:00",
+  "updatedAt": "2026-07-10T03:25:07+00:00",
   "source": "the-odds-api",
   "sourcesTried": [
     {
       "source": "the-odds-api",
       "ok": true,
-      "count": 4
+      "count": 3
     },
     {
       "source": "espn",
@@ -13,58 +13,45 @@
       "error": "'NoneType' object has no attribute 'get'"
     }
   ],
-  "count": 4,
+  "count": 3,
   "odds": [
-    {
-      "date": "2026-07-09",
-      "home": "France",
-      "away": "Morocco",
-      "home_odds": 1.3944,
-      "draw_odds": 5.3903,
-      "away_odds": 22.6217,
-      "p_home": 0.7574,
-      "p_draw": 0.1959,
-      "p_away": 0.0467,
-      "bookmaker": "avg(36)",
-      "source": "the-odds-api"
-    },
     {
       "date": "2026-07-10",
       "home": "Spain",
       "away": "Belgium",
-      "home_odds": 1.6357,
-      "draw_odds": 3.9576,
-      "away_odds": 5.4739,
-      "p_home": 0.5841,
-      "p_draw": 0.2414,
-      "p_away": 0.1745,
-      "bookmaker": "avg(49)",
+      "home_odds": 1.6383,
+      "draw_odds": 3.9304,
+      "away_odds": 5.4894,
+      "p_home": 0.583,
+      "p_draw": 0.243,
+      "p_away": 0.174,
+      "bookmaker": "avg(48)",
       "source": "the-odds-api"
     },
     {
       "date": "2026-07-11",
       "home": "Norway",
       "away": "England",
-      "home_odds": 4.1782,
-      "draw_odds": 3.6847,
-      "away_odds": 1.862,
-      "p_home": 0.2284,
-      "p_draw": 0.259,
-      "p_away": 0.5126,
-      "bookmaker": "avg(49)",
+      "home_odds": 4.1444,
+      "draw_odds": 3.6723,
+      "away_odds": 1.8665,
+      "p_home": 0.2299,
+      "p_draw": 0.2595,
+      "p_away": 0.5106,
+      "bookmaker": "avg(48)",
       "source": "the-odds-api"
     },
     {
       "date": "2026-07-12",
       "home": "Argentina",
       "away": "Switzerland",
-      "home_odds": 1.6943,
-      "draw_odds": 3.5749,
-      "away_odds": 5.6422,
-      "p_home": 0.5636,
-      "p_draw": 0.2671,
-      "p_away": 0.1692,
-      "bookmaker": "avg(49)",
+      "home_odds": 1.6925,
+      "draw_odds": 3.5596,
+      "away_odds": 5.6435,
+      "p_home": 0.5633,
+      "p_draw": 0.2678,
+      "p_away": 0.1689,
+      "bookmaker": "avg(48)",
       "source": "the-odds-api"
     }
   ]

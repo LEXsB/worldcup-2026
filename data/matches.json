@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-09T21:25:29+00:00",
+  "updatedAt": "2026-07-10T03:25:06+00:00",
   "source": "football-data.org / competitions/WC/matches",
   "competition": "FIFA World Cup",
   "count": 104,
@@ -2599,7 +2599,7 @@
     {
       "id": 537383,
       "utcDate": "2026-07-09T20:00:00Z",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "stage": "QUARTER_FINALS",
       "group": null,
       "matchday": null,
@@ -2616,9 +2616,9 @@
         "crest": "https://crests.football-data.org/morocco.svg"
       },
       "score": {
-        "home": 0,
+        "home": 2,
         "away": 0,
-        "winner": "DRAW",
+        "winner": "HOME_TEAM",
         "duration": "REGULAR"
       },
       "venue": null
