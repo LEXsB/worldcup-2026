@@ -1,14 +1,25 @@
 {
-  "checkedAt": "2026-07-10T17:48:36+00:00",
-  "anomalyCount": 0,
-  "anomalies": [],
+  "checkedAt": "2026-07-10T21:06:36+00:00",
+  "anomalyCount": 2,
+  "anomalies": [
+    {
+      "area": "odds",
+      "level": "warn",
+      "msg": "2026-07-10 Spain vs Belgium: draw_odds 3.9884 → 16.7632 (drift 320%)"
+    },
+    {
+      "area": "odds",
+      "level": "warn",
+      "msg": "2026-07-10 Spain vs Belgium: away_odds 5.6914 → 321.3032 (drift 5545%)"
+    }
+  ],
   "summary": {
     "matches": {
       "count": 104,
       "out_of_window": 0,
       "missing_status": 0,
-      "finished": 97,
-      "scheduled": 7
+      "finished": 98,
+      "scheduled": 6
     },
     "odds": {
       "count": 3,
@@ -16,7 +27,7 @@
       "sources_failed": [
         "espn"
       ],
-      "drift_warnings": 0
+      "drift_warnings": 2
     },
     "team_stats": {
       "team_count": 48,
@@ -30,7 +41,8 @@
     }
   },
   "issue": {
-    "opened": false,
-    "reason": "no severe anomalies"
+    "opened": true,
+    "number": 35,
+    "fp": "74eaaa4d6c64"
   }
 }
