@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-11T06:13:43+00:00",
+  "updatedAt": "2026-07-11T09:38:30+00:00",
   "source": "football-data.org / competitions/WC/matches",
   "competition": "FIFA World Cup",
   "count": 104,
@@ -2718,10 +2718,10 @@
         "crest": "https://crests.football-data.org/773.svg"
       },
       "awayTeam": {
-        "name": null,
-        "shortName": null,
-        "tla": null,
-        "crest": null
+        "name": "Spain",
+        "shortName": "Spain",
+        "tla": "ESP",
+        "crest": "https://crests.football-data.org/760.svg"
       },
       "score": {
         "home": null,
