@@ -1,29 +1,13 @@
 {
-  "checkedAt": "2026-07-12T02:51:01+00:00",
-  "anomalyCount": 3,
-  "anomalies": [
-    {
-      "area": "odds",
-      "level": "warn",
-      "msg": "2026-07-12 Argentina vs Switzerland: home_odds 1.6985 → 2.8733 (drift 69%)"
-    },
-    {
-      "area": "odds",
-      "level": "warn",
-      "msg": "2026-07-12 Argentina vs Switzerland: draw_odds 3.5173 → 1.4908 (drift 58%)"
-    },
-    {
-      "area": "odds",
-      "level": "warn",
-      "msg": "2026-07-12 Argentina vs Switzerland: away_odds 5.739 → 21.0253 (drift 266%)"
-    }
-  ],
+  "checkedAt": "2026-07-12T06:33:19+00:00",
+  "anomalyCount": 0,
+  "anomalies": [],
   "summary": {
     "matches": {
       "count": 104,
       "out_of_window": 0,
-      "missing_status": 2,
-      "finished": 98,
+      "missing_status": 0,
+      "finished": 100,
       "scheduled": 4
     },
     "odds": {
@@ -32,7 +16,7 @@
       "sources_failed": [
         "espn"
       ],
-      "drift_warnings": 3
+      "drift_warnings": 0
     },
     "team_stats": {
       "team_count": 48,
@@ -46,8 +30,7 @@
     }
   },
   "issue": {
-    "opened": true,
-    "number": 36,
-    "fp": "8ea676a444b8"
+    "opened": false,
+    "reason": "no severe anomalies"
   }
 }

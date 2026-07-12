@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-12T02:50:41+00:00",
+  "updatedAt": "2026-07-12T06:33:10+00:00",
   "source": "football-data.org / competitions/WC/matches",
   "competition": "FIFA World Cup",
   "count": 104,
@@ -2464,7 +2464,7 @@
     {
       "id": 537378,
       "utcDate": "2026-07-06T01:00:00Z",
-      "status": "2026-07-06 01:00:00Z",
+      "status": "FINISHED",
       "stage": "LAST_16",
       "group": null,
       "matchday": null,
@@ -2680,7 +2680,7 @@
     {
       "id": 537386,
       "utcDate": "2026-07-12T01:00:00Z",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "stage": "QUARTER_FINALS",
       "group": null,
       "matchday": null,
@@ -2697,10 +2697,10 @@
         "crest": "https://crests.football-data.org/788.svg"
       },
       "score": {
-        "home": 1,
+        "home": 3,
         "away": 1,
-        "winner": "DRAW",
-        "duration": "REGULAR"
+        "winner": "HOME_TEAM",
+        "duration": "EXTRA_TIME"
       },
       "venue": null
     },
@@ -2739,16 +2739,16 @@
       "group": null,
       "matchday": null,
       "homeTeam": {
-        "name": null,
-        "shortName": null,
-        "tla": null,
-        "crest": null
+        "name": "England",
+        "shortName": "England",
+        "tla": "ENG",
+        "crest": "https://crests.football-data.org/770.svg"
       },
       "awayTeam": {
-        "name": null,
-        "shortName": null,
-        "tla": null,
-        "crest": null
+        "name": "Argentina",
+        "shortName": "Argentina",
+        "tla": "ARG",
+        "crest": "https://crests.football-data.org/762.png"
       },
       "score": {
         "home": null,
