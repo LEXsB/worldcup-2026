@@ -1,14 +1,30 @@
 {
-  "checkedAt": "2026-07-14T17:15:36+00:00",
-  "anomalyCount": 0,
-  "anomalies": [],
+  "checkedAt": "2026-07-14T21:01:05+00:00",
+  "anomalyCount": 3,
+  "anomalies": [
+    {
+      "area": "odds",
+      "level": "warn",
+      "msg": "2026-07-14 France vs Spain: home_odds 2.4852 → 319.2987 (drift 12748%)"
+    },
+    {
+      "area": "odds",
+      "level": "warn",
+      "msg": "2026-07-14 France vs Spain: draw_odds 3.0916 → 112.3261 (drift 3533%)"
+    },
+    {
+      "area": "odds",
+      "level": "warn",
+      "msg": "2026-07-14 France vs Spain: away_odds 3.1126 → 1.0039 (drift 68%)"
+    }
+  ],
   "summary": {
     "matches": {
       "count": 104,
       "out_of_window": 0,
-      "missing_status": 0,
+      "missing_status": 1,
       "finished": 100,
-      "scheduled": 4
+      "scheduled": 3
     },
     "odds": {
       "count": 2,
@@ -16,7 +32,7 @@
       "sources_failed": [
         "espn"
       ],
-      "drift_warnings": 0
+      "drift_warnings": 3
     },
     "team_stats": {
       "team_count": 48,
@@ -30,7 +46,8 @@
     }
   },
   "issue": {
-    "opened": false,
-    "reason": "no severe anomalies"
+    "opened": true,
+    "number": 37,
+    "fp": "c79707e950fe"
   }
 }
