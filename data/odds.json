@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-15T02:31:27+00:00",
+  "updatedAt": "2026-07-15T06:15:17+00:00",
   "source": "the-odds-api",
   "sourcesTried": [
     {
@@ -19,12 +19,12 @@
       "date": "2026-07-15",
       "home": "England",
       "away": "Argentina",
-      "home_odds": 2.7082,
-      "draw_odds": 2.8902,
-      "away_odds": 3.0158,
-      "p_home": 0.3527,
-      "p_draw": 0.3305,
-      "p_away": 0.3168,
+      "home_odds": 2.704,
+      "draw_odds": 2.906,
+      "away_odds": 3.0072,
+      "p_home": 0.3534,
+      "p_draw": 0.3288,
+      "p_away": 0.3178,
       "bookmaker": "avg(50)",
       "source": "the-odds-api"
     }
