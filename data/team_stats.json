@@ -1,12 +1,12 @@
 {
-  "updatedAt": "2026-07-15T21:01:15+00:00",
+  "updatedAt": "2026-07-16T02:39:52+00:00",
   "window": 10,
   "teamCount": 48,
   "sourcesTried": [
     {
       "source": "bayesian-results",
       "ok": true,
-      "rows": 49506
+      "rows": 49518
     },
     {
       "source": "api-football-cards-last10",
@@ -152,8 +152,17 @@
         "draws": 0,
         "losses": 0,
         "record": "10-0-0",
-        "last_match_date": "2026-07-11",
+        "last_match_date": "2026-07-15",
         "last_matches": [
+          {
+            "date": "2026-07-15",
+            "opponent": "England",
+            "gf": 2,
+            "ga": 1,
+            "result": "W",
+            "tournament": "FIFA World Cup",
+            "venue": "A"
+          },
           {
             "date": "2026-07-11",
             "opponent": "Switzerland",
@@ -231,15 +240,6 @@
             "opponent": "Zambia",
             "gf": 5,
             "ga": 0,
-            "result": "W",
-            "tournament": "Friendly",
-            "venue": "H"
-          },
-          {
-            "date": "2026-03-27",
-            "opponent": "Mauritania",
-            "gf": 2,
-            "ga": 1,
             "result": "W",
             "tournament": "Friendly",
             "venue": "H"
@@ -2049,15 +2049,24 @@
         "matches": 10,
         "window": 10,
         "gf_total": 18,
-        "ga_total": 8,
+        "ga_total": 9,
         "gf_avg": 1.8,
-        "ga_avg": 0.8,
+        "ga_avg": 0.9,
         "wins": 7,
-        "draws": 2,
-        "losses": 1,
-        "record": "7-2-1",
-        "last_match_date": "2026-07-11",
+        "draws": 1,
+        "losses": 2,
+        "record": "7-1-2",
+        "last_match_date": "2026-07-15",
         "last_matches": [
+          {
+            "date": "2026-07-15",
+            "opponent": "Argentina",
+            "gf": 1,
+            "ga": 2,
+            "result": "L",
+            "tournament": "FIFA World Cup",
+            "venue": "H"
+          },
           {
             "date": "2026-07-11",
             "opponent": "Norway",
@@ -2136,15 +2145,6 @@
             "gf": 0,
             "ga": 1,
             "result": "L",
-            "tournament": "Friendly",
-            "venue": "H"
-          },
-          {
-            "date": "2026-03-27",
-            "opponent": "Uruguay",
-            "gf": 1,
-            "ga": 1,
-            "result": "D",
             "tournament": "Friendly",
             "venue": "H"
           }

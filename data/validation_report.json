@@ -1,38 +1,20 @@
 {
-  "checkedAt": "2026-07-15T21:01:24+00:00",
-  "anomalyCount": 3,
-  "anomalies": [
-    {
-      "area": "odds",
-      "level": "warn",
-      "msg": "2026-07-15 England vs Argentina: home_odds 2.6756 → 194.9289 (drift 7185%)"
-    },
-    {
-      "area": "odds",
-      "level": "warn",
-      "msg": "2026-07-15 England vs Argentina: draw_odds 2.9068 → 11.5039 (drift 296%)"
-    },
-    {
-      "area": "odds",
-      "level": "warn",
-      "msg": "2026-07-15 England vs Argentina: away_odds 3.0604 → 1.5093 (drift 51%)"
-    }
-  ],
+  "checkedAt": "2026-07-16T02:40:10+00:00",
+  "anomalyCount": 0,
+  "anomalies": [],
   "summary": {
     "matches": {
       "count": 104,
       "out_of_window": 0,
-      "missing_status": 1,
-      "finished": 101,
+      "missing_status": 0,
+      "finished": 102,
       "scheduled": 2
     },
     "odds": {
-      "count": 1,
+      "count": 2,
       "source": "the-odds-api",
-      "sources_failed": [
-        "espn"
-      ],
-      "drift_warnings": 3
+      "sources_failed": [],
+      "drift_warnings": 0
     },
     "team_stats": {
       "team_count": 48,
@@ -46,8 +28,7 @@
     }
   },
   "issue": {
-    "opened": true,
-    "number": 38,
-    "fp": "e5771585ce73"
+    "opened": false,
+    "reason": "no severe anomalies"
   }
 }
