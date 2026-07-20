@@ -1,12 +1,12 @@
 {
-  "updatedAt": "2026-07-19T20:50:52+00:00",
+  "updatedAt": "2026-07-20T03:16:49+00:00",
   "window": 10,
   "teamCount": 48,
   "sourcesTried": [
     {
       "source": "bayesian-results",
       "ok": true,
-      "rows": 49519
+      "rows": 49520
     },
     {
       "source": "api-football-cards-last10",
@@ -144,16 +144,25 @@
         "team": "Argentina",
         "matches": 10,
         "window": 10,
-        "gf_total": 29,
-        "ga_total": 7,
-        "gf_avg": 2.9,
-        "ga_avg": 0.7,
-        "wins": 10,
+        "gf_total": 24,
+        "ga_total": 8,
+        "gf_avg": 2.4,
+        "ga_avg": 0.8,
+        "wins": 9,
         "draws": 0,
-        "losses": 0,
-        "record": "10-0-0",
-        "last_match_date": "2026-07-15",
+        "losses": 1,
+        "record": "9-0-1",
+        "last_match_date": "2026-07-19",
         "last_matches": [
+          {
+            "date": "2026-07-19",
+            "opponent": "Spain",
+            "gf": 0,
+            "ga": 1,
+            "result": "L",
+            "tournament": "FIFA World Cup",
+            "venue": "A"
+          },
           {
             "date": "2026-07-15",
             "opponent": "England",
@@ -230,15 +239,6 @@
             "date": "2026-06-06",
             "opponent": "Honduras",
             "gf": 2,
-            "ga": 0,
-            "result": "W",
-            "tournament": "Friendly",
-            "venue": "H"
-          },
-          {
-            "date": "2026-03-31",
-            "opponent": "Zambia",
-            "gf": 5,
             "ga": 0,
             "result": "W",
             "tournament": "Friendly",
@@ -4785,16 +4785,25 @@
         "team": "Spain",
         "matches": 10,
         "window": 10,
-        "gf_total": 17,
+        "gf_total": 18,
         "ga_total": 3,
-        "gf_avg": 1.7,
+        "gf_avg": 1.8,
         "ga_avg": 0.3,
-        "wins": 7,
-        "draws": 3,
+        "wins": 8,
+        "draws": 2,
         "losses": 0,
-        "record": "7-3-0",
-        "last_match_date": "2026-07-14",
+        "record": "8-2-0",
+        "last_match_date": "2026-07-19",
         "last_matches": [
+          {
+            "date": "2026-07-19",
+            "opponent": "Argentina",
+            "gf": 1,
+            "ga": 0,
+            "result": "W",
+            "tournament": "FIFA World Cup",
+            "venue": "H"
+          },
           {
             "date": "2026-07-14",
             "opponent": "France",
@@ -4872,15 +4881,6 @@
             "opponent": "Iraq",
             "gf": 1,
             "ga": 1,
-            "result": "D",
-            "tournament": "Friendly",
-            "venue": "H"
-          },
-          {
-            "date": "2026-03-31",
-            "opponent": "Egypt",
-            "gf": 0,
-            "ga": 0,
             "result": "D",
             "tournament": "Friendly",
             "venue": "H"

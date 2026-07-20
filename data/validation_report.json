@@ -1,26 +1,26 @@
 {
-  "checkedAt": "2026-07-19T20:50:59+00:00",
+  "checkedAt": "2026-07-20T03:16:57+00:00",
   "anomalyCount": 1,
   "anomalies": [
     {
       "area": "odds",
       "level": "warn",
-      "msg": "2026-07-19 Spain vs Argentina: away_odds 3.6086 → 6.1797 (drift 71%)"
+      "msg": "no odds collected from any source"
     }
   ],
   "summary": {
     "matches": {
       "count": 104,
       "out_of_window": 0,
-      "missing_status": 1,
-      "finished": 103,
+      "missing_status": 0,
+      "finished": 104,
       "scheduled": 0
     },
     "odds": {
-      "count": 1,
-      "source": "the-odds-api",
+      "count": 0,
+      "source": null,
       "sources_failed": [],
-      "drift_warnings": 1
+      "drift_warnings": 0
     },
     "team_stats": {
       "team_count": 48,
@@ -35,7 +35,7 @@
   },
   "issue": {
     "opened": true,
-    "number": 39,
-    "fp": "eac12840b2f1"
+    "number": 40,
+    "fp": "8775eb66837e"
   }
 }
