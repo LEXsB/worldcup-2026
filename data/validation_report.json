@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-07-20T21:13:06+00:00",
+  "checkedAt": "2026-07-21T02:45:09+00:00",
   "anomalyCount": 1,
   "anomalies": [
     {
@@ -19,7 +19,9 @@
     "odds": {
       "count": 0,
       "source": null,
-      "sources_failed": [],
+      "sources_failed": [
+        "espn"
+      ],
       "drift_warnings": 0
     },
     "team_stats": {
