@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-22T21:08:36+00:00",
+  "updatedAt": "2026-07-23T02:48:19+00:00",
   "source": null,
   "sourcesTried": [
     {
@@ -10,7 +10,7 @@
     {
       "source": "espn",
       "ok": false,
-      "error": "400 Client Error: Bad Request for url: https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=20260722-20260720"
+      "error": "400 Client Error: Bad Request for url: https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=20260723-20260720"
     }
   ],
   "count": 0,
