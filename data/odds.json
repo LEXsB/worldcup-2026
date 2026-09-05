@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-04T22:10:19+00:00",
+  "updatedAt": "2026-09-05T03:20:47+00:00",
   "source": null,
   "sourcesTried": [
     {
@@ -10,7 +10,7 @@
     {
       "source": "espn",
       "ok": false,
-      "error": "403 Client Error: Forbidden for url: https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=20260904-20260720"
+      "error": "403 Client Error: Forbidden for url: https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=20260905-20260720"
     }
   ],
   "count": 0,
