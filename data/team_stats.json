@@ -1,12 +1,12 @@
 {
-  "updatedAt": "2026-10-31T04:27:54+00:00",
+  "updatedAt": "2026-10-31T14:21:00+00:00",
   "window": 10,
   "teamCount": 48,
   "sourcesTried": [
     {
       "source": "bayesian-results",
       "ok": true,
-      "rows": 49945
+      "rows": 49940
     },
     {
       "source": "api-football-cards-last10",
