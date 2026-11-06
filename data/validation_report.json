@@ -1,11 +1,16 @@
 {
-  "checkedAt": "2026-11-06T18:58:32+00:00",
-  "anomalyCount": 1,
+  "checkedAt": "2026-11-06T23:58:27+00:00",
+  "anomalyCount": 2,
   "anomalies": [
     {
       "area": "odds",
       "level": "warn",
       "msg": "no odds collected from any source"
+    },
+    {
+      "area": "injuries",
+      "level": "info",
+      "msg": "no injury source configured (set API_FOOTBALL_KEY)"
     }
   ],
   "summary": {
@@ -31,8 +36,8 @@
     },
     "injuries": {
       "team_count": 48,
-      "teams_with_injuries": 18,
-      "source": "wikipedia-squads"
+      "teams_with_injuries": 0,
+      "source": null
     }
   },
   "issue": {
